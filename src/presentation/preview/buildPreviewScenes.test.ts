@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { demoFixtures } from '../../data/demoFixtures';
-import { SLIDE } from '../design/tokens';
+import { COLORS, SLIDE } from '../design/tokens';
 import { buildOnePagerPreviewScenes, buildPreviewScenes } from './buildPreviewScenes';
 
 describe('buildPreviewScenes', () => {
@@ -72,8 +72,25 @@ describe('buildPreviewScenes', () => {
   it('показывает логотипы кейсов и в полном КП, и в One-pager', () => {
     const fullCaseImages = scenes[5].elements.filter((element) => element.kind === 'image').map((element) => String(element.options.data));
     const onePagerImages = buildOnePagerPreviewScenes(proposal)[0].elements.filter((element) => element.kind === 'image').map((element) => String(element.options.data));
-    expect(fullCaseImages.some((source) => source.includes('/case-logos/'))).toBe(true);
-    expect(onePagerImages.some((source) => source.includes('/case-logos/'))).toBe(true);
+    expect(fullCaseImages.some((source) => source.includes('/case-logos'))).toBe(true);
+    expect(onePagerImages.some((source) => source.includes('/case-logos'))).toBe(true);
+  });
+
+  it('переключает все сцены в светлую палитру и использует тёмные логотипы', () => {
+    const lightProposal = structuredClone(proposal);
+    lightProposal.presentationTheme = 'light';
+    const lightScenes = buildPreviewScenes(lightProposal);
+    const firstImages = lightScenes[0].elements.filter((element) => element.kind === 'image').map((element) => String(element.options.data));
+    expect(firstImages).toContain('/backgrounds-light/prez-bg-1.png');
+    expect(firstImages).toContain('/logos/calltouch-dark.svg');
+    expect(lightScenes[1].background?.color).toBe('F3F7F9');
+    const lightTextColors = lightScenes.slice(1, 7).flatMap((scene) => scene.elements)
+      .filter((element) => element.kind === 'text')
+      .map((element) => String(element.options.color));
+    expect(lightTextColors).not.toContain(COLORS.white);
+    const onePagerImages = buildOnePagerPreviewScenes(lightProposal)[0].elements.filter((element) => element.kind === 'image').map((element) => String(element.options.data));
+    expect(onePagerImages).toContain('/logos/calltouch-dark.svg');
+    expect(onePagerImages.some((source) => source.includes('case-logos-dark'))).toBe(true);
   });
 
   it('оставляет в One-pager только рекомендуемый тариф', () => {

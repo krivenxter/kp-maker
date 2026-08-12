@@ -2,11 +2,11 @@ import type PptxGenJS from 'pptxgenjs';
 import casesData from '../../data/cases.json';
 import type { ProposalDocument } from '../../schemas/proposal';
 import { columns } from '../design/layout';
-import { accentForBrand, COLORS, fontProfileForBrand, textStyle } from '../design/tokens';
+import { accentForBrand, COLORS, fontProfileForBrand, textStyle, type PresentationTheme } from '../design/tokens';
 import type { PresentationAssets } from '../engine/assets';
 import { addAdaptiveText, addBackground, addBrandHeader, addCard, addCaseLogo, addNotes, addTitle } from '../helpers/pptxHelpers';
 
-export function renderCasesSlide(pptx: PptxGenJS, proposal: ProposalDocument, assets: PresentationAssets) {
+export function renderCasesSlide(pptx: PptxGenJS, proposal: ProposalDocument, assets: PresentationAssets, _theme?: PresentationTheme) {
   const slide = pptx.addSlide();
   const accent = accentForBrand(proposal.client.brandId);
   const fonts = fontProfileForBrand(proposal.client.brandId);

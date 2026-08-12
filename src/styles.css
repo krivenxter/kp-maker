@@ -244,6 +244,24 @@ label em, .form-error { color: var(--danger); font-size: var(--type-body-size); 
 .custom-case-editor label:last-child { margin-bottom: 0; }
 .cover-settings { margin-top: 22px; }
 .cover-settings > div:first-child > span { color: var(--muted); font-size: var(--type-caption-size); font-weight: var(--type-caption-weight); line-height: var(--type-caption-line); }
+.presentation-theme-control { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin: 4px 0 16px; padding: 12px; background: linear-gradient(110deg, #eef8fa, #f8fafb 58%, #f2edff); border: 1px solid #d9e8eb; border-radius: 12px; }
+.presentation-theme-copy { display: flex; min-width: 0; flex-direction: column; gap: 3px; }
+.presentation-theme-copy b { color: #18282e; font-size: var(--type-label-size); font-weight: var(--type-label-weight); line-height: var(--type-label-line); }
+.presentation-theme-copy span { color: #718087; font-size: var(--type-caption-size); font-weight: var(--type-caption-weight); line-height: var(--type-caption-line); }
+.presentation-theme-toggle { display: grid; flex: 0 0 auto; grid-template-columns: repeat(2, minmax(102px, 1fr)); gap: 4px; padding: 4px; background: rgba(255,255,255,.76); border: 1px solid rgba(207,224,228,.9); border-radius: 12px; box-shadow: 0 3px 10px rgba(39,75,84,.08); }
+.presentation-theme-toggle button { display: flex; align-items: center; justify-content: center; gap: 7px; min-height: 38px; padding: 5px 9px; color: #61747c; background: transparent; border: 0; border-radius: 8px; font-size: var(--type-caption-size); font-weight: var(--type-label-weight); line-height: var(--type-label-line); transition: color .16s, background .16s, box-shadow .16s, transform .16s; }
+.presentation-theme-toggle button:hover { color: #142027; background: rgba(255,255,255,.72); }
+.presentation-theme-toggle button.selected { color: #142027; background: white; box-shadow: 0 3px 8px rgba(24,48,57,.12); }
+.presentation-theme-toggle button:focus-visible { outline: 0; box-shadow: 0 0 0 3px rgba(25,198,230,.22); }
+.presentation-theme-toggle button.selected:active { transform: scale(.98); }
+.theme-preview { position: relative; display: block; width: 25px; height: 17px; overflow: hidden; border: 1px solid; border-radius: 5px; }
+.theme-preview::before, .theme-preview::after, .theme-preview span { content: ""; position: absolute; display: block; border-radius: 2px; }
+.theme-preview-dark { background: #142027; border-color: #43555d; }
+.theme-preview-dark::before { top: 4px; left: 4px; width: 9px; height: 2px; background: var(--cyan); box-shadow: 0 4px 0 #eef4f5; }
+.theme-preview-dark::after { right: 3px; bottom: 3px; width: 5px; height: 5px; background: #8b3dff; }
+.theme-preview-light { background: #f9fcfd; border-color: #c6d9de; }
+.theme-preview-light::before { top: 4px; left: 4px; width: 10px; height: 2px; background: #142027; box-shadow: 0 4px 0 #718087; }
+.theme-preview-light::after { right: 3px; bottom: 3px; width: 5px; height: 5px; background: var(--cyan); }
 .cover-options { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; margin-bottom: 16px; }
 .cover-options button { position: relative; overflow: hidden; aspect-ratio: 16 / 9; padding: 0; background-position: center; background-size: cover; border: 2px solid transparent; border-radius: 8px; }
 .cover-options button.selected { border-color: var(--cyan); box-shadow: 0 0 0 2px rgba(25,198,230,.18); }
@@ -341,6 +359,8 @@ label em, .form-error { color: var(--danger); font-size: var(--type-body-size); 
   main.show-mobile-preview .form-pane { min-height: auto; padding-bottom: 0; }
   .field-grid.two, .product-options, .case-options, .metric-options, .product-catalog-toolbar { grid-template-columns: 1fr; }
   .cover-options { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .presentation-theme-control { align-items: stretch; flex-direction: column; gap: 10px; }
+  .presentation-theme-toggle { width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .line-editor { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .case-metric-row { grid-template-columns: 1fr; }
   .case-metric-row > span:last-child { display: none; }

@@ -4,7 +4,7 @@ import cases from '../../data/cases.json';
 import { demoFixtures } from '../../data/demoFixtures';
 import type { ProposalDocument } from '../../schemas/proposal';
 import type { PresentationAssets } from '../engine/assets';
-import { accentForBrand, COLORS } from '../design/tokens';
+import { accentForBrand, COLORS, presentationThemeOf } from '../design/tokens';
 import { FLOW_ICON_PATHS, productIconPath, tintedIconPath } from '../design/productIcons';
 import { UI_ICONS } from '../design/uiIcons';
 import {
@@ -73,6 +73,7 @@ function makePreviewSafe(proposal: ProposalDocument): ProposalDocument {
   return {
     ...fallback,
     ...proposal,
+    presentationTheme: proposal.presentationTheme ?? fallback.presentationTheme,
     client: {
       ...fallback.client,
       ...proposal.client,
@@ -109,23 +110,27 @@ export function buildPreviewScenes(rawProposal: ProposalDocument): PreviewScene[
     logoLight: '/logos/calltouch-light.svg',
     logoDark: '/logos/calltouch-dark.svg',
     darkBackground: `/backgrounds/${proposal.cover.backgroundId ?? 'prez-bg-1'}.webp`,
+    lightBackground: `/backgrounds-light/${proposal.cover.backgroundId ?? 'prez-bg-1'}.png`,
     finalBackground: '/backgrounds/prez-bg-6.webp',
+    lightFinalBackground: '/backgrounds-light/prez-bg-6.png',
     productIcons: Object.fromEntries(products.map((product) => [product.id, tintedIconPath(productIconPath(product.id, product.icon), accent)])),
     productVisuals: Object.fromEntries(products.filter((product) => product.icon).map((product) => [product.id, product.icon])),
     caseLogos: Object.fromEntries(cases.filter((item) => item.logo).map((item) => [item.id, item.logo])),
-    caseLogosDark: Object.fromEntries(cases.filter((item) => item.logo).map((item) => [item.id, `${item.logo}?tint=${COLORS.ink}`])),
+    caseLogosDark: Object.fromEntries(cases.filter((item) => item.logo).map((item) => [item.id, item.logo.replace('/case-logos/', '/case-logos-dark/')])),
     flowIcons: Object.fromEntries(FLOW_ICON_PATHS.map((path) => [path, tintedIconPath(path, accent)])),
     uiIcons: Object.fromEntries(Object.entries(UI_ICONS).map(([name, path]) => [name, tintedIconPath(path, name === 'userPlaceholder' || name === 'email' || name === 'phone' ? COLORS.white : COLORS.ink)])),
+    uiIconsDark: Object.fromEntries(Object.entries(UI_ICONS).map(([name, path]) => [name, tintedIconPath(path, COLORS.ink)])),
   };
   const pptx = deck as unknown as PptxGenJS;
+  const theme = presentationThemeOf(proposal);
 
-  renderCoverSlide(pptx, proposal, assets);
-  renderContextSlide(pptx, proposal, assets);
-  renderConfigurationSlide(pptx, proposal, assets);
-  renderPricingSlide(pptx, proposal, assets);
-  renderFlowSlide(pptx, proposal, assets);
-  renderCasesSlide(pptx, proposal, assets);
-  renderContactsSlide(pptx, proposal, assets);
+  renderCoverSlide(pptx, proposal, assets, theme);
+  renderContextSlide(pptx, proposal, assets, theme);
+  renderConfigurationSlide(pptx, proposal, assets, theme);
+  renderPricingSlide(pptx, proposal, assets, theme);
+  renderFlowSlide(pptx, proposal, assets, theme);
+  renderCasesSlide(pptx, proposal, assets, theme);
+  renderContactsSlide(pptx, proposal, assets, theme);
 
   return deck.scenes;
 }
@@ -138,14 +143,17 @@ export function buildOnePagerPreviewScenes(rawProposal: ProposalDocument): Previ
     logoLight: '/logos/calltouch-light.svg',
     logoDark: '/logos/calltouch-dark.svg',
     darkBackground: `/backgrounds/${proposal.cover.backgroundId ?? 'prez-bg-1'}.webp`,
+    lightBackground: `/backgrounds-light/${proposal.cover.backgroundId ?? 'prez-bg-1'}.png`,
     finalBackground: '/backgrounds/prez-bg-6.webp',
+    lightFinalBackground: '/backgrounds-light/prez-bg-6.png',
     productIcons: Object.fromEntries(products.map((product) => [product.id, tintedIconPath(productIconPath(product.id, product.icon), accent)])),
     productVisuals: Object.fromEntries(products.filter((product) => product.icon).map((product) => [product.id, product.icon])),
     caseLogos: Object.fromEntries(cases.filter((item) => item.logo).map((item) => [item.id, item.logo])),
-    caseLogosDark: Object.fromEntries(cases.filter((item) => item.logo).map((item) => [item.id, `${item.logo}?tint=${COLORS.ink}`])),
+    caseLogosDark: Object.fromEntries(cases.filter((item) => item.logo).map((item) => [item.id, item.logo.replace('/case-logos/', '/case-logos-dark/')])),
     flowIcons: Object.fromEntries(FLOW_ICON_PATHS.map((path) => [path, tintedIconPath(path, accent)])),
     uiIcons: Object.fromEntries(Object.entries(UI_ICONS).map(([name, path]) => [name, tintedIconPath(path, name === 'userPlaceholder' || name === 'email' || name === 'phone' ? COLORS.white : COLORS.ink)])),
+    uiIconsDark: Object.fromEntries(Object.entries(UI_ICONS).map(([name, path]) => [name, tintedIconPath(path, COLORS.ink)])),
   };
-  renderOnePager(deck as unknown as PptxGenJS, proposal, assets);
+  renderOnePager(deck as unknown as PptxGenJS, proposal, assets, presentationThemeOf(proposal));
   return deck.scenes;
 }

@@ -18,6 +18,7 @@ export const demoFixtures: Array<{ id: string; name: string; proposal: ProposalD
     name: 'EXLANTIX — готовое КП со скидкой',
     proposal: {
       version: 1,
+      presentationTheme: 'dark',
       client: { name: 'EXLANTIX', brandId: 'exlantix', site: 'exlantix.ru', industry: 'automotive' },
       managerId: 'ivan-petrov',
       project: baseProject,
@@ -46,6 +47,7 @@ export const demoFixtures: Array<{ id: string; name: string; proposal: ProposalD
     name: 'Новый клиент — простое КП',
     proposal: {
       version: 1,
+      presentationTheme: 'dark',
       client: { name: 'Новый клиент', brandId: 'neutral', site: '', industry: 'other' },
       managerId: 'ivan-petrov',
       project: { ...baseProject, goal: 'Определять, какая реклама приводит звонки', summary: '', crm: '', integrations: [] },
@@ -66,6 +68,7 @@ export const demoFixtures: Array<{ id: string; name: string; proposal: ProposalD
     name: 'Сравнение двух тарифов',
     proposal: {
       version: 1,
+      presentationTheme: 'dark',
       client: { name: 'Проект с двумя тарифами', brandId: 'neutral', site: '', industry: 'automotive' },
       managerId: 'ivan-petrov',
       project: baseProject,
@@ -95,6 +98,7 @@ export const demoFixtures: Array<{ id: string; name: string; proposal: ProposalD
     name: 'Комплексное КП с тремя тарифами',
     proposal: {
       version: 1,
+      presentationTheme: 'dark',
       client: { name: 'Комплексный проект', brandId: 'neutral', site: '', industry: 'automotive' },
       managerId: 'ivan-petrov',
       project: { ...baseProject, goal: 'Автоматизировать обработку обращений и контролировать маркетинг в едином контуре' },

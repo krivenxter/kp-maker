@@ -43,6 +43,7 @@ export function migrateProposalDocument(input: unknown): unknown {
 
 export const proposalSchema = z.object({
   version: z.literal(1),
+  presentationTheme: z.enum(['dark', 'light']).default('dark'),
   client: z.object({
     name: z.string().min(2, 'Укажите название клиента').max(60),
     brandId: z.string().default('neutral'),

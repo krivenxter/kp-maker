@@ -11,13 +11,16 @@ export type PresentationAssets = {
   logoLight?: string;
   logoDark?: string;
   darkBackground?: string;
+  lightBackground?: string;
   finalBackground?: string;
+  lightFinalBackground?: string;
   productIcons: Record<string, string>;
   productVisuals?: Record<string, string>;
   caseLogos?: Record<string, string>;
   caseLogosDark?: Record<string, string>;
   flowIcons?: Record<string, string>;
   uiIcons?: Record<string, string>;
+  uiIconsDark?: Record<string, string>;
   fonts?: EmbeddedFontAsset[];
 };
 
@@ -163,6 +166,7 @@ export async function loadPresentationAssets(productIcons: Array<{ id: string; i
   const caseLogoDarkEntries = await Promise.all(caseItems.map(async (item) => [item.id, await loadCaseLogoDarkDataUrl(item.logo)] as const));
   const flowIconEntries = await Promise.all(FLOW_ICON_PATHS.map(async (path) => [path, await fetchTintedIconDataUrl(path, accent)] as const));
   const uiIconEntries = await Promise.all(Object.entries(UI_ICONS).map(async ([name, path]) => [name, await fetchTintedIconDataUrl(path, name === 'userPlaceholder' || name === 'email' || name === 'phone' ? COLORS.white : COLORS.ink)] as const));
+  const uiIconDarkEntries = await Promise.all(Object.entries(UI_ICONS).map(async ([name, path]) => [name, await fetchTintedIconDataUrl(path, COLORS.ink)] as const));
   const fontProfile = fontProfileForBrand(brandId);
   const fontRequests = [
     ...(fontProfile.heading === 'Dela Gothic One' ? [fontProfile.headingFile] : UNBOUNDED_STATIC_FILES),
@@ -177,13 +181,16 @@ export async function loadPresentationAssets(productIcons: Array<{ id: string; i
     logoLight: logoLightSvg ? (await rasterizeDataUrl(logoLightSvg) ?? logoLightSvg) : undefined,
     logoDark: logoDarkSvg ? (await rasterizeDataUrl(logoDarkSvg) ?? logoDarkSvg) : undefined,
     darkBackground: await rasterizeToPng(`/backgrounds/${coverBackgroundId}.webp`),
+    lightBackground: await rasterizeToPng(`/backgrounds-light/${coverBackgroundId}.png`),
     finalBackground: await rasterizeToPng('/backgrounds/prez-bg-6.webp'),
+    lightFinalBackground: await rasterizeToPng('/backgrounds-light/prez-bg-6.png'),
     productIcons: Object.fromEntries(iconEntries.filter((entry): entry is readonly [string, string] => Boolean(entry[1]))),
     productVisuals: Object.fromEntries(visualEntries.filter((entry): entry is readonly [string, string] => Boolean(entry[1]))),
     caseLogos: Object.fromEntries(caseLogoEntries.filter((entry): entry is readonly [string, string] => Boolean(entry[1]))),
     caseLogosDark: Object.fromEntries(caseLogoDarkEntries.filter((entry): entry is readonly [string, string] => Boolean(entry[1]))),
     flowIcons: Object.fromEntries(flowIconEntries.filter((entry): entry is readonly [string, string] => Boolean(entry[1]))),
     uiIcons: Object.fromEntries(uiIconEntries.filter((entry): entry is readonly [string, string] => Boolean(entry[1]))),
+    uiIconsDark: Object.fromEntries(uiIconDarkEntries.filter((entry): entry is readonly [string, string] => Boolean(entry[1]))),
     fonts: fontBuffers.filter((entry): entry is readonly [string, ArrayBuffer] => Boolean(entry[1])).map(([path, fontFile]) => ({
       fontFace: path.includes('/Manrope_') ? 'Manrope' : path.includes('/Unbounded_') ? 'Unbounded' : 'Dela Gothic One',
       fontFile,

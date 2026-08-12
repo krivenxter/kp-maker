@@ -16,6 +16,56 @@ export const COLORS = {
   danger: 'D44B5F',
 } as const;
 
+export type PresentationTheme = 'dark' | 'light';
+
+export const DEFAULT_PRESENTATION_THEME: PresentationTheme = 'dark';
+
+export type PresentationPalette = {
+  background: string;
+  card: string;
+  cardAlt: string;
+  text: string;
+  muted: string;
+  mutedStrong: string;
+  line: string;
+  headerMode: 'dark' | 'light';
+};
+
+const PRESENTATION_PALETTES: Record<PresentationTheme, PresentationPalette> = {
+  dark: {
+    background: COLORS.dark,
+    card: COLORS.darkCard,
+    cardAlt: '17262D',
+    text: COLORS.white,
+    muted: 'B6C4CA',
+    mutedStrong: 'AEBEC5',
+    line: '314149',
+    headerMode: 'dark',
+  },
+  light: {
+    background: COLORS.white,
+    card: COLORS.paper,
+    cardAlt: 'EAF4F7',
+    text: COLORS.ink,
+    muted: '718087',
+    mutedStrong: '52636B',
+    line: COLORS.line,
+    headerMode: 'light',
+  },
+};
+
+export function presentationThemeOf(value: { presentationTheme?: PresentationTheme } | undefined): PresentationTheme {
+  return value?.presentationTheme === 'light' ? 'light' : DEFAULT_PRESENTATION_THEME;
+}
+
+export function paletteForTheme(theme: PresentationTheme): PresentationPalette {
+  return PRESENTATION_PALETTES[theme];
+}
+
+export function surfaceMode(theme: PresentationTheme, defaultMode: 'dark' | 'light'): 'dark' | 'light' {
+  return theme === 'light' ? 'light' : defaultMode;
+}
+
 export const TYPOGRAPHY = {
   display: { size: 30, lineSpacing: 32 },
   title: { size: 24, lineSpacing: 26 },

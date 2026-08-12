@@ -46,7 +46,9 @@ const assets = {
   logoLight: await dataUrl(resolve(root, 'calltouch-assets/logos/calltouch-light.svg')),
   logoDark: await dataUrl(resolve(root, 'calltouch-assets/logos/calltouch-dark.svg')),
   darkBackground: await dataUrl(resolve(root, 'tmp/pptx/prez-bg-1.png')),
+  lightBackground: await dataUrl(resolve(root, 'calltouch-assets/backgrounds-light/prez-bg-1.png')),
   finalBackground: await dataUrl(resolve(root, 'tmp/pptx/prez-bg-6.png')),
+  lightFinalBackground: await dataUrl(resolve(root, 'calltouch-assets/backgrounds-light/prez-bg-6.png')),
   productIcons: Object.fromEntries(await Promise.all(selectedProducts.map(async (product) => [product.id, await tintedSvgDataUrl(resolve(root, `calltouch-assets${productIconPath(product.id, product.icon)}`), accent)]))),
   productVisuals: Object.fromEntries(await Promise.all(selectedProducts.filter((product) => product.icon).map(async (product) => [product.id, await dataUrl(resolve(root, `calltouch-assets${product.icon}`))]))),
   caseLogos: Object.fromEntries(await Promise.all(selectedCases.map(async (item) => [item.id, await dataUrl(resolve(root, `calltouch-assets${item.logo}`))]))),
@@ -59,6 +61,7 @@ const assets = {
       name === 'userPlaceholder' || name === 'email' || name === 'phone' ? 'FFFFFF' : '142027',
     ),
   ]))),
+  uiIconsDark: Object.fromEntries(await Promise.all(Object.entries(UI_ICONS).map(async ([name, path]) => [name, await tintedSvgDataUrl(resolve(root, `calltouch-assets${path}`), '142027')]))),
   fonts: [
     { fontFace: fontProfile.heading, fontFile: await arrayBuffer(resolve(root, `calltouch-assets${fontProfile.headingFile}`)) },
     { fontFace: fontProfile.body, fontFile: await arrayBuffer(resolve(root, `calltouch-assets${fontProfile.bodyFile}`)) },

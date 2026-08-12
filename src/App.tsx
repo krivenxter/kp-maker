@@ -11,6 +11,7 @@ import { buildProposal } from './domain/buildProposal';
 import { ProposalPreview } from './components/preview/ProposalPreview';
 import { CustomSelect } from './components/ui/CustomSelect';
 import { UiIcon } from './components/ui/UiIcon';
+import { PresentationThemeToggle } from './components/ui/PresentationThemeToggle';
 import { OnboardingModal } from './components/ui/OnboardingModal';
 import { resolveManager } from './domain/resolveManager';
 import { getOnePagerWarnings } from './domain/onePager';
@@ -25,11 +26,11 @@ const MAX_SELECTED_PRODUCTS = 5;
 const steps = ['Клиент и менеджер', 'Задача и продукты', 'Расчёт и условия', 'Проверка и экспорт'];
 const productCategories = ['Все категории', ...new Set(products.map((product) => product.category))];
 const coverBackgrounds = [
-  { id: 'prez-bg-1', label: 'Вариант 1', image: '/backgrounds/prez-bg-1.webp' },
-  { id: 'prez-bg-2', label: 'Вариант 2', image: '/backgrounds/prez-bg-2.webp' },
-  { id: 'prez-bg-3', label: 'Вариант 3', image: '/backgrounds/prez-bg-3.webp' },
-  { id: 'prez-bg-4', label: 'Вариант 4', image: '/backgrounds/prez-bg-4.webp' },
-  { id: 'prez-bg-5', label: 'Вариант 5', image: '/backgrounds/prez-bg-5.webp' },
+  { id: 'prez-bg-1', label: 'Вариант 1', darkImage: '/backgrounds/prez-bg-1.webp', lightImage: '/backgrounds-light/prez-bg-1.png' },
+  { id: 'prez-bg-2', label: 'Вариант 2', darkImage: '/backgrounds/prez-bg-2.webp', lightImage: '/backgrounds-light/prez-bg-2.png' },
+  { id: 'prez-bg-3', label: 'Вариант 3', darkImage: '/backgrounds/prez-bg-3.webp', lightImage: '/backgrounds-light/prez-bg-3.png' },
+  { id: 'prez-bg-4', label: 'Вариант 4', darkImage: '/backgrounds/prez-bg-4.webp', lightImage: '/backgrounds-light/prez-bg-4.png' },
+  { id: 'prez-bg-5', label: 'Вариант 5', darkImage: '/backgrounds/prez-bg-5.webp', lightImage: '/backgrounds-light/prez-bg-5.png' },
 ] as const;
 
 function stepForIssue(path: string) {
@@ -107,6 +108,7 @@ export default function App() {
   const draftMenuRef = useRef<HTMLDetailsElement>(null);
   const { register, watch, reset, setValue } = useForm<ProposalDocument>({ defaultValues: initialDraft.current.proposal, mode: 'onChange' });
   const proposal = watch();
+  const presentationTheme = proposal.presentationTheme ?? 'dark';
   const proposalRef = useRef(proposal);
   proposalRef.current = proposal;
   const manager = useMemo(() => resolveManager(proposal), [proposal]);
@@ -403,9 +405,11 @@ export default function App() {
           <div className="manager-card">{manager?.photoDataUrl ? <img src={manager.photoDataUrl} alt="" /> : <i><span className="manager-placeholder-icon" aria-hidden="true" /></i>}<div><b>{manager?.name}</b><span>{manager?.email}</span></div></div>
           <div className="review-block cover-settings">
             <div><h2>Обложка КП</h2><span>Сразу видна в превью справа</span></div>
+            <PresentationThemeToggle value={presentationTheme} onChange={(value) => setValue('presentationTheme', value, { shouldValidate: true })} />
             <div className="cover-options">{coverBackgrounds.map((cover) => {
               const selected = (proposal.cover.backgroundId ?? 'prez-bg-1') === cover.id;
-              return <button type="button" className={selected ? 'selected' : ''} aria-pressed={selected} onClick={() => setValue('cover.backgroundId', cover.id, { shouldValidate: true })} key={cover.id} style={{ backgroundImage: `url(${cover.image})` }}><span>{cover.label}</span></button>;
+              const image = presentationTheme === 'light' ? cover.lightImage : cover.darkImage;
+              return <button type="button" className={selected ? 'selected' : ''} aria-pressed={selected} onClick={() => setValue('cover.backgroundId', cover.id, { shouldValidate: true })} key={cover.id} style={{ backgroundImage: `url(${image})` }}><span>{cover.label}</span></button>;
             })}</div>
             <label className="required-label"><span className="field-label-text">Подзаголовок на обложке *</span><textarea required {...register('cover.subtitle')} maxLength={130} rows={2} placeholder="Коротко: какую задачу клиента решает предложение" />{issueFor('cover.subtitle') && <em>{issueFor('cover.subtitle')}</em>}</label>
           </div>
