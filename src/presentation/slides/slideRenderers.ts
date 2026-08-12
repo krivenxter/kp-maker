@@ -223,7 +223,7 @@ export function renderFlowSlide(pptx: PptxGenJS, proposal: ProposalDocument, ass
   const flow = selectFlow(proposal.products.map((item) => item.productId));
   addAdaptiveText(slide, flow.headline, { x: 0.72, y: 1.72, w: 8.9, h: 0.28, ...textStyle(fonts, 'heading'), color: COLORS.white, margin: 0, wrap: false }, { singleLine: true, minFontSize: 9 });
   addAdaptiveText(slide, flow.explanation, { x: 0.72, y: 2.08, w: 11.1, h: 0.32, ...textStyle(fonts, 'body'), color: 'B6C4CA', margin: 0 }, { maxLines: 2, minFontSize: 8 });
-  slide.addText('КАК ЭТО РАБОТАЕТ', { x: 0.72, y: 2.66, w: 3.4, h: 0.2, ...textStyle(fonts, 'caption'), charSpacing: 1.5, color: accent, margin: 0 });
+  slide.addText('КАК ЭТО РАБОТАЕТ', { x: 0.72, y: 2.66, w: 3.4, h: 0.2, ...textStyle(fonts, 'caption'), bold: true, charSpacing: 1.5, color: accent, margin: 0 });
   const stepBoxes = columns(flow.steps.length, 2.96, 1.35, 0.72, 0.72);
   for (let index = 0; index < stepBoxes.length - 1; index += 1) {
     const current = stepBoxes[index];
