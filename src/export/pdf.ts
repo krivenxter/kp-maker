@@ -1,10 +1,11 @@
 import type { ProposalDocument } from '../schemas/proposal';
 import { createOnePagerPptxBlob, createPptxBlob } from './pptx';
 import { safeClientName } from './fileName';
+import { pdfApiUrl } from './pdfApi';
 
 export async function downloadPdf(proposal: ProposalDocument, format: 'full' | 'onepager' = 'full') {
   const pptxBlob = format === 'onepager' ? await createOnePagerPptxBlob(proposal) : await createPptxBlob(proposal);
-  const response = await fetch('/api/export/pdf', {
+  const response = await fetch(pdfApiUrl('/api/export/pdf'), {
     method: 'POST',
     headers: { 'Content-Type': 'application/vnd.openxmlformats-officedocument.presentationml.presentation' },
     body: pptxBlob,

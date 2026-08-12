@@ -29,11 +29,10 @@ export function ExportDock({ valid, issueCount, busy, status, format, onePagerBl
       <button type="button" className={format === 'both' ? 'active' : ''} aria-pressed={format === 'both'} onClick={() => onFormatChange('both')}>Оба</button>
     </div>
     <div className="export-actions">
-      <button className="button secondary" title={pdfState === 'unavailable' ? 'LibreOffice не найден — PPTX по-прежнему доступен' : undefined} disabled={blocked || pdfState !== 'available'} onClick={() => onExport('pdf')}>
+      <button className="button secondary" title={pdfState === 'unavailable' ? 'PDF-сервис недоступен — PPTX по-прежнему доступен' : undefined} disabled={blocked || pdfState !== 'available'} onClick={() => onExport('pdf')}>
         {pdfState === 'checking' ? 'Проверяю PDF…' : pdfState === 'unavailable' ? 'PDF недоступен' : 'Скачать PDF'}
       </button>
       <button className="button primary" disabled={blocked} onClick={() => onExport('pptx')}>Скачать PPTX</button>
     </div>
   </div>;
 }
-

@@ -49,13 +49,15 @@ One-pager не копирует полную презентацию: в нём �
 
 ## PDF
 
-PPTX остаётся source of truth. Для PDF требуется установленный LibreOffice. Обычная команда разработки запускает интерфейс и PDF-адаптер вместе:
+PPTX остаётся source of truth. PDF создаётся конвертацией готового PPTX через LibreOffice headless — слайды не рендерятся в изображения. Для локальной разработки требуется установленный LibreOffice. Обычная команда разработки запускает интерфейс и PDF-адаптер вместе:
 
 ```bash
 pnpm dev
 ```
 
 На Windows приложение автоматически проверяет стандартный путь установки LibreOffice. Порт и нестандартный путь задаются через environment variables, см. `.env.example`. Frontend проверяет `GET /api/export/pdf/health`, а затем отправляет готовый PPTX в `POST /api/export/pdf`; сервер использует изолированный временный профиль LibreOffice и удаляет рабочую директорию после ответа.
+
+Для Vercel нужно развернуть отдельный Docker-сервис из [`deploy/pdf-service/Dockerfile`](deploy/pdf-service/Dockerfile), а в настройках Vercel указать `VITE_PDF_API_URL` с его публичным URL. Полная инструкция находится в [`deploy/pdf-service/README.md`](deploy/pdf-service/README.md).
 
 Для отдельного запуска только интерфейса или только PDF-адаптера остаются команды `pnpm dev:web` и `pnpm server`.
 

@@ -6,8 +6,9 @@ import { tmpdir } from 'node:os';
 import { isAbsolute, join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
-const defaultPort = Number(process.env.PDF_SERVER_PORT || 4174);
+const defaultPort = Number(process.env.PORT || process.env.PDF_SERVER_PORT || 4174);
 const maxBytes = 50 * 1024 * 1024;
+const corsOrigin = process.env.PDF_CORS_ORIGIN || '*';
 
 function resolveLibreOfficeBinary() {
   if (process.env.LIBREOFFICE_BIN) return process.env.LIBREOFFICE_BIN;
@@ -50,10 +51,15 @@ async function convert(input: string, outputDir: string, profileDir: string) {
 
 export function createPdfServer(): Server {
   return createServer(async (request, response) => {
-    response.setHeader('Access-Control-Allow-Origin', '*');
+    const requestOrigin = request.headers.origin;
+    const originAllowed = corsOrigin === '*' || !requestOrigin || requestOrigin === corsOrigin;
+    if (originAllowed) response.setHeader('Access-Control-Allow-Origin', corsOrigin === '*' ? '*' : corsOrigin);
     response.setHeader('Access-Control-Allow-Headers', 'Content-Type');
     response.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-    if (request.method === 'OPTIONS') return response.end();
+    if (request.method === 'OPTIONS') {
+      if (!originAllowed) return response.writeHead(403).end('Origin not allowed');
+      return response.end();
+    }
 
     if (request.method === 'GET' && request.url === '/api/export/pdf/health') {
       const available = await isLibreOfficeAvailable();
