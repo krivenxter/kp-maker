@@ -170,12 +170,12 @@ export function addImageFit(slide: Slide, imageData: string, box: ImageBox, fit:
 }
 
 export function addCaseLogo(pptx: PptxGenJS, slide: Slide, imageData: string, box: ImageBox, mode: 'dark' | 'light', darkImageData?: string) {
-  const plateColor = mode === 'dark' ? COLORS.white : 'EEF2F3';
+  const plateColor = mode === 'dark' ? COLORS.white : 'F5F7F8';
   slide.addShape(pptx.ShapeType.roundRect, {
     ...box,
     rectRadius: Math.min(0.08, box.h * 0.22),
     fill: { color: plateColor, transparency: mode === 'dark' ? 90 : 0 },
-    line: { color: mode === 'dark' ? COLORS.white : 'D4DEE1', transparency: mode === 'dark' ? 72 : 0, width: 0.5 },
+    line: { color: mode === 'dark' ? COLORS.white : 'E1E7E9', transparency: mode === 'dark' ? 72 : 0, width: 0.5 },
   });
   const insetX = Math.min(0.06, box.w * 0.1);
   const insetY = Math.min(0.06, box.h * 0.16);

@@ -20,7 +20,7 @@ export function renderCasesSlide(pptx: PptxGenJS, proposal: ProposalDocument, as
   const boxes = columns(selectedCases.length, 1.76, 4.52);
   selectedCases.forEach((item, index) => {
     const box = boxes[index];
-    addCard(pptx, slide, box, 'light', { fill: index === 0 ? (theme === 'light' ? 'E9EEF0' : accent === COLORS.gold ? 'EAF4F7' : 'EBFAFD') : theme === 'light' ? 'F1F4F5' : COLORS.white });
+    addCard(pptx, slide, box, 'light', { fill: index === 0 ? (theme === 'light' ? 'F1F4F5' : accent === COLORS.gold ? 'EAF4F7' : 'EBFAFD') : theme === 'light' ? 'F7F9FA' : COLORS.white });
     const caseLogo = assets.caseLogos?.[item.id];
     const companyX = caseLogo ? box.x + 1.08 : box.x + 0.26;
     if (caseLogo) {

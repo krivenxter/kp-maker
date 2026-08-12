@@ -10,7 +10,7 @@ import { accentForBrand, COLORS, fontProfileForBrand, paletteForTheme, presentat
 import { flowIconPath } from '../design/productIcons';
 
 function addIconTile(pptx: PptxGenJS, slide: PptxGenJS.Slide, icon: string, x: number, y: number, size: number, mode: 'dark' | 'light' = 'dark') {
-  slide.addShape(pptx.ShapeType.roundRect, { x, y, w: size, h: size, rectRadius: 0.06, fill: { color: mode === 'light' ? 'DDE5E7' : 'FFFFFF', transparency: mode === 'light' ? 0 : 90 }, line: { color: mode === 'light' ? 'D0DCE0' : 'FFFFFF', transparency: mode === 'light' ? 0 : 100 } });
+  slide.addShape(pptx.ShapeType.roundRect, { x, y, w: size, h: size, rectRadius: 0.06, fill: { color: mode === 'light' ? 'F0F3F4' : 'FFFFFF', transparency: mode === 'light' ? 0 : 90 }, line: { color: mode === 'light' ? 'E0E7E9' : 'FFFFFF', transparency: mode === 'light' ? 0 : 100 } });
   const inner = size * 0.63;
   addImageFit(slide, icon, { x: x + (size - inner) / 2, y: y + (size - inner) / 2, w: inner, h: inner }, 'contain');
 }
@@ -151,7 +151,7 @@ export function renderPricingSlide(pptx: PptxGenJS, proposal: ProposalDocument, 
     addAdaptiveText(slide, plan.name.toUpperCase(), { x: 0.72, y: 1.68, w: 5.8, h: 0.3, ...textStyle(fonts, 'heading'), color: COLORS.ink, margin: 0, wrap: false }, { singleLine: true, minFontSize: 9 });
     if (plan.recommended) addPill(pptx, slide, 'РЕКОМЕНДУЕМ', { x: 6.88, y: 1.64, w: 1.12 }, accent, fonts);
 
-    addCard(pptx, slide, listBox, 'light', { fill: theme === 'light' ? 'F1F4F5' : COLORS.white, line: COLORS.line });
+    addCard(pptx, slide, listBox, 'light', { fill: theme === 'light' ? 'F7F9FA' : COLORS.white, line: COLORS.line });
     slide.addText('СОСТАВ ТАРИФА', { x: listBox.x + 0.24, y: listBox.y + 0.18, w: 2.4, h: 0.18, ...textStyle(fonts, 'caption'), bold: true, charSpacing: 1.1, color: '718087', margin: 0 });
     if (showDiscount) {
       addAdaptiveText(slide, 'ПОЛНАЯ СТОИМОСТЬ', { x: listBox.x + listBox.w - 3.18, y: listBox.y + 0.18, w: 1.38, h: 0.18, ...textStyle(fonts, 'caption'), color: '718087', align: 'right', margin: 0, wrap: false }, { singleLine: true, minFontSize: 6 });
@@ -168,7 +168,7 @@ export function renderPricingSlide(pptx: PptxGenJS, proposal: ProposalDocument, 
       slide.addShape(pptx.ShapeType.line, { x: listBox.x + 0.24, y: y + 0.34, w: listBox.w - 0.48, h: 0, line: { color: COLORS.line, width: 0.6 } });
     });
 
-    addCard(pptx, slide, totalsBox, 'light', { fill: plan.recommended ? (theme === 'light' ? 'E9EEF0' : accent === COLORS.gold ? 'EAF4F7' : COLORS.cyanSoft) : theme === 'light' ? 'F1F4F5' : COLORS.white, line: plan.recommended ? accent : COLORS.line });
+    addCard(pptx, slide, totalsBox, 'light', { fill: plan.recommended ? (theme === 'light' ? 'F1F4F5' : accent === COLORS.gold ? 'EAF4F7' : COLORS.cyanSoft) : theme === 'light' ? 'F7F9FA' : COLORS.white, line: plan.recommended ? accent : COLORS.line });
     slide.addText('ИТОГО ПО ТАРИФУ', { x: totalsBox.x + 0.26, y: totalsBox.y + 0.2, w: totalsBox.w - 0.52, h: 0.18, ...textStyle(fonts, 'caption'), bold: true, charSpacing: 1.1, color: '718087', margin: 0 });
     slide.addText('ЕЖЕМЕСЯЧНО', { x: totalsBox.x + 0.26, y: totalsBox.y + 0.68, w: totalsBox.w - 0.52, h: 0.18, ...textStyle(fonts, 'caption'), color: '718087', margin: 0 });
     addAdaptiveText(slide, formatMoney(totals.monthlyTotal), { x: totalsBox.x + 0.26, y: totalsBox.y + 0.94, w: totalsBox.w - 0.52, h: 0.42, ...textStyle(fonts, 'title'), color: accent, margin: 0, wrap: false }, { singleLine: true, minFontSize: 14 });
@@ -184,7 +184,7 @@ export function renderPricingSlide(pptx: PptxGenJS, proposal: ProposalDocument, 
     plans.forEach((plan, index) => {
     const box = boxes[index];
     const totals = calculatePlanTotals(plan);
-    addCard(pptx, slide, box, 'light', { fill: plan.recommended ? (theme === 'light' ? 'E9EEF0' : accent === COLORS.gold ? 'EAF4F7' : COLORS.cyanSoft) : theme === 'light' ? 'F1F4F5' : COLORS.white, line: plan.recommended ? accent : COLORS.line });
+    addCard(pptx, slide, box, 'light', { fill: plan.recommended ? (theme === 'light' ? 'F1F4F5' : accent === COLORS.gold ? 'EAF4F7' : COLORS.cyanSoft) : theme === 'light' ? 'F7F9FA' : COLORS.white, line: plan.recommended ? accent : COLORS.line });
     addAdaptiveText(slide, plan.name.toUpperCase(), { x: box.x + 0.22, y: box.y + 0.2, w: box.w - 0.44, h: 0.3, ...textStyle(fonts, 'heading'), color: COLORS.ink, margin: 0, wrap: false }, { singleLine: true, minFontSize: 8 });
     if (plan.recommended) addPill(pptx, slide, 'РЕКОМЕНДУЕМ', { x: box.x + box.w - 1.35, y: box.y + 0.16, w: 1.12 }, accent, fonts);
 
