@@ -1,0 +1,2285 @@
+{
+  "sourcePptx": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/materials/Calltouch All Products.pptx",
+  "workspace": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect",
+  "outDir": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect",
+  "generatedAt": "2026-08-11T19:40:02.520Z",
+  "slideCount": 53,
+  "slideArtifacts": [
+    {
+      "slide": 1,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-01.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-01.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-01.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-01.layout.json"
+    },
+    {
+      "slide": 2,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-02.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-02.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-02.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-02.layout.json"
+    },
+    {
+      "slide": 3,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-03.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-03.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-03.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-03.layout.json"
+    },
+    {
+      "slide": 4,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-04.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-04.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-04.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-04.layout.json"
+    },
+    {
+      "slide": 5,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-05.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-05.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-05.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-05.layout.json"
+    },
+    {
+      "slide": 6,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-06.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-06.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-06.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-06.layout.json"
+    },
+    {
+      "slide": 7,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-07.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-07.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-07.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-07.layout.json"
+    },
+    {
+      "slide": 8,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-08.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-08.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-08.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-08.layout.json"
+    },
+    {
+      "slide": 9,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-09.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-09.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-09.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-09.layout.json"
+    },
+    {
+      "slide": 10,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-10.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-10.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-10.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-10.layout.json"
+    },
+    {
+      "slide": 11,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-11.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-11.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-11.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-11.layout.json"
+    },
+    {
+      "slide": 12,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-12.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-12.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-12.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-12.layout.json"
+    },
+    {
+      "slide": 13,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-13.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-13.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-13.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-13.layout.json"
+    },
+    {
+      "slide": 14,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-14.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-14.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-14.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-14.layout.json"
+    },
+    {
+      "slide": 15,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-15.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-15.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-15.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-15.layout.json"
+    },
+    {
+      "slide": 16,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-16.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-16.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-16.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-16.layout.json"
+    },
+    {
+      "slide": 17,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-17.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-17.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-17.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-17.layout.json"
+    },
+    {
+      "slide": 18,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-18.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-18.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-18.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-18.layout.json"
+    },
+    {
+      "slide": 19,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-19.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-19.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-19.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-19.layout.json"
+    },
+    {
+      "slide": 20,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-20.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-20.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-20.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-20.layout.json"
+    },
+    {
+      "slide": 21,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-21.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-21.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-21.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-21.layout.json"
+    },
+    {
+      "slide": 22,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-22.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-22.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-22.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-22.layout.json"
+    },
+    {
+      "slide": 23,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-23.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-23.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-23.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-23.layout.json"
+    },
+    {
+      "slide": 24,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-24.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-24.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-24.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-24.layout.json"
+    },
+    {
+      "slide": 25,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-25.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-25.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-25.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-25.layout.json"
+    },
+    {
+      "slide": 26,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-26.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-26.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-26.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-26.layout.json"
+    },
+    {
+      "slide": 27,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-27.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-27.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-27.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-27.layout.json"
+    },
+    {
+      "slide": 28,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-28.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-28.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-28.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-28.layout.json"
+    },
+    {
+      "slide": 29,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-29.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-29.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-29.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-29.layout.json"
+    },
+    {
+      "slide": 30,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-30.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-30.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-30.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-30.layout.json"
+    },
+    {
+      "slide": 31,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-31.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-31.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-31.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-31.layout.json"
+    },
+    {
+      "slide": 32,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-32.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-32.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-32.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-32.layout.json"
+    },
+    {
+      "slide": 33,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-33.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-33.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-33.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-33.layout.json"
+    },
+    {
+      "slide": 34,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-34.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-34.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-34.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-34.layout.json"
+    },
+    {
+      "slide": 35,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-35.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-35.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-35.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-35.layout.json"
+    },
+    {
+      "slide": 36,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-36.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-36.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-36.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-36.layout.json"
+    },
+    {
+      "slide": 37,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-37.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-37.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-37.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-37.layout.json"
+    },
+    {
+      "slide": 38,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-38.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-38.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-38.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-38.layout.json"
+    },
+    {
+      "slide": 39,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-39.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-39.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-39.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-39.layout.json"
+    },
+    {
+      "slide": 40,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-40.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-40.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-40.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-40.layout.json"
+    },
+    {
+      "slide": 41,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-41.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-41.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-41.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-41.layout.json"
+    },
+    {
+      "slide": 42,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-42.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-42.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-42.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-42.layout.json"
+    },
+    {
+      "slide": 43,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-43.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-43.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-43.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-43.layout.json"
+    },
+    {
+      "slide": 44,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-44.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-44.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-44.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-44.layout.json"
+    },
+    {
+      "slide": 45,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-45.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-45.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-45.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-45.layout.json"
+    },
+    {
+      "slide": 46,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-46.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-46.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-46.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-46.layout.json"
+    },
+    {
+      "slide": 47,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-47.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-47.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-47.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-47.layout.json"
+    },
+    {
+      "slide": 48,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-48.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-48.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-48.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-48.layout.json"
+    },
+    {
+      "slide": 49,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-49.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-49.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-49.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-49.layout.json"
+    },
+    {
+      "slide": 50,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-50.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-50.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-50.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-50.layout.json"
+    },
+    {
+      "slide": 51,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-51.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-51.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-51.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-51.layout.json"
+    },
+    {
+      "slide": 52,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-52.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-52.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-52.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-52.layout.json"
+    },
+    {
+      "slide": 53,
+      "previewPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/source-slides/source-slide-53.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-53.png",
+      "layoutPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/layouts/source-slide-53.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-53.layout.json"
+    }
+  ],
+  "inspectPath": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/template-inspect.ndjson",
+  "inspectRelativePath": "template-inspect/template-inspect.ndjson",
+  "inspectTruncated": true,
+  "inspectMetadata": {
+    "revision": "u9gbzq",
+    "target": {
+      "id": "pr/llsewj"
+    },
+    "kind": {
+      "requested": "slide,textbox,shape,image,table,chart",
+      "tokens": [
+        "slide",
+        "textbox",
+        "shape",
+        "image",
+        "table",
+        "chart"
+      ]
+    },
+    "include": {
+      "tokens": []
+    },
+    "exclude": {
+      "tokens": []
+    },
+    "notices": []
+  },
+  "extractedMedia": [
+    {
+      "entry": "ppt/media/image213.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image213.png",
+      "relativePath": "template-inspect/assets/ppt/media/image213.png",
+      "bytes": 31672
+    },
+    {
+      "entry": "ppt/media/image214.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image214.png",
+      "relativePath": "template-inspect/assets/ppt/media/image214.png",
+      "bytes": 1610
+    },
+    {
+      "entry": "ppt/media/image282.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image282.png",
+      "relativePath": "template-inspect/assets/ppt/media/image282.png",
+      "bytes": 27839
+    },
+    {
+      "entry": "ppt/media/image1.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image1.png",
+      "relativePath": "template-inspect/assets/ppt/media/image1.png",
+      "bytes": 10198
+    },
+    {
+      "entry": "ppt/media/image2.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image2.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image2.svg",
+      "bytes": 4805
+    },
+    {
+      "entry": "ppt/media/image3.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image3.png",
+      "relativePath": "template-inspect/assets/ppt/media/image3.png",
+      "bytes": 1219306
+    },
+    {
+      "entry": "ppt/media/image4.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image4.png",
+      "relativePath": "template-inspect/assets/ppt/media/image4.png",
+      "bytes": 2316502
+    },
+    {
+      "entry": "ppt/media/image5.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image5.png",
+      "relativePath": "template-inspect/assets/ppt/media/image5.png",
+      "bytes": 21928
+    },
+    {
+      "entry": "ppt/media/image6.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image6.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image6.svg",
+      "bytes": 15519
+    },
+    {
+      "entry": "ppt/media/image7.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image7.png",
+      "relativePath": "template-inspect/assets/ppt/media/image7.png",
+      "bytes": 884243
+    },
+    {
+      "entry": "ppt/media/hdphoto1.wdp",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/hdphoto1.wdp",
+      "relativePath": "template-inspect/assets/ppt/media/hdphoto1.wdp",
+      "bytes": 92078
+    },
+    {
+      "entry": "ppt/media/hdphoto2.wdp",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/hdphoto2.wdp",
+      "relativePath": "template-inspect/assets/ppt/media/hdphoto2.wdp",
+      "bytes": 92078
+    },
+    {
+      "entry": "ppt/media/image8.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image8.png",
+      "relativePath": "template-inspect/assets/ppt/media/image8.png",
+      "bytes": 847881
+    },
+    {
+      "entry": "ppt/media/image9.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image9.png",
+      "relativePath": "template-inspect/assets/ppt/media/image9.png",
+      "bytes": 101332
+    },
+    {
+      "entry": "ppt/media/image10.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image10.png",
+      "relativePath": "template-inspect/assets/ppt/media/image10.png",
+      "bytes": 1297956
+    },
+    {
+      "entry": "ppt/media/image11.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image11.png",
+      "relativePath": "template-inspect/assets/ppt/media/image11.png",
+      "bytes": 214329
+    },
+    {
+      "entry": "ppt/media/image12.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image12.png",
+      "relativePath": "template-inspect/assets/ppt/media/image12.png",
+      "bytes": 189539
+    },
+    {
+      "entry": "ppt/media/image13.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image13.png",
+      "relativePath": "template-inspect/assets/ppt/media/image13.png",
+      "bytes": 188209
+    },
+    {
+      "entry": "ppt/media/image14.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image14.png",
+      "relativePath": "template-inspect/assets/ppt/media/image14.png",
+      "bytes": 11380
+    },
+    {
+      "entry": "ppt/media/image15.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image15.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image15.svg",
+      "bytes": 4805
+    },
+    {
+      "entry": "ppt/media/image16.jpg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image16.jpg",
+      "relativePath": "template-inspect/assets/ppt/media/image16.jpg",
+      "bytes": 239094
+    },
+    {
+      "entry": "ppt/media/image17.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image17.png",
+      "relativePath": "template-inspect/assets/ppt/media/image17.png",
+      "bytes": 97353
+    },
+    {
+      "entry": "ppt/media/image18.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image18.png",
+      "relativePath": "template-inspect/assets/ppt/media/image18.png",
+      "bytes": 11412
+    },
+    {
+      "entry": "ppt/media/image19.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image19.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image19.svg",
+      "bytes": 4805
+    },
+    {
+      "entry": "ppt/media/image20.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image20.png",
+      "relativePath": "template-inspect/assets/ppt/media/image20.png",
+      "bytes": 223332
+    },
+    {
+      "entry": "ppt/media/image21.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image21.png",
+      "relativePath": "template-inspect/assets/ppt/media/image21.png",
+      "bytes": 227252
+    },
+    {
+      "entry": "ppt/media/hdphoto3.wdp",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/hdphoto3.wdp",
+      "relativePath": "template-inspect/assets/ppt/media/hdphoto3.wdp",
+      "bytes": 213171
+    },
+    {
+      "entry": "ppt/media/image22.jpeg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image22.jpeg",
+      "relativePath": "template-inspect/assets/ppt/media/image22.jpeg",
+      "bytes": 86253
+    },
+    {
+      "entry": "ppt/media/image23.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image23.png",
+      "relativePath": "template-inspect/assets/ppt/media/image23.png",
+      "bytes": 52784
+    },
+    {
+      "entry": "ppt/media/image24.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image24.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image24.svg",
+      "bytes": 13400
+    },
+    {
+      "entry": "ppt/media/image25.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image25.png",
+      "relativePath": "template-inspect/assets/ppt/media/image25.png",
+      "bytes": 143569
+    },
+    {
+      "entry": "ppt/media/image26.jpeg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image26.jpeg",
+      "relativePath": "template-inspect/assets/ppt/media/image26.jpeg",
+      "bytes": 104250
+    },
+    {
+      "entry": "ppt/media/image27.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image27.png",
+      "relativePath": "template-inspect/assets/ppt/media/image27.png",
+      "bytes": 22278
+    },
+    {
+      "entry": "ppt/media/image28.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image28.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image28.svg",
+      "bytes": 13329
+    },
+    {
+      "entry": "ppt/media/image29.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image29.png",
+      "relativePath": "template-inspect/assets/ppt/media/image29.png",
+      "bytes": 229947
+    },
+    {
+      "entry": "ppt/media/image30.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image30.png",
+      "relativePath": "template-inspect/assets/ppt/media/image30.png",
+      "bytes": 240015
+    },
+    {
+      "entry": "ppt/media/image31.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image31.png",
+      "relativePath": "template-inspect/assets/ppt/media/image31.png",
+      "bytes": 1885
+    },
+    {
+      "entry": "ppt/media/image32.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image32.png",
+      "relativePath": "template-inspect/assets/ppt/media/image32.png",
+      "bytes": 589939
+    },
+    {
+      "entry": "ppt/media/image33.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image33.png",
+      "relativePath": "template-inspect/assets/ppt/media/image33.png",
+      "bytes": 516166
+    },
+    {
+      "entry": "ppt/media/image34.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image34.png",
+      "relativePath": "template-inspect/assets/ppt/media/image34.png",
+      "bytes": 2371
+    },
+    {
+      "entry": "ppt/media/image35.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image35.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image35.svg",
+      "bytes": 704
+    },
+    {
+      "entry": "ppt/media/image36.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image36.png",
+      "relativePath": "template-inspect/assets/ppt/media/image36.png",
+      "bytes": 207502
+    },
+    {
+      "entry": "ppt/media/image37.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image37.png",
+      "relativePath": "template-inspect/assets/ppt/media/image37.png",
+      "bytes": 378676
+    },
+    {
+      "entry": "ppt/media/hdphoto4.wdp",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/hdphoto4.wdp",
+      "relativePath": "template-inspect/assets/ppt/media/hdphoto4.wdp",
+      "bytes": 90232
+    },
+    {
+      "entry": "ppt/media/image38.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image38.png",
+      "relativePath": "template-inspect/assets/ppt/media/image38.png",
+      "bytes": 2443
+    },
+    {
+      "entry": "ppt/media/image39.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image39.png",
+      "relativePath": "template-inspect/assets/ppt/media/image39.png",
+      "bytes": 2749
+    },
+    {
+      "entry": "ppt/media/image40.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image40.png",
+      "relativePath": "template-inspect/assets/ppt/media/image40.png",
+      "bytes": 1964
+    },
+    {
+      "entry": "ppt/media/image41.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image41.png",
+      "relativePath": "template-inspect/assets/ppt/media/image41.png",
+      "bytes": 3195
+    },
+    {
+      "entry": "ppt/media/image42.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image42.png",
+      "relativePath": "template-inspect/assets/ppt/media/image42.png",
+      "bytes": 2914
+    },
+    {
+      "entry": "ppt/media/image43.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image43.png",
+      "relativePath": "template-inspect/assets/ppt/media/image43.png",
+      "bytes": 3239
+    },
+    {
+      "entry": "ppt/media/image44.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image44.png",
+      "relativePath": "template-inspect/assets/ppt/media/image44.png",
+      "bytes": 2146
+    },
+    {
+      "entry": "ppt/media/image45.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image45.png",
+      "relativePath": "template-inspect/assets/ppt/media/image45.png",
+      "bytes": 2920
+    },
+    {
+      "entry": "ppt/media/image46.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image46.png",
+      "relativePath": "template-inspect/assets/ppt/media/image46.png",
+      "bytes": 2384
+    },
+    {
+      "entry": "ppt/media/image47.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image47.png",
+      "relativePath": "template-inspect/assets/ppt/media/image47.png",
+      "bytes": 2289
+    },
+    {
+      "entry": "ppt/media/image48.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image48.png",
+      "relativePath": "template-inspect/assets/ppt/media/image48.png",
+      "bytes": 132639
+    },
+    {
+      "entry": "ppt/media/image49.jpeg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image49.jpeg",
+      "relativePath": "template-inspect/assets/ppt/media/image49.jpeg",
+      "bytes": 240350
+    },
+    {
+      "entry": "ppt/media/image50.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image50.png",
+      "relativePath": "template-inspect/assets/ppt/media/image50.png",
+      "bytes": 201340
+    },
+    {
+      "entry": "ppt/media/image51.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image51.png",
+      "relativePath": "template-inspect/assets/ppt/media/image51.png",
+      "bytes": 2780
+    },
+    {
+      "entry": "ppt/media/image52.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image52.png",
+      "relativePath": "template-inspect/assets/ppt/media/image52.png",
+      "bytes": 1333
+    },
+    {
+      "entry": "ppt/media/image53.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image53.png",
+      "relativePath": "template-inspect/assets/ppt/media/image53.png",
+      "bytes": 2490
+    },
+    {
+      "entry": "ppt/media/image54.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image54.png",
+      "relativePath": "template-inspect/assets/ppt/media/image54.png",
+      "bytes": 132884
+    },
+    {
+      "entry": "ppt/media/image55.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image55.png",
+      "relativePath": "template-inspect/assets/ppt/media/image55.png",
+      "bytes": 1840892
+    },
+    {
+      "entry": "ppt/media/image56.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image56.png",
+      "relativePath": "template-inspect/assets/ppt/media/image56.png",
+      "bytes": 1817
+    },
+    {
+      "entry": "ppt/media/image57.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image57.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image57.svg",
+      "bytes": 2220
+    },
+    {
+      "entry": "ppt/media/image58.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image58.png",
+      "relativePath": "template-inspect/assets/ppt/media/image58.png",
+      "bytes": 1544
+    },
+    {
+      "entry": "ppt/media/image59.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image59.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image59.svg",
+      "bytes": 2603
+    },
+    {
+      "entry": "ppt/media/image60.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image60.png",
+      "relativePath": "template-inspect/assets/ppt/media/image60.png",
+      "bytes": 1165
+    },
+    {
+      "entry": "ppt/media/image61.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image61.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image61.svg",
+      "bytes": 1815
+    },
+    {
+      "entry": "ppt/media/image62.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image62.png",
+      "relativePath": "template-inspect/assets/ppt/media/image62.png",
+      "bytes": 875
+    },
+    {
+      "entry": "ppt/media/image63.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image63.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image63.svg",
+      "bytes": 2093
+    },
+    {
+      "entry": "ppt/media/image64.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image64.png",
+      "relativePath": "template-inspect/assets/ppt/media/image64.png",
+      "bytes": 657
+    },
+    {
+      "entry": "ppt/media/image65.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image65.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image65.svg",
+      "bytes": 1916
+    },
+    {
+      "entry": "ppt/media/image66.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image66.png",
+      "relativePath": "template-inspect/assets/ppt/media/image66.png",
+      "bytes": 1144
+    },
+    {
+      "entry": "ppt/media/image67.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image67.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image67.svg",
+      "bytes": 2987
+    },
+    {
+      "entry": "ppt/media/image68.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image68.png",
+      "relativePath": "template-inspect/assets/ppt/media/image68.png",
+      "bytes": 1142
+    },
+    {
+      "entry": "ppt/media/image69.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image69.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image69.svg",
+      "bytes": 1409
+    },
+    {
+      "entry": "ppt/media/image70.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image70.png",
+      "relativePath": "template-inspect/assets/ppt/media/image70.png",
+      "bytes": 1435
+    },
+    {
+      "entry": "ppt/media/image71.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image71.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image71.svg",
+      "bytes": 1155
+    },
+    {
+      "entry": "ppt/media/image72.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image72.png",
+      "relativePath": "template-inspect/assets/ppt/media/image72.png",
+      "bytes": 472
+    },
+    {
+      "entry": "ppt/media/image73.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image73.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image73.svg",
+      "bytes": 897
+    },
+    {
+      "entry": "ppt/media/image74.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image74.png",
+      "relativePath": "template-inspect/assets/ppt/media/image74.png",
+      "bytes": 1394
+    },
+    {
+      "entry": "ppt/media/image75.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image75.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image75.svg",
+      "bytes": 820
+    },
+    {
+      "entry": "ppt/media/image76.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image76.png",
+      "relativePath": "template-inspect/assets/ppt/media/image76.png",
+      "bytes": 1812
+    },
+    {
+      "entry": "ppt/media/image77.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image77.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image77.svg",
+      "bytes": 2992
+    },
+    {
+      "entry": "ppt/media/image78.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image78.png",
+      "relativePath": "template-inspect/assets/ppt/media/image78.png",
+      "bytes": 1055
+    },
+    {
+      "entry": "ppt/media/image79.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image79.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image79.svg",
+      "bytes": 781
+    },
+    {
+      "entry": "ppt/media/image80.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image80.png",
+      "relativePath": "template-inspect/assets/ppt/media/image80.png",
+      "bytes": 1526
+    },
+    {
+      "entry": "ppt/media/image81.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image81.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image81.svg",
+      "bytes": 2021
+    },
+    {
+      "entry": "ppt/media/image82.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image82.png",
+      "relativePath": "template-inspect/assets/ppt/media/image82.png",
+      "bytes": 1044
+    },
+    {
+      "entry": "ppt/media/image83.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image83.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image83.svg",
+      "bytes": 1006
+    },
+    {
+      "entry": "ppt/media/image215.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image215.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image215.svg",
+      "bytes": 2607
+    },
+    {
+      "entry": "ppt/media/image216.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image216.png",
+      "relativePath": "template-inspect/assets/ppt/media/image216.png",
+      "bytes": 1456
+    },
+    {
+      "entry": "ppt/media/image217.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image217.png",
+      "relativePath": "template-inspect/assets/ppt/media/image217.png",
+      "bytes": 1852
+    },
+    {
+      "entry": "ppt/media/image218.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image218.png",
+      "relativePath": "template-inspect/assets/ppt/media/image218.png",
+      "bytes": 1949
+    },
+    {
+      "entry": "ppt/media/image219.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image219.png",
+      "relativePath": "template-inspect/assets/ppt/media/image219.png",
+      "bytes": 3417
+    },
+    {
+      "entry": "ppt/media/image220.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image220.png",
+      "relativePath": "template-inspect/assets/ppt/media/image220.png",
+      "bytes": 3722
+    },
+    {
+      "entry": "ppt/media/image221.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image221.png",
+      "relativePath": "template-inspect/assets/ppt/media/image221.png",
+      "bytes": 3278
+    },
+    {
+      "entry": "ppt/media/image222.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image222.png",
+      "relativePath": "template-inspect/assets/ppt/media/image222.png",
+      "bytes": 2561
+    },
+    {
+      "entry": "ppt/media/image223.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image223.png",
+      "relativePath": "template-inspect/assets/ppt/media/image223.png",
+      "bytes": 4289
+    },
+    {
+      "entry": "ppt/media/image224.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image224.png",
+      "relativePath": "template-inspect/assets/ppt/media/image224.png",
+      "bytes": 1989
+    },
+    {
+      "entry": "ppt/media/image225.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image225.png",
+      "relativePath": "template-inspect/assets/ppt/media/image225.png",
+      "bytes": 2645
+    },
+    {
+      "entry": "ppt/media/image226.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image226.png",
+      "relativePath": "template-inspect/assets/ppt/media/image226.png",
+      "bytes": 2434
+    },
+    {
+      "entry": "ppt/media/image227.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image227.png",
+      "relativePath": "template-inspect/assets/ppt/media/image227.png",
+      "bytes": 484242
+    },
+    {
+      "entry": "ppt/media/image228.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image228.png",
+      "relativePath": "template-inspect/assets/ppt/media/image228.png",
+      "bytes": 1155
+    },
+    {
+      "entry": "ppt/media/image229.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image229.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image229.svg",
+      "bytes": 3712
+    },
+    {
+      "entry": "ppt/media/image230.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image230.png",
+      "relativePath": "template-inspect/assets/ppt/media/image230.png",
+      "bytes": 3666
+    },
+    {
+      "entry": "ppt/media/image231.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image231.png",
+      "relativePath": "template-inspect/assets/ppt/media/image231.png",
+      "bytes": 899910
+    },
+    {
+      "entry": "ppt/media/image232.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image232.png",
+      "relativePath": "template-inspect/assets/ppt/media/image232.png",
+      "bytes": 1619
+    },
+    {
+      "entry": "ppt/media/image233.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image233.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image233.svg",
+      "bytes": 3058
+    },
+    {
+      "entry": "ppt/media/image234.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image234.png",
+      "relativePath": "template-inspect/assets/ppt/media/image234.png",
+      "bytes": 4396
+    },
+    {
+      "entry": "ppt/media/image235.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image235.png",
+      "relativePath": "template-inspect/assets/ppt/media/image235.png",
+      "bytes": 266677
+    },
+    {
+      "entry": "ppt/media/image236.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image236.png",
+      "relativePath": "template-inspect/assets/ppt/media/image236.png",
+      "bytes": 2332
+    },
+    {
+      "entry": "ppt/media/image237.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image237.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image237.svg",
+      "bytes": 1872
+    },
+    {
+      "entry": "ppt/media/image238.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image238.png",
+      "relativePath": "template-inspect/assets/ppt/media/image238.png",
+      "bytes": 2826
+    },
+    {
+      "entry": "ppt/media/image239.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image239.png",
+      "relativePath": "template-inspect/assets/ppt/media/image239.png",
+      "bytes": 2105
+    },
+    {
+      "entry": "ppt/media/image240.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image240.png",
+      "relativePath": "template-inspect/assets/ppt/media/image240.png",
+      "bytes": 2237
+    },
+    {
+      "entry": "ppt/media/image241.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image241.png",
+      "relativePath": "template-inspect/assets/ppt/media/image241.png",
+      "bytes": 1749041
+    },
+    {
+      "entry": "ppt/media/image242.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image242.png",
+      "relativePath": "template-inspect/assets/ppt/media/image242.png",
+      "bytes": 5783
+    },
+    {
+      "entry": "ppt/media/image243.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image243.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image243.svg",
+      "bytes": 458
+    },
+    {
+      "entry": "ppt/media/image244.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image244.png",
+      "relativePath": "template-inspect/assets/ppt/media/image244.png",
+      "bytes": 3402
+    },
+    {
+      "entry": "ppt/media/image245.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image245.png",
+      "relativePath": "template-inspect/assets/ppt/media/image245.png",
+      "bytes": 5002
+    },
+    {
+      "entry": "ppt/media/image246.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image246.png",
+      "relativePath": "template-inspect/assets/ppt/media/image246.png",
+      "bytes": 1087
+    },
+    {
+      "entry": "ppt/media/image247.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image247.png",
+      "relativePath": "template-inspect/assets/ppt/media/image247.png",
+      "bytes": 2195
+    },
+    {
+      "entry": "ppt/media/image248.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image248.png",
+      "relativePath": "template-inspect/assets/ppt/media/image248.png",
+      "bytes": 9355
+    },
+    {
+      "entry": "ppt/media/image249.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image249.png",
+      "relativePath": "template-inspect/assets/ppt/media/image249.png",
+      "bytes": 1043478
+    },
+    {
+      "entry": "ppt/media/image250.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image250.png",
+      "relativePath": "template-inspect/assets/ppt/media/image250.png",
+      "bytes": 38369
+    },
+    {
+      "entry": "ppt/media/image251.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image251.png",
+      "relativePath": "template-inspect/assets/ppt/media/image251.png",
+      "bytes": 267980
+    },
+    {
+      "entry": "ppt/media/image252.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image252.png",
+      "relativePath": "template-inspect/assets/ppt/media/image252.png",
+      "bytes": 1340
+    },
+    {
+      "entry": "ppt/media/image253.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image253.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image253.svg",
+      "bytes": 5055
+    },
+    {
+      "entry": "ppt/media/image254.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image254.png",
+      "relativePath": "template-inspect/assets/ppt/media/image254.png",
+      "bytes": 4120
+    },
+    {
+      "entry": "ppt/media/image255.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image255.png",
+      "relativePath": "template-inspect/assets/ppt/media/image255.png",
+      "bytes": 4142
+    },
+    {
+      "entry": "ppt/media/image256.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image256.png",
+      "relativePath": "template-inspect/assets/ppt/media/image256.png",
+      "bytes": 4828
+    },
+    {
+      "entry": "ppt/media/image257.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image257.png",
+      "relativePath": "template-inspect/assets/ppt/media/image257.png",
+      "bytes": 4812
+    },
+    {
+      "entry": "ppt/media/image258.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image258.png",
+      "relativePath": "template-inspect/assets/ppt/media/image258.png",
+      "bytes": 248005
+    },
+    {
+      "entry": "ppt/media/image259.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image259.png",
+      "relativePath": "template-inspect/assets/ppt/media/image259.png",
+      "bytes": 41576
+    },
+    {
+      "entry": "ppt/media/image260.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image260.png",
+      "relativePath": "template-inspect/assets/ppt/media/image260.png",
+      "bytes": 34805
+    },
+    {
+      "entry": "ppt/media/image143.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image143.png",
+      "relativePath": "template-inspect/assets/ppt/media/image143.png",
+      "bytes": 4283
+    },
+    {
+      "entry": "ppt/media/image261.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image261.png",
+      "relativePath": "template-inspect/assets/ppt/media/image261.png",
+      "bytes": 1478550
+    },
+    {
+      "entry": "ppt/media/image144.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image144.png",
+      "relativePath": "template-inspect/assets/ppt/media/image144.png",
+      "bytes": 2743
+    },
+    {
+      "entry": "ppt/media/image262.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image262.png",
+      "relativePath": "template-inspect/assets/ppt/media/image262.png",
+      "bytes": 1312
+    },
+    {
+      "entry": "ppt/media/image263.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image263.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image263.svg",
+      "bytes": 1409
+    },
+    {
+      "entry": "ppt/media/image264.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image264.png",
+      "relativePath": "template-inspect/assets/ppt/media/image264.png",
+      "bytes": 3128
+    },
+    {
+      "entry": "ppt/media/image265.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image265.png",
+      "relativePath": "template-inspect/assets/ppt/media/image265.png",
+      "bytes": 2671338
+    },
+    {
+      "entry": "ppt/media/image266.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image266.png",
+      "relativePath": "template-inspect/assets/ppt/media/image266.png",
+      "bytes": 2855
+    },
+    {
+      "entry": "ppt/media/image267.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image267.png",
+      "relativePath": "template-inspect/assets/ppt/media/image267.png",
+      "bytes": 4157
+    },
+    {
+      "entry": "ppt/media/image268.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image268.png",
+      "relativePath": "template-inspect/assets/ppt/media/image268.png",
+      "bytes": 5606
+    },
+    {
+      "entry": "ppt/media/image269.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image269.png",
+      "relativePath": "template-inspect/assets/ppt/media/image269.png",
+      "bytes": 935
+    },
+    {
+      "entry": "ppt/media/image270.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image270.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image270.svg",
+      "bytes": 1622
+    },
+    {
+      "entry": "ppt/media/image271.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image271.png",
+      "relativePath": "template-inspect/assets/ppt/media/image271.png",
+      "bytes": 553734
+    },
+    {
+      "entry": "ppt/media/image272.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image272.png",
+      "relativePath": "template-inspect/assets/ppt/media/image272.png",
+      "bytes": 14359
+    },
+    {
+      "entry": "ppt/media/image273.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image273.png",
+      "relativePath": "template-inspect/assets/ppt/media/image273.png",
+      "bytes": 6904
+    },
+    {
+      "entry": "ppt/media/image274.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image274.png",
+      "relativePath": "template-inspect/assets/ppt/media/image274.png",
+      "bytes": 21624
+    },
+    {
+      "entry": "ppt/media/image275.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image275.png",
+      "relativePath": "template-inspect/assets/ppt/media/image275.png",
+      "bytes": 1576
+    },
+    {
+      "entry": "ppt/media/image276.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image276.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image276.svg",
+      "bytes": 1155
+    },
+    {
+      "entry": "ppt/media/image277.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image277.png",
+      "relativePath": "template-inspect/assets/ppt/media/image277.png",
+      "bytes": 41619
+    },
+    {
+      "entry": "ppt/media/image278.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image278.png",
+      "relativePath": "template-inspect/assets/ppt/media/image278.png",
+      "bytes": 24211
+    },
+    {
+      "entry": "ppt/media/image279.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image279.png",
+      "relativePath": "template-inspect/assets/ppt/media/image279.png",
+      "bytes": 442848
+    },
+    {
+      "entry": "ppt/media/image280.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image280.png",
+      "relativePath": "template-inspect/assets/ppt/media/image280.png",
+      "bytes": 15161
+    },
+    {
+      "entry": "ppt/media/image281.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image281.png",
+      "relativePath": "template-inspect/assets/ppt/media/image281.png",
+      "bytes": 31857
+    },
+    {
+      "entry": "ppt/media/image138.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image138.png",
+      "relativePath": "template-inspect/assets/ppt/media/image138.png",
+      "bytes": 3003086
+    },
+    {
+      "entry": "ppt/media/image283.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image283.png",
+      "relativePath": "template-inspect/assets/ppt/media/image283.png",
+      "bytes": 535
+    },
+    {
+      "entry": "ppt/media/image284.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image284.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image284.svg",
+      "bytes": 897
+    },
+    {
+      "entry": "ppt/media/image285.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image285.png",
+      "relativePath": "template-inspect/assets/ppt/media/image285.png",
+      "bytes": 6462
+    },
+    {
+      "entry": "ppt/media/image286.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image286.png",
+      "relativePath": "template-inspect/assets/ppt/media/image286.png",
+      "bytes": 297486
+    },
+    {
+      "entry": "ppt/media/image287.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image287.png",
+      "relativePath": "template-inspect/assets/ppt/media/image287.png",
+      "bytes": 123158
+    },
+    {
+      "entry": "ppt/media/image288.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image288.png",
+      "relativePath": "template-inspect/assets/ppt/media/image288.png",
+      "bytes": 30342
+    },
+    {
+      "entry": "ppt/media/image289.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image289.png",
+      "relativePath": "template-inspect/assets/ppt/media/image289.png",
+      "bytes": 46881
+    },
+    {
+      "entry": "ppt/media/image290.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image290.png",
+      "relativePath": "template-inspect/assets/ppt/media/image290.png",
+      "bytes": 1229
+    },
+    {
+      "entry": "ppt/media/image291.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image291.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image291.svg",
+      "bytes": 801
+    },
+    {
+      "entry": "ppt/media/image292.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image292.png",
+      "relativePath": "template-inspect/assets/ppt/media/image292.png",
+      "bytes": 1491611
+    },
+    {
+      "entry": "ppt/media/image293.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image293.png",
+      "relativePath": "template-inspect/assets/ppt/media/image293.png",
+      "bytes": 64689
+    },
+    {
+      "entry": "ppt/media/image294.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image294.png",
+      "relativePath": "template-inspect/assets/ppt/media/image294.png",
+      "bytes": 35850
+    },
+    {
+      "entry": "ppt/media/image295.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image295.png",
+      "relativePath": "template-inspect/assets/ppt/media/image295.png",
+      "bytes": 27515
+    },
+    {
+      "entry": "ppt/media/image296.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image296.png",
+      "relativePath": "template-inspect/assets/ppt/media/image296.png",
+      "bytes": 823164
+    },
+    {
+      "entry": "ppt/media/image297.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image297.png",
+      "relativePath": "template-inspect/assets/ppt/media/image297.png",
+      "bytes": 88952
+    },
+    {
+      "entry": "ppt/media/image137.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image137.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image137.svg",
+      "bytes": 1256
+    },
+    {
+      "entry": "ppt/media/image136.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image136.png",
+      "relativePath": "template-inspect/assets/ppt/media/image136.png",
+      "bytes": 1721
+    },
+    {
+      "entry": "ppt/media/image145.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image145.png",
+      "relativePath": "template-inspect/assets/ppt/media/image145.png",
+      "bytes": 5289
+    },
+    {
+      "entry": "ppt/media/image146.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image146.png",
+      "relativePath": "template-inspect/assets/ppt/media/image146.png",
+      "bytes": 4467
+    },
+    {
+      "entry": "ppt/media/image147.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image147.png",
+      "relativePath": "template-inspect/assets/ppt/media/image147.png",
+      "bytes": 3392
+    },
+    {
+      "entry": "ppt/media/image148.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image148.png",
+      "relativePath": "template-inspect/assets/ppt/media/image148.png",
+      "bytes": 5309
+    },
+    {
+      "entry": "ppt/media/image149.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image149.png",
+      "relativePath": "template-inspect/assets/ppt/media/image149.png",
+      "bytes": 4003
+    },
+    {
+      "entry": "ppt/media/image150.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image150.png",
+      "relativePath": "template-inspect/assets/ppt/media/image150.png",
+      "bytes": 1271
+    },
+    {
+      "entry": "ppt/media/image151.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image151.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image151.svg",
+      "bytes": 1781
+    },
+    {
+      "entry": "ppt/media/image152.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image152.png",
+      "relativePath": "template-inspect/assets/ppt/media/image152.png",
+      "bytes": 2137464
+    },
+    {
+      "entry": "ppt/media/image135.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image135.png",
+      "relativePath": "template-inspect/assets/ppt/media/image135.png",
+      "bytes": 3493
+    },
+    {
+      "entry": "ppt/media/image134.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image134.png",
+      "relativePath": "template-inspect/assets/ppt/media/image134.png",
+      "bytes": 2363
+    },
+    {
+      "entry": "ppt/media/image133.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image133.png",
+      "relativePath": "template-inspect/assets/ppt/media/image133.png",
+      "bytes": 3578
+    },
+    {
+      "entry": "ppt/media/image132.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image132.png",
+      "relativePath": "template-inspect/assets/ppt/media/image132.png",
+      "bytes": 1316346
+    },
+    {
+      "entry": "ppt/media/image131.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image131.png",
+      "relativePath": "template-inspect/assets/ppt/media/image131.png",
+      "bytes": 2581636
+    },
+    {
+      "entry": "ppt/media/image130.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image130.png",
+      "relativePath": "template-inspect/assets/ppt/media/image130.png",
+      "bytes": 2377
+    },
+    {
+      "entry": "ppt/media/image129.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image129.png",
+      "relativePath": "template-inspect/assets/ppt/media/image129.png",
+      "bytes": 4564
+    },
+    {
+      "entry": "ppt/media/image128.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image128.png",
+      "relativePath": "template-inspect/assets/ppt/media/image128.png",
+      "bytes": 5228
+    },
+    {
+      "entry": "ppt/media/image127.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image127.png",
+      "relativePath": "template-inspect/assets/ppt/media/image127.png",
+      "bytes": 4987
+    },
+    {
+      "entry": "ppt/media/image126.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image126.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image126.svg",
+      "bytes": 779
+    },
+    {
+      "entry": "ppt/media/image125.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image125.png",
+      "relativePath": "template-inspect/assets/ppt/media/image125.png",
+      "bytes": 643
+    },
+    {
+      "entry": "ppt/media/image124.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image124.png",
+      "relativePath": "template-inspect/assets/ppt/media/image124.png",
+      "bytes": 3092
+    },
+    {
+      "entry": "ppt/media/image123.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image123.png",
+      "relativePath": "template-inspect/assets/ppt/media/image123.png",
+      "bytes": 4049
+    },
+    {
+      "entry": "ppt/media/image122.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image122.png",
+      "relativePath": "template-inspect/assets/ppt/media/image122.png",
+      "bytes": 3549
+    },
+    {
+      "entry": "ppt/media/image121.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image121.png",
+      "relativePath": "template-inspect/assets/ppt/media/image121.png",
+      "bytes": 32379
+    },
+    {
+      "entry": "ppt/media/image120.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image120.png",
+      "relativePath": "template-inspect/assets/ppt/media/image120.png",
+      "bytes": 32300
+    },
+    {
+      "entry": "ppt/media/image119.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image119.png",
+      "relativePath": "template-inspect/assets/ppt/media/image119.png",
+      "bytes": 141864
+    },
+    {
+      "entry": "ppt/media/image118.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image118.png",
+      "relativePath": "template-inspect/assets/ppt/media/image118.png",
+      "bytes": 2115419
+    },
+    {
+      "entry": "ppt/media/image117.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image117.png",
+      "relativePath": "template-inspect/assets/ppt/media/image117.png",
+      "bytes": 2787
+    },
+    {
+      "entry": "ppt/media/image116.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image116.png",
+      "relativePath": "template-inspect/assets/ppt/media/image116.png",
+      "bytes": 3487
+    },
+    {
+      "entry": "ppt/media/image115.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image115.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image115.svg",
+      "bytes": 2990
+    },
+    {
+      "entry": "ppt/media/image114.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image114.png",
+      "relativePath": "template-inspect/assets/ppt/media/image114.png",
+      "bytes": 2049
+    },
+    {
+      "entry": "ppt/media/image113.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image113.png",
+      "relativePath": "template-inspect/assets/ppt/media/image113.png",
+      "bytes": 2249
+    },
+    {
+      "entry": "ppt/media/image112.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image112.png",
+      "relativePath": "template-inspect/assets/ppt/media/image112.png",
+      "bytes": 14131
+    },
+    {
+      "entry": "ppt/media/image111.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image111.png",
+      "relativePath": "template-inspect/assets/ppt/media/image111.png",
+      "bytes": 5753
+    },
+    {
+      "entry": "ppt/media/image110.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image110.png",
+      "relativePath": "template-inspect/assets/ppt/media/image110.png",
+      "bytes": 16099
+    },
+    {
+      "entry": "ppt/media/image109.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image109.png",
+      "relativePath": "template-inspect/assets/ppt/media/image109.png",
+      "bytes": 2407733
+    },
+    {
+      "entry": "ppt/media/image108.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image108.png",
+      "relativePath": "template-inspect/assets/ppt/media/image108.png",
+      "bytes": 4326
+    },
+    {
+      "entry": "ppt/media/image107.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image107.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image107.svg",
+      "bytes": 814
+    },
+    {
+      "entry": "ppt/media/image106.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image106.png",
+      "relativePath": "template-inspect/assets/ppt/media/image106.png",
+      "bytes": 1516
+    },
+    {
+      "entry": "ppt/media/image105.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image105.png",
+      "relativePath": "template-inspect/assets/ppt/media/image105.png",
+      "bytes": 1867
+    },
+    {
+      "entry": "ppt/media/image104.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image104.png",
+      "relativePath": "template-inspect/assets/ppt/media/image104.png",
+      "bytes": 2687
+    },
+    {
+      "entry": "ppt/media/image103.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image103.png",
+      "relativePath": "template-inspect/assets/ppt/media/image103.png",
+      "bytes": 2101
+    },
+    {
+      "entry": "ppt/media/image102.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image102.png",
+      "relativePath": "template-inspect/assets/ppt/media/image102.png",
+      "bytes": 2315
+    },
+    {
+      "entry": "ppt/media/image101.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image101.png",
+      "relativePath": "template-inspect/assets/ppt/media/image101.png",
+      "bytes": 3855
+    },
+    {
+      "entry": "ppt/media/image100.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image100.png",
+      "relativePath": "template-inspect/assets/ppt/media/image100.png",
+      "bytes": 3867
+    },
+    {
+      "entry": "ppt/media/image99.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image99.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image99.svg",
+      "bytes": 776
+    },
+    {
+      "entry": "ppt/media/image98.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image98.png",
+      "relativePath": "template-inspect/assets/ppt/media/image98.png",
+      "bytes": 1627
+    },
+    {
+      "entry": "ppt/media/image97.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image97.png",
+      "relativePath": "template-inspect/assets/ppt/media/image97.png",
+      "bytes": 3747
+    },
+    {
+      "entry": "ppt/media/image96.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image96.png",
+      "relativePath": "template-inspect/assets/ppt/media/image96.png",
+      "bytes": 4234
+    },
+    {
+      "entry": "ppt/media/image95.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image95.png",
+      "relativePath": "template-inspect/assets/ppt/media/image95.png",
+      "bytes": 2064
+    },
+    {
+      "entry": "ppt/media/image94.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image94.png",
+      "relativePath": "template-inspect/assets/ppt/media/image94.png",
+      "bytes": 914294
+    },
+    {
+      "entry": "ppt/media/image93.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image93.png",
+      "relativePath": "template-inspect/assets/ppt/media/image93.png",
+      "bytes": 694
+    },
+    {
+      "entry": "ppt/media/image92.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image92.png",
+      "relativePath": "template-inspect/assets/ppt/media/image92.png",
+      "bytes": 1322
+    },
+    {
+      "entry": "ppt/media/image91.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image91.png",
+      "relativePath": "template-inspect/assets/ppt/media/image91.png",
+      "bytes": 2219
+    },
+    {
+      "entry": "ppt/media/image90.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image90.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image90.svg",
+      "bytes": 1781
+    },
+    {
+      "entry": "ppt/media/image139.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image139.png",
+      "relativePath": "template-inspect/assets/ppt/media/image139.png",
+      "bytes": 142991
+    },
+    {
+      "entry": "ppt/media/image89.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image89.png",
+      "relativePath": "template-inspect/assets/ppt/media/image89.png",
+      "bytes": 1123
+    },
+    {
+      "entry": "ppt/media/image88.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image88.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image88.svg",
+      "bytes": 571
+    },
+    {
+      "entry": "ppt/media/image87.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image87.png",
+      "relativePath": "template-inspect/assets/ppt/media/image87.png",
+      "bytes": 1171
+    },
+    {
+      "entry": "ppt/media/image86.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image86.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image86.svg",
+      "bytes": 1256
+    },
+    {
+      "entry": "ppt/media/image85.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image85.png",
+      "relativePath": "template-inspect/assets/ppt/media/image85.png",
+      "bytes": 1598
+    },
+    {
+      "entry": "ppt/media/image84.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image84.png",
+      "relativePath": "template-inspect/assets/ppt/media/image84.png",
+      "bytes": 1544
+    },
+    {
+      "entry": "ppt/media/image153.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image153.png",
+      "relativePath": "template-inspect/assets/ppt/media/image153.png",
+      "bytes": 2215
+    },
+    {
+      "entry": "ppt/media/image154.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image154.png",
+      "relativePath": "template-inspect/assets/ppt/media/image154.png",
+      "bytes": 3714
+    },
+    {
+      "entry": "ppt/media/image155.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image155.png",
+      "relativePath": "template-inspect/assets/ppt/media/image155.png",
+      "bytes": 98935
+    },
+    {
+      "entry": "ppt/media/image156.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image156.png",
+      "relativePath": "template-inspect/assets/ppt/media/image156.png",
+      "bytes": 28892
+    },
+    {
+      "entry": "ppt/media/image157.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image157.png",
+      "relativePath": "template-inspect/assets/ppt/media/image157.png",
+      "bytes": 37377
+    },
+    {
+      "entry": "ppt/media/image158.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image158.png",
+      "relativePath": "template-inspect/assets/ppt/media/image158.png",
+      "bytes": 2729
+    },
+    {
+      "entry": "ppt/media/image159.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image159.png",
+      "relativePath": "template-inspect/assets/ppt/media/image159.png",
+      "bytes": 3850
+    },
+    {
+      "entry": "ppt/media/image160.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image160.png",
+      "relativePath": "template-inspect/assets/ppt/media/image160.png",
+      "bytes": 1845
+    },
+    {
+      "entry": "ppt/media/image161.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image161.png",
+      "relativePath": "template-inspect/assets/ppt/media/image161.png",
+      "bytes": 4653
+    },
+    {
+      "entry": "ppt/media/image162.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image162.png",
+      "relativePath": "template-inspect/assets/ppt/media/image162.png",
+      "bytes": 2814
+    },
+    {
+      "entry": "ppt/media/image163.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image163.png",
+      "relativePath": "template-inspect/assets/ppt/media/image163.png",
+      "bytes": 4518
+    },
+    {
+      "entry": "ppt/media/image164.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image164.png",
+      "relativePath": "template-inspect/assets/ppt/media/image164.png",
+      "bytes": 4052
+    },
+    {
+      "entry": "ppt/media/image165.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image165.png",
+      "relativePath": "template-inspect/assets/ppt/media/image165.png",
+      "bytes": 1450
+    },
+    {
+      "entry": "ppt/media/image166.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image166.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image166.svg",
+      "bytes": 785
+    },
+    {
+      "entry": "ppt/media/image167.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image167.png",
+      "relativePath": "template-inspect/assets/ppt/media/image167.png",
+      "bytes": 2210469
+    },
+    {
+      "entry": "ppt/media/image168.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image168.png",
+      "relativePath": "template-inspect/assets/ppt/media/image168.png",
+      "bytes": 32102
+    },
+    {
+      "entry": "ppt/media/image169.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image169.png",
+      "relativePath": "template-inspect/assets/ppt/media/image169.png",
+      "bytes": 85001
+    },
+    {
+      "entry": "ppt/media/image170.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image170.png",
+      "relativePath": "template-inspect/assets/ppt/media/image170.png",
+      "bytes": 12059
+    },
+    {
+      "entry": "ppt/media/image171.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image171.png",
+      "relativePath": "template-inspect/assets/ppt/media/image171.png",
+      "bytes": 190196
+    },
+    {
+      "entry": "ppt/media/image172.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image172.png",
+      "relativePath": "template-inspect/assets/ppt/media/image172.png",
+      "bytes": 37434
+    },
+    {
+      "entry": "ppt/media/image173.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image173.png",
+      "relativePath": "template-inspect/assets/ppt/media/image173.png",
+      "bytes": 4487
+    },
+    {
+      "entry": "ppt/media/image174.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image174.png",
+      "relativePath": "template-inspect/assets/ppt/media/image174.png",
+      "bytes": 37572
+    },
+    {
+      "entry": "ppt/media/image175.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image175.png",
+      "relativePath": "template-inspect/assets/ppt/media/image175.png",
+      "bytes": 4457
+    },
+    {
+      "entry": "ppt/media/image176.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image176.png",
+      "relativePath": "template-inspect/assets/ppt/media/image176.png",
+      "bytes": 1909
+    },
+    {
+      "entry": "ppt/media/image177.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image177.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image177.svg",
+      "bytes": 8342
+    },
+    {
+      "entry": "ppt/media/image178.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image178.png",
+      "relativePath": "template-inspect/assets/ppt/media/image178.png",
+      "bytes": 3745931
+    },
+    {
+      "entry": "ppt/media/image140.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image140.png",
+      "relativePath": "template-inspect/assets/ppt/media/image140.png",
+      "bytes": 40869
+    },
+    {
+      "entry": "ppt/media/image179.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image179.png",
+      "relativePath": "template-inspect/assets/ppt/media/image179.png",
+      "bytes": 3684
+    },
+    {
+      "entry": "ppt/media/image180.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image180.png",
+      "relativePath": "template-inspect/assets/ppt/media/image180.png",
+      "bytes": 4895
+    },
+    {
+      "entry": "ppt/media/image181.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image181.png",
+      "relativePath": "template-inspect/assets/ppt/media/image181.png",
+      "bytes": 1686
+    },
+    {
+      "entry": "ppt/media/image182.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image182.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image182.svg",
+      "bytes": 2204
+    },
+    {
+      "entry": "ppt/media/image183.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image183.png",
+      "relativePath": "template-inspect/assets/ppt/media/image183.png",
+      "bytes": 2655890
+    },
+    {
+      "entry": "ppt/media/image184.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image184.png",
+      "relativePath": "template-inspect/assets/ppt/media/image184.png",
+      "bytes": 6806
+    },
+    {
+      "entry": "ppt/media/image185.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image185.png",
+      "relativePath": "template-inspect/assets/ppt/media/image185.png",
+      "bytes": 17079
+    },
+    {
+      "entry": "ppt/media/image186.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image186.png",
+      "relativePath": "template-inspect/assets/ppt/media/image186.png",
+      "bytes": 3645
+    },
+    {
+      "entry": "ppt/media/image187.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image187.png",
+      "relativePath": "template-inspect/assets/ppt/media/image187.png",
+      "bytes": 61374
+    },
+    {
+      "entry": "ppt/media/image188.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image188.png",
+      "relativePath": "template-inspect/assets/ppt/media/image188.png",
+      "bytes": 2550
+    },
+    {
+      "entry": "ppt/media/image189.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image189.png",
+      "relativePath": "template-inspect/assets/ppt/media/image189.png",
+      "bytes": 2035
+    },
+    {
+      "entry": "ppt/media/image190.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image190.png",
+      "relativePath": "template-inspect/assets/ppt/media/image190.png",
+      "bytes": 3414
+    },
+    {
+      "entry": "ppt/media/image191.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image191.png",
+      "relativePath": "template-inspect/assets/ppt/media/image191.png",
+      "bytes": 3862
+    },
+    {
+      "entry": "ppt/media/image192.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image192.png",
+      "relativePath": "template-inspect/assets/ppt/media/image192.png",
+      "bytes": 2715303
+    },
+    {
+      "entry": "ppt/media/image141.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image141.png",
+      "relativePath": "template-inspect/assets/ppt/media/image141.png",
+      "bytes": 10879
+    },
+    {
+      "entry": "ppt/media/image193.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image193.png",
+      "relativePath": "template-inspect/assets/ppt/media/image193.png",
+      "bytes": 1929
+    },
+    {
+      "entry": "ppt/media/image194.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image194.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image194.svg",
+      "bytes": 2220
+    },
+    {
+      "entry": "ppt/media/image195.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image195.png",
+      "relativePath": "template-inspect/assets/ppt/media/image195.png",
+      "bytes": 3541
+    },
+    {
+      "entry": "ppt/media/image196.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image196.png",
+      "relativePath": "template-inspect/assets/ppt/media/image196.png",
+      "bytes": 3590
+    },
+    {
+      "entry": "ppt/media/image197.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image197.png",
+      "relativePath": "template-inspect/assets/ppt/media/image197.png",
+      "bytes": 3935
+    },
+    {
+      "entry": "ppt/media/image198.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image198.png",
+      "relativePath": "template-inspect/assets/ppt/media/image198.png",
+      "bytes": 1675069
+    },
+    {
+      "entry": "ppt/media/image142.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image142.png",
+      "relativePath": "template-inspect/assets/ppt/media/image142.png",
+      "bytes": 55176
+    },
+    {
+      "entry": "ppt/media/image199.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image199.png",
+      "relativePath": "template-inspect/assets/ppt/media/image199.png",
+      "bytes": 3942
+    },
+    {
+      "entry": "ppt/media/image200.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image200.png",
+      "relativePath": "template-inspect/assets/ppt/media/image200.png",
+      "bytes": 3933
+    },
+    {
+      "entry": "ppt/media/image201.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image201.png",
+      "relativePath": "template-inspect/assets/ppt/media/image201.png",
+      "bytes": 3572
+    },
+    {
+      "entry": "ppt/media/image202.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image202.png",
+      "relativePath": "template-inspect/assets/ppt/media/image202.png",
+      "bytes": 4002191
+    },
+    {
+      "entry": "ppt/media/image203.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image203.png",
+      "relativePath": "template-inspect/assets/ppt/media/image203.png",
+      "bytes": 3525
+    },
+    {
+      "entry": "ppt/media/image204.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image204.png",
+      "relativePath": "template-inspect/assets/ppt/media/image204.png",
+      "bytes": 11786
+    },
+    {
+      "entry": "ppt/media/image205.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image205.png",
+      "relativePath": "template-inspect/assets/ppt/media/image205.png",
+      "bytes": 80295
+    },
+    {
+      "entry": "ppt/media/image206.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image206.png",
+      "relativePath": "template-inspect/assets/ppt/media/image206.png",
+      "bytes": 23738
+    },
+    {
+      "entry": "ppt/media/image207.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image207.png",
+      "relativePath": "template-inspect/assets/ppt/media/image207.png",
+      "bytes": 167240
+    },
+    {
+      "entry": "ppt/media/image208.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image208.png",
+      "relativePath": "template-inspect/assets/ppt/media/image208.png",
+      "bytes": 664
+    },
+    {
+      "entry": "ppt/media/image209.svg",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image209.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image209.svg",
+      "bytes": 1916
+    },
+    {
+      "entry": "ppt/media/image210.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image210.png",
+      "relativePath": "template-inspect/assets/ppt/media/image210.png",
+      "bytes": 3940
+    },
+    {
+      "entry": "ppt/media/image211.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image211.png",
+      "relativePath": "template-inspect/assets/ppt/media/image211.png",
+      "bytes": 1234114
+    },
+    {
+      "entry": "ppt/media/image212.png",
+      "path": "/Users/olegkrivenko/Yandex.Disk.localized/Own Work/DUMP/VIBECODING/kp-maker/tmp/product-catalog-inspect/template-inspect/assets/ppt/media/image212.png",
+      "relativePath": "template-inspect/assets/ppt/media/image212.png",
+      "bytes": 126868
+    }
+  ],
+  "fonts": [
+    "+mj-cs",
+    "+mj-ea",
+    "+mj-lt",
+    "+mn-cs",
+    "+mn-ea",
+    "+mn-lt",
+    "Angsana New",
+    "Aptos",
+    "Aptos Display",
+    "Arial",
+    "Calibri",
+    "Calibri Light",
+    "Cordia New",
+    "DaunPenh",
+    "Dela Gothic One",
+    "Dela Gothic One Regular",
+    "DokChampa",
+    "Ebrima",
+    "Estrangelo Edessa",
+    "Euphemia",
+    "Gautami",
+    "Helvetica",
+    "Iskoola Pota",
+    "Javanese Text",
+    "Kalinga",
+    "Kartika",
+    "Latha",
+    "Leelawadee UI",
+    "MV Boli",
+    "Mangal",
+    "Microsoft Himalaya",
+    "Microsoft JhengHei",
+    "Microsoft New Tai Lue",
+    "Microsoft Tai Le",
+    "Microsoft Uighur",
+    "Microsoft Yi Baiti",
+    "Mongolian Baiti",
+    "MoolBoran",
+    "Museo Sans Cyrl 300",
+    "Museo Sans Cyrl 500",
+    "Museo Sans Cyrl 700",
+    "Museo Sans Cyrl 900",
+    "Myanmar Text",
+    "Nirmala UI",
+    "Nyala",
+    "Phagspa",
+    "Plantagenet Cherokee",
+    "Raavi",
+    "Roboto Black",
+    "Segoe UI",
+    "Shruti",
+    "Sylfaen",
+    "Times New Roman",
+    "Tunga",
+    "Vrinda",
+    "arial",
+    "新細明體",
+    "游ゴシック",
+    "游ゴシック Light",
+    "等线",
+    "等线 Light",
+    "맑은 고딕"
+  ],
+  "packageParts": {
+    "mediaCount": 301,
+    "slideXmlCount": 53,
+    "chartCount": 0,
+    "tableSlideCount": 0
+  }
+}

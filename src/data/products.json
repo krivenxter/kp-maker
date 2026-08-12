@@ -1,0 +1,597 @@
+[
+  {
+    "id": "calltracking",
+    "category": "Сбор данных",
+    "name": "Динамический коллтрекинг",
+    "shortName": "Динамический коллтрекинг",
+    "shortValue": "Определяет рекламный источник каждого звонка",
+    "problemTags": ["attribution", "calls", "marketing-efficiency"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/calltracking.png",
+    "offerIncludes": ["Подмена номеров на сайте", "Источники до кампании и ключевого слова", "Отчёты по лидам и выручке"],
+    "benefits": [
+      { "title": "Точная атрибуция", "description": "Источник звонка виден до канала, кампании и ключевого слова" },
+      { "title": "Быстрый запуск", "description": "Настройка от одного дня и более 100 бесплатных интеграций" }
+    ],
+    "flowSteps": ["Реклама", "Подмена номера", "Звонок", "Источник и выручка"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "static-calltracking",
+    "category": "Сбор данных",
+    "name": "Статический коллтрекинг",
+    "shortName": "Статический коллтрекинг",
+    "shortValue": "Связывает отдельный номер с офлайн- или рекламным источником",
+    "problemTags": ["attribution", "calls", "offline"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/calltracking.png",
+    "offerIncludes": ["Выделенный номер для источника", "Учёт офлайн-рекламы", "Отчёты по обращениям"],
+    "benefits": [
+      { "title": "Офлайн под контролем", "description": "Наружная реклама, печатные материалы и площадки получают отдельные номера" },
+      { "title": "Единая аналитика", "description": "Звонки из офлайна учитываются вместе с digital-каналами" }
+    ],
+    "flowSteps": ["Офлайн-реклама", "Выделенный номер", "Звонок", "Отчёт"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "email-tracking",
+    "category": "Сбор данных",
+    "name": "Емейл-трекинг",
+    "shortName": "Емейл-трекинг",
+    "shortValue": "Определяет, из какой рекламы клиент написал на почту",
+    "problemTags": ["attribution", "email", "marketing-efficiency"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/email-tracking.png",
+    "offerIncludes": ["Подмена адресов на сайте", "Связь письма с рекламным источником", "Передача писем в рабочую почту"],
+    "benefits": [
+      { "title": "Источник каждого письма", "description": "Канал, кампания и ключевое слово фиксируются автоматически" },
+      { "title": "Без доступа к почте", "description": "Для настройки не нужны логины и пароли от корпоративного ящика" }
+    ],
+    "flowSteps": ["Реклама", "Подмена email", "Письмо", "Источник и выручка"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "tagging",
+    "category": "Сбор данных",
+    "name": "Тегирование",
+    "shortName": "Тегирование",
+    "shortValue": "Сегментирует звонки по темам, качеству и результату",
+    "problemTags": ["calls", "quality", "automation"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/tagging.png",
+    "offerIncludes": ["Ручные, IVR- и автотеги", "Неограниченное число тегов", "Фильтры и сегменты"],
+    "benefits": [
+      { "title": "До 95% автоматически", "description": "Система присваивает звонкам нужные признаки без ручной разметки" },
+      { "title": "Быстрый поиск", "description": "Нужные разговоры находятся по теме, качеству или исходу" }
+    ],
+    "flowSteps": ["Звонок", "Анализ", "Тег", "Сегмент и отчёт"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "cdp",
+    "category": "Коммуникация",
+    "name": "Платформа клиентских данных (CDP)",
+    "shortName": "CDP-платформа",
+    "shortValue": "Объединяет данные о клиенте и запускает автоматические сценарии",
+    "problemTags": ["crm", "automation", "retention"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/cdp.png",
+    "offerIncludes": ["Единый профиль клиента", "Сегментация аудитории", "Автоматические коммуникации", "Аналитика сценариев"],
+    "benefits": [
+      { "title": "Единый профиль", "description": "Данные из CRM, сайта и коммуникаций собираются в одной карточке" },
+      { "title": "Готовые механики", "description": "Более 200 сценариев и 150 параметров сегментации" }
+    ],
+    "flowSteps": ["Источники данных", "Профиль клиента", "Сегмент", "Сценарий", "Результат"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "voice-target",
+    "category": "Коммуникация",
+    "name": "Войс Таргет",
+    "shortName": "Войс Таргет",
+    "shortValue": "Помогает связаться с посетителями сайта, которые не оставили контакты",
+    "problemTags": ["lead-generation", "calls", "conversion"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/voice-target.png",
+    "offerIncludes": ["Сбор целевой аудитории", "Контакты потенциальных клиентов", "Передача в работу менеджерам"],
+    "benefits": [
+      { "title": "Больше контактов", "description": "В работу попадают посетители с высоким интересом без оставленной заявки" },
+      { "title": "Оплата за результат", "description": "Оплачиваются целевые контакты из легального набора данных" }
+    ],
+    "flowSteps": ["Интерес на сайте", "Аудитория Calltouch", "Контакт", "Продажа"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "programmatic",
+    "category": "Коммуникация",
+    "name": "Программатик",
+    "shortName": "Программатик",
+    "shortValue": "Охватная реклама в Рунете с аналитикой от показа до продажи",
+    "problemTags": ["media", "attribution", "lead-generation"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/programmatic.png",
+    "offerIncludes": ["Настройка рекламных кампаний", "Фильтрация трафика", "Атрибуция показов и обращений"],
+    "benefits": [
+      { "title": "Сквозная оценка", "description": "Видны показы, обращения, продажи и ДРР кампании" },
+      { "title": "Под ключ", "description": "Команда Calltouch ведёт кампанию и контролирует качество трафика" }
+    ],
+    "flowSteps": ["Медийная реклама", "Сайт", "Контакт", "Продажа и ДРР"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "media-format",
+    "category": "Коммуникация",
+    "name": "Медийный формат Calltouch",
+    "shortName": "Медийный формат",
+    "shortValue": "Медийное размещение для охвата целевой аудитории",
+    "problemTags": ["media", "reach", "lead-generation"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/media-format.png",
+    "offerIncludes": ["Медийное размещение Calltouch", "Настройка аудитории", "Оценка отклика"],
+    "benefits": [
+      { "title": "Целевой охват", "description": "Сообщение показывается выбранной аудитории на медийных площадках" },
+      { "title": "Измеримый отклик", "description": "Обращения от размещения попадают в аналитику" }
+    ],
+    "flowSteps": ["Аудитория", "Медийный показ", "Переход", "Обращение"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "dooh",
+    "category": "Коммуникация",
+    "name": "Цифровая наружная реклама",
+    "shortName": "Цифровая наружная реклама",
+    "shortValue": "Размещает digital-рекламу на наружных экранах",
+    "problemTags": ["offline", "media", "reach"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/digital-outdoor.png",
+    "offerIncludes": ["Размещение на цифровых экранах", "Настройка аудитории и географии", "Оценка отклика"],
+    "benefits": [
+      { "title": "Офлайн-охват", "description": "Бренд получает заметный контакт с аудиторией вне интернета" },
+      { "title": "Digital-управление", "description": "Размещение настраивается по географии, времени и аудитории" }
+    ],
+    "flowSteps": ["Аудитория", "Цифровой экран", "Контакт с брендом", "Обращение"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "ai-operator",
+    "category": "Коммуникация",
+    "name": "ИИ Оператор",
+    "shortName": "ИИ Оператор",
+    "shortValue": "Ведёт естественный диалог, квалифицирует лид и работает 24/7",
+    "problemTags": ["calls", "automation", "quality"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/ai-operator.png",
+    "offerIncludes": ["Приём и исходящие звонки", "Сбор данных клиента", "Квалификация лида", "Передача результата"],
+    "benefits": [
+      { "title": "До 100% принятых", "description": "ИИ отвечает ночью, в выходные и в моменты пиковой нагрузки" },
+      { "title": "Масштаб без найма", "description": "Число одновременных диалогов растёт без расширения штата" }
+    ],
+    "flowSteps": ["Звонок клиента", "Диалог с ИИ", "Сбор данных", "Квалифицированный лид"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "sms",
+    "category": "Рассылки",
+    "name": "СМС по базе",
+    "shortName": "СМС по базе",
+    "shortValue": "Возвращает текущих клиентов к покупке персональными сообщениями",
+    "problemTags": ["retention", "automation", "communication"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/sms-customer-base.png",
+    "offerIncludes": ["Сегментация базы", "Персонализированные предложения", "Шаблоны сообщений", "Статистика кампании"],
+    "benefits": [
+      { "title": "Продажи без роста трафика", "description": "Повторные обращения приходят из уже накопленной клиентской базы" },
+      { "title": "Готовые сценарии", "description": "Более 2000 шаблонов и 200 механик для разных задач" }
+    ],
+    "flowSteps": ["База клиентов", "Сегмент", "СМС", "Переход и покупка"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "targeted-sms",
+    "category": "Рассылки",
+    "name": "Таргетированная СМС-рассылка",
+    "shortName": "Таргетированная СМС",
+    "shortValue": "Отправляет предложение целевой аудитории, даже если её номеров нет в базе",
+    "problemTags": ["lead-generation", "communication", "conversion"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/targeted-sms.png",
+    "offerIncludes": ["Сегмент целевой аудитории", "Отправка через операторов", "Ссылка на предложение", "Аналитика отклика"],
+    "benefits": [
+      { "title": "Новые контакты", "description": "Коммуникация запускается с потенциальными клиентами вне вашей базы" },
+      { "title": "Четыре оператора", "description": "Рассылки управляются из одного кабинета Calltouch" }
+    ],
+    "flowSteps": ["Посетитель без заявки", "Сегмент", "СМС", "Переход", "Лид"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "callback",
+    "category": "Виджеты",
+    "name": "Обратный звонок",
+    "shortName": "Обратный звонок",
+    "shortValue": "Соединяет посетителя сайта с менеджером по запросу",
+    "problemTags": ["calls", "conversion", "lead-generation"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/callback.png",
+    "offerIncludes": ["Форма заказа звонка", "Автоматическое соединение", "Настройка времени показа"],
+    "benefits": [
+      { "title": "До 30% больше заявок", "description": "Посетитель получает быстрый контакт без самостоятельного звонка" },
+      { "title": "Сбор 24/7", "description": "В нерабочее время виджет сохраняет заявку на удобный слот" }
+    ],
+    "flowSteps": ["Номер клиента", "Звонок менеджеру", "Соединение", "Обращение"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "autodial-site",
+    "category": "Виджеты",
+    "name": "Автопрозвон заявки с сайта",
+    "shortName": "Автопрозвон с сайта",
+    "shortValue": "Сразу звонит менеджеру после новой заявки на сайте",
+    "problemTags": ["calls", "automation", "conversion"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/autodial.png",
+    "offerIncludes": ["Получение заявки", "Автоматический звонок менеджеру", "Соединение с клиентом"],
+    "benefits": [
+      { "title": "Меньше потерянных лидов", "description": "Менеджер связывается с клиентом сразу после заявки" },
+      { "title": "Горячий контакт", "description": "Разговор начинается, пока интерес клиента максимален" }
+    ],
+    "flowSteps": ["Заявка на сайте", "Звонок менеджеру", "Соединение", "Продажа"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "autodial-list",
+    "category": "Виджеты",
+    "name": "Автопрозвон списка номеров",
+    "shortName": "Автопрозвон списка",
+    "shortValue": "Автоматически обзванивает загруженный список контактов",
+    "problemTags": ["calls", "automation", "sales"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/autodial.png",
+    "offerIncludes": ["Загрузка списка", "Последовательный обзвон", "Соединение ответивших с менеджером"],
+    "benefits": [
+      { "title": "Экономия времени", "description": "Менеджеры разговаривают с ответившими, а не набирают номера вручную" },
+      { "title": "Системная обработка", "description": "Контакты проходят единый автоматизированный сценарий" }
+    ],
+    "flowSteps": ["Список номеров", "Автоматический набор", "Ответ", "Менеджер"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "autodial-missed",
+    "category": "Виджеты",
+    "name": "Автопрозвон пропущенных",
+    "shortName": "Автопрозвон пропущенных",
+    "shortValue": "Возвращает менеджеру пропущенные звонки автоматически",
+    "problemTags": ["calls", "automation", "quality"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/autodial.png",
+    "offerIncludes": ["Фиксация пропущенного", "Повторный вызов менеджера", "Соединение с клиентом"],
+    "benefits": [
+      { "title": "Ни одного забытого звонка", "description": "Система автоматически возвращает пропущенные обращения в работу" },
+      { "title": "Быстрый перезвон", "description": "Клиент получает ответ без ручного контроля списка пропущенных" }
+    ],
+    "flowSteps": ["Пропущенный звонок", "Автопрозвон", "Менеджер", "Клиент"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "autodial-lead-form",
+    "category": "Виджеты",
+    "name": "Автопрозвон лид-форм",
+    "shortName": "Автопрозвон лид-форм",
+    "shortValue": "Звонит по заявкам из рекламных лид-форм без задержки",
+    "problemTags": ["calls", "automation", "lead-generation"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/autodial.png",
+    "offerIncludes": ["Получение лида из формы", "Автоматический звонок", "Соединение с менеджером"],
+    "benefits": [
+      { "title": "Мгновенная реакция", "description": "Заявка из рекламной формы сразу превращается в звонок" },
+      { "title": "Выше дозвон", "description": "Контакт происходит, пока пользователь помнит предложение" }
+    ],
+    "flowSteps": ["Лид-форма", "Новая заявка", "Автопрозвон", "Менеджер"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "promo-widgets",
+    "category": "Виджеты",
+    "name": "Промо-виджеты",
+    "shortName": "Промо-виджеты",
+    "shortValue": "Запускают промо на сайте без разработки",
+    "problemTags": ["conversion", "lead-generation", "promotion"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/promo-widgets.png",
+    "offerIncludes": ["Промо-лендинг", "Промо-ссылка", "Промо-баннер", "Аналитика конверсии"],
+    "benefits": [
+      { "title": "Без разработки", "description": "Промо запускается быстро и оформляется в фирменном стиле" },
+      { "title": "Точная аналитика", "description": "Показы, клики и заявки видны в Calltouch" }
+    ],
+    "flowSteps": ["Посетитель", "Промо-виджет", "Предложение", "Заявка"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "promo-landing",
+    "category": "Виджеты",
+    "name": "Промо-лендинг",
+    "shortName": "Промо-лендинг",
+    "shortValue": "Создаёт отдельную промо-страницу без участия разработки",
+    "problemTags": ["conversion", "promotion", "lead-generation"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/promo-widgets.png",
+    "offerIncludes": ["Промо-страница", "Брендированный дизайн", "Форма обращения", "Аналитика"],
+    "benefits": [
+      { "title": "Быстрый запуск", "description": "Для акции не требуется отдельная разработка страницы" },
+      { "title": "Высокая конверсия", "description": "Контент и форма сфокусированы на одном предложении" }
+    ],
+    "flowSteps": ["Реклама", "Промо-лендинг", "Форма", "Заявка"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "promo-link",
+    "category": "Виджеты",
+    "name": "Промо-ссылка",
+    "shortName": "Промо-ссылка",
+    "shortValue": "Открывает промо-предложение по ссылке с измеримым откликом",
+    "problemTags": ["conversion", "promotion", "analytics"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/promo-widgets.png",
+    "offerIncludes": ["Промо-ссылка", "Брендированное предложение", "Отслеживание переходов и заявок"],
+    "benefits": [
+      { "title": "Удобное распространение", "description": "Ссылку можно использовать в рекламе и коммуникациях" },
+      { "title": "Измеримый результат", "description": "Переходы и обращения фиксируются в аналитике" }
+    ],
+    "flowSteps": ["Сообщение или реклама", "Промо-ссылка", "Предложение", "Заявка"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "promo-banner",
+    "category": "Виджеты",
+    "name": "Промо-баннер",
+    "shortName": "Промо-баннер",
+    "shortValue": "Показывает посетителю сайта акцию или целевое предложение",
+    "problemTags": ["conversion", "promotion", "lead-generation"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/promo-widgets.png",
+    "offerIncludes": ["Баннер на сайте", "Условия показа", "Брендированный дизайн", "Аналитика"],
+    "benefits": [
+      { "title": "Релевантный показ", "description": "Баннер появляется у нужной аудитории в выбранный момент" },
+      { "title": "Запуск без кода", "description": "Акция публикуется без очереди на разработку" }
+    ],
+    "flowSteps": ["Посетитель", "Условие показа", "Промо-баннер", "Заявка"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "smart-request",
+    "category": "Виджеты",
+    "name": "Умная заявка",
+    "shortName": "Умная заявка",
+    "shortValue": "Показывает форму обращения в подходящий момент",
+    "problemTags": ["conversion", "lead-generation", "automation"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/smart-form.png",
+    "offerIncludes": ["Анализ поведения", "Сценарии показа формы", "Сбор контактов и интереса"],
+    "benefits": [
+      { "title": "Дополнительные лиды", "description": "Форма собирает контакты пользователей, которые пока не готовы звонить" },
+      { "title": "Правильный момент", "description": "Показ запускается по поведению посетителя и данным аналитики" }
+    ],
+    "flowSteps": ["Посещение", "Анализ поведения", "Форма", "Контакт и интерес", "Обработка"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "multibutton",
+    "category": "Виджеты",
+    "name": "Мультикнопка",
+    "shortName": "Мультикнопка",
+    "shortValue": "Собирает звонки, чаты, мессенджеры и формы в одной кнопке",
+    "problemTags": ["communication", "conversion", "omnichannel"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/multi-button.png",
+    "offerIncludes": ["Каналы связи в одном виджете", "До 20 вариантов кнопки", "Антиспам", "CRM-интеграции"],
+    "benefits": [
+      { "title": "Все каналы рядом", "description": "Клиент выбирает звонок, чат, мессенджер или форму" },
+      { "title": "Единая аналитика", "description": "Обращения из всех каналов учитываются в одном кабинете" }
+    ],
+    "flowSteps": ["Посетитель", "Мультикнопка", "Выбор канала", "Обращение"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "wheel-of-fortune",
+    "category": "Виджеты",
+    "name": "Колесо фортуны",
+    "shortName": "Колесо фортуны",
+    "shortValue": "Вовлекает посетителя и выдаёт промокод за контакт",
+    "problemTags": ["conversion", "gamification", "lead-generation"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/wheel-of-fortune.png",
+    "offerIncludes": ["Игровой виджет", "До 10 промокодов", "Вероятности выигрыша", "Таргетинг показа"],
+    "benefits": [
+      { "title": "Больше лидов", "description": "Игровая механика мотивирует оставить контакт" },
+      { "title": "Контроль скидок", "description": "Для каждого промокода задаются вероятность и условия" }
+    ],
+    "flowSteps": ["Показ виджета", "Контакт", "Вращение", "Промокод"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "trade-in",
+    "category": "Виджеты",
+    "name": "Трейд-ин",
+    "shortName": "Трейд-ин",
+    "shortValue": "Собирает заявку на обмен автомобиля прямо на сайте дилера",
+    "problemTags": ["automotive", "conversion", "lead-generation"],
+    "industryTags": ["automotive"],
+    "icon": "/visuals/trade-in.png",
+    "offerIncludes": ["Форма оценки автомобиля", "Данные текущего авто", "Контакты клиента", "Передача заявки менеджеру"],
+    "benefits": [
+      { "title": "Контекст для менеджера", "description": "В заявке уже есть марка, модель и параметры автомобиля клиента" },
+      { "title": "Выше конверсия", "description": "Клиент получает понятный сценарий обмена при выборе нового авто" }
+    ],
+    "flowSteps": ["Выбор нового авто", "Форма трейд-ин", "Данные авто и контакт", "Заявка"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "marquiz",
+    "category": "Виджеты",
+    "name": "Marquiz",
+    "shortName": "Marquiz",
+    "shortValue": "Собирает контакты и потребности через интерактивный квиз",
+    "problemTags": ["conversion", "lead-generation", "qualification"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/marquiz.png",
+    "offerIncludes": ["Интерактивный квиз", "Сбор ответов и контактов", "Передача контекста менеджеру", "Автопрозвон"],
+    "benefits": [
+      { "title": "Квалифицированная заявка", "description": "Менеджер получает контакт вместе с ответами и интересами клиента" },
+      { "title": "Быстрый контакт", "description": "Автопрозвон может соединить менеджера сразу после заполнения" }
+    ],
+    "flowSteps": ["Квиз", "Ответы", "Контакт", "Заявка с контекстом"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "online-chat",
+    "category": "Чаты",
+    "name": "Онлайн-чат",
+    "shortName": "Онлайн-чат",
+    "shortValue": "Принимает обращения посетителей сайта в реальном времени",
+    "problemTags": ["chat", "communication", "conversion"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/online-chat.png",
+    "offerIncludes": ["Чат на сайте", "Офлайн-форма", "Архив диалогов", "Передача в CRM"],
+    "benefits": [
+      { "title": "Точная аналитика", "description": "Диалог связывается с рекламным источником и продажей" },
+      { "title": "Единое окно", "description": "Операторы работают с чатами и историей в одном кабинете" }
+    ],
+    "flowSteps": ["Посетитель", "Чат или офлайн-форма", "CRM", "Продажа и ДРР"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "max-chat",
+    "category": "Чаты",
+    "name": "MAX",
+    "shortName": "Чат MAX",
+    "shortValue": "Принимает обращения клиентов из MAX в едином окне",
+    "problemTags": ["chat", "communication", "omnichannel"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/icons/MAX.svg",
+    "offerIncludes": ["Подключение MAX", "Единое окно оператора", "История обращений"],
+    "benefits": [
+      { "title": "Удобный канал", "description": "Клиент пишет в привычном мессенджере" },
+      { "title": "Единая работа", "description": "Сообщения обрабатываются вместе с другими каналами" }
+    ],
+    "flowSteps": ["Клиент в MAX", "Сообщение", "Оператор", "Обращение"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "vk-chat",
+    "category": "Чаты",
+    "name": "VK",
+    "shortName": "Чат VK",
+    "shortValue": "Принимает обращения клиентов из VK в едином окне",
+    "problemTags": ["chat", "communication", "omnichannel"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/icons/VK.svg",
+    "offerIncludes": ["Подключение VK", "Единое окно оператора", "История обращений"],
+    "benefits": [
+      { "title": "Привычная среда", "description": "Клиент обращается из VK без перехода на другой канал" },
+      { "title": "Единая работа", "description": "Сообщения обрабатываются вместе с другими каналами" }
+    ],
+    "flowSteps": ["Клиент в VK", "Сообщение", "Оператор", "Обращение"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "telegram-chat",
+    "category": "Чаты",
+    "name": "Telegram",
+    "shortName": "Чат Telegram",
+    "shortValue": "Принимает обращения клиентов из Telegram в едином окне",
+    "problemTags": ["chat", "communication", "omnichannel"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/icons/Telegram.svg",
+    "offerIncludes": ["Подключение Telegram", "Единое окно оператора", "История обращений"],
+    "benefits": [
+      { "title": "Привычный канал", "description": "Клиент пишет в Telegram без лишних форм и звонков" },
+      { "title": "Единая работа", "description": "Сообщения обрабатываются вместе с другими каналами" }
+    ],
+    "flowSteps": ["Клиент в Telegram", "Сообщение", "Оператор", "Обращение"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "analytics",
+    "category": "Аналитика",
+    "name": "Сквозная аналитика",
+    "shortName": "Сквозная аналитика",
+    "shortValue": "Показывает путь от рекламного клика до продажи и ДРР",
+    "problemTags": ["roi", "crm", "marketing-efficiency"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/end-to-end-analytics.png",
+    "offerIncludes": ["Интеграция рекламы и CRM", "Автоматические отчёты", "ROI и ДРР по каналам", "Контроль качества данных"],
+    "benefits": [
+      { "title": "Весь путь клиента", "description": "Расходы, обращения, сделки и выручка связаны в одном отчёте" },
+      { "title": "Автоматические отчёты", "description": "Маркетинг и продажи получают актуальные данные без ручной сборки" }
+    ],
+    "flowSteps": ["Рекламный клик", "Обращение", "CRM", "Продажа", "ROI и ДРР"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "predict",
+    "category": "Аналитика",
+    "name": "Предикт",
+    "shortName": "Предикт",
+    "shortValue": "Расшифровывает звонки и автоматически определяет их содержание",
+    "problemTags": ["calls", "quality", "automation"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/predict.png",
+    "offerIncludes": ["Распознавание речи", "Транскрибация звонков", "Автоматические теги", "Отчёты по разговорам"],
+    "benefits": [
+      { "title": "До 95% автотегов", "description": "Звонки классифицируются без прослушивания каждого разговора" },
+      { "title": "Расшифровка до часа", "description": "Текст разговора быстро становится доступен для анализа" }
+    ],
+    "flowSteps": ["Запись звонка", "Распознавание речи", "Теги", "Отчёт"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "scoring",
+    "category": "Аналитика",
+    "name": "Скоринг клиентов",
+    "shortName": "Скоринг клиентов",
+    "shortValue": "Оценивает текущий интерес клиента к покупке",
+    "problemTags": ["sales", "qualification", "data"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/customer-scoring.png",
+    "offerIncludes": ["Загрузка клиентской базы", "Оценка интереса", "Список горячих лидов", "Приоритизация работы"],
+    "benefits": [
+      { "title": "Горячие лиды первыми", "description": "Менеджеры начинают с клиентов с наиболее высокой вероятностью покупки" },
+      { "title": "Возврат клиентов", "description": "Скоринг помогает найти тех, кто снова проявил интерес к категории" }
+    ],
+    "flowSteps": ["Клиентская база", "Скоринг", "Приоритетный список", "Продажа"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "big-data",
+    "category": "Аналитика",
+    "name": "Биг Дата",
+    "shortName": "Биг Дата",
+    "shortValue": "Связывает офлайн-покупателей и посещения с рекламными источниками",
+    "problemTags": ["offline", "attribution", "data"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/big-data.png",
+    "offerIncludes": ["Матчинг клиентской базы", "Цифровой след", "Атрибуция рекламы", "Отчёт по сделкам"],
+    "benefits": [
+      { "title": "Офлайн стал измеримым", "description": "Посещения и покупки связываются с рекламными кампаниями" },
+      { "title": "Реальный CPL", "description": "Стоимость лида считается с учётом офлайн-конверсий" }
+    ],
+    "flowSteps": ["Клиентская база", "Цифровой след", "Рекламный источник", "CRM и сделка", "Отчёт"],
+    "approvedMetrics": []
+  },
+  {
+    "id": "ai-assistant",
+    "category": "Аналитика",
+    "name": "ИИ Ассистент",
+    "shortName": "ИИ Ассистент",
+    "shortValue": "Анализирует звонки, оценивает менеджеров и возвращает потерянные лиды",
+    "problemTags": ["calls", "quality", "automation"],
+    "industryTags": ["automotive", "medical", "real-estate", "other"],
+    "icon": "/visuals/ai-assistant.png",
+    "offerIncludes": ["Прослушивание звонков", "Квалификация обращений", "Оценка менеджеров", "Поиск потерянных лидов"],
+    "benefits": [
+      { "title": "До 100% звонков", "description": "ИИ анализирует весь поток, а не небольшую ручную выборку" },
+      { "title": "Возврат в воронку", "description": "Потерянные и необработанные лиды автоматически находятся для повторной работы" }
+    ],
+    "flowSteps": ["Звонок", "Анализ разговора", "Оценка", "Отчёт и возврат лида"],
+    "approvedMetrics": []
+  }
+]

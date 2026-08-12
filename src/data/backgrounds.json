@@ -1,0 +1,6 @@
+[
+  { "id": "dark-1", "mode": "dark", "path": "/backgrounds/prez-bg-1.webp" },
+  { "id": "dark-2", "mode": "dark", "path": "/backgrounds/prez-bg-2.webp" },
+  { "id": "light-1", "mode": "light", "path": "/backgrounds-light/prez-bg-1.png" },
+  { "id": "light-2", "mode": "light", "path": "/backgrounds-light/prez-bg-2.png" }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "neutral",
+    "name": "Нейтральный бренд",
+    "colors": { "primary": "#19C6E6", "secondary": "#8B3DFF", "background": "#111A1F", "text": "#FFFFFF" },
+    "industry": "other"
+  },
+  {
+    "id": "exlantix",
+    "name": "EXLANTIX",
+    "colors": { "primary": "#D6A746", "secondary": "#111111", "background": "#080808", "text": "#FFFFFF" },
+    "industry": "automotive"
+  }
+]

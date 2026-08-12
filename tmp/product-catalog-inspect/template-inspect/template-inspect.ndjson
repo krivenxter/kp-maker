@@ -1,0 +1,128 @@
+{"kind":"slide","id":"sl/y90nupkv","slide":1,"title":"CALLTOUCH","textShapes":4}
+{"kind":"textbox","id":"sh/65g3298r","slide":1,"textChars":9,"textLines":1}
+{"kind":"textbox","id":"sh/ts7md4r2","slide":1,"textChars":8,"textLines":1}
+{"kind":"textbox","id":"sh/sryl4zqx","slide":1,"textChars":9,"textLines":1}
+{"kind":"textbox","id":"sh/fu94fe98","slide":1,"textChars":7,"textLines":1}
+{"kind":"image","id":"im/7mp0jixo","slide":1,"name":"Рисунок 9","bbox":[0,0,2560,1440]}
+{"kind":"image","id":"im/jqxw72dk","slide":1,"name":"Calltouch-logo-a","bbox":[165.33,148,765.33,136]}
+{"kind":"image","id":"im/ipofexcz","slide":1,"name":"Group 2087325151","bbox":[1215.66,31.79,1327.01,1408.21]}
+{"kind":"slide","id":"sl/hwbqtkby","slide":2,"title":"КТО МЫ ТАКИЕ","textShapes":1}
+{"kind":"textbox","id":"sh/b29kza94","slide":2,"textChars":12,"textLines":1}
+{"kind":"image","id":"im/7eh0ny1c","slide":2,"name":"Рисунок 5","bbox":[0,0,2560,1440]}
+{"kind":"image","id":"im/8fa1g3ix","slide":2,"name":"Calltouch-logo-a","bbox":[168.98,49.17,373.33,66.67]}
+{"kind":"slide","id":"sl/ofy9wn61","slide":3,"title":"15","textShapes":11}
+{"kind":"shape","id":"sh/ja54na9g","slide":3,"name":"Скругленный прямоугольник 14","bbox":[168.67,378.56,648.22,444.11]}
+{"kind":"shape","id":"sh/6d0fytg3","slide":3,"name":"Скругленный прямоугольник 14","bbox":[849.89,378.56,879.89,444.11]}
+{"kind":"shape","id":"sh/re9g7yxo","slide":3,"name":"Скругленный прямоугольник 14","bbox":[1757.44,378.56,647.89,444.11]}
+{"kind":"shape","id":"sh/sfix03y9","slide":3,"name":"Скругленный прямоугольник 14","bbox":[1305.33,850.28,1100,444.11]}
+{"kind":"shape","id":"sh/tgry9ofu","slide":3,"name":"Скругленный прямоугольник 14","bbox":[171,850.28,1100,444.11]}
+{"kind":"textbox","id":"sh/obq90bml","slide":3,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/pcjqtg36","slide":3,"textChars":12,"textLines":1}
+{"kind":"textbox","id":"sh/m5cra54z","slide":3,"textChars":6,"textLines":1}
+{"kind":"textbox","id":"sh/n6ls3alk","slide":3,"textChars":8,"textLines":1}
+{"kind":"textbox","id":"sh/n2l4fq98","slide":3,"textChars":3,"textLines":1}
+{"kind":"textbox","id":"sh/m1c3mlsn","slide":3,"textChars":20,"textLines":1}
+{"kind":"textbox","id":"sh/943mhgre","slide":3,"textChars":3,"textLines":1}
+{"kind":"textbox","id":"sh/83ulovat","slide":3,"textChars":10,"textLines":1}
+{"kind":"textbox","id":"sh/v6l4jq94","slide":3,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/a5c3ql8z","slide":3,"textChars":28,"textLines":1}
+{"kind":"textbox","id":"sh/i9w3u58v","slide":3,"textChars":10,"textLines":1}
+{"kind":"image","id":"im/lwvexsju","slide":3,"name":"темный фон_02 2","geometry":"roundRect","bbox":[168.67,378.56,648.22,444.11]}
+{"kind":"image","id":"im/kvmd4n29","slide":3,"name":"темный фон_02 2","geometry":"roundRect","bbox":[849.89,378.56,879.89,444.11]}
+{"kind":"image","id":"im/ihgryp0r","slide":3,"name":"темный фон_02 2","geometry":"roundRect","bbox":[1757.44,378.56,647.89,444.11]}
+{"kind":"image","id":"im/3ipsru1c","slide":3,"name":"темный фон_02 2","geometry":"roundRect","bbox":[170.67,850.28,1100,444.11]}
+{"kind":"image","id":"im/4jyt0zix","slide":3,"name":"темный фон_02 2","geometry":"roundRect","bbox":[1306.33,850.28,1099,444.11]}
+{"kind":"image","id":"im/547at4zi","slide":3,"name":"Рисунок 16","bbox":[168.67,49.17,373.65,65.83]}
+{"kind":"slide","id":"sl/jyx0ra1s","slide":4,"title":"2012","textShapes":35}
+{"kind":"textbox","id":"sh/3ihk3et8","slide":4,"textChars":4,"textLines":1}
+{"kind":"textbox","id":"sh/5cva1cfq","slide":4,"textChars":4,"textLines":1}
+{"kind":"textbox","id":"sh/i94r6xgz","slide":4,"textChars":140,"textLines":5}
+{"kind":"textbox","id":"sh/x8vaxsfe","slide":4,"textChars":4,"textLines":1}
+{"kind":"textbox","id":"sh/a5kr2xg3","slide":4,"textChars":116,"textLines":5}
+{"kind":"textbox","id":"sh/h4fa9wfy","slide":4,"textChars":4,"textLines":1}
+{"kind":"textbox","id":"sh/p0batw72","slide":4,"textChars":248,"textLines":7}
+{"kind":"textbox","id":"sh/gv29g7q5","slide":4,"textChars":4,"textLines":1}
+{"kind":"textbox","id":"sh/fu9sn2p0","slide":4,"textChars":105,"textLines":5}
+{"kind":"textbox","id":"sh/sri9s7q9","slide":4,"textChars":4,"textLines":1}
+{"kind":"textbox","id":"sh/ilwf69kv","slide":4,"textChars":64,"textLines":1}
+{"kind":"textbox","id":"sh/jm5gze1g","slide":4,"textChars":4,"textLines":1}
+{"kind":"textbox","id":"sh/knex8j21","slide":4,"textChars":232,"textLines":7}
+{"kind":"textbox","id":"sh/wzex4z2p","slide":4,"textChars":4,"textLines":1}
+{"kind":"textbox","id":"sh/xknyx4ja","slide":4,"textChars":104,"textLines":3}
+{"kind":"shape","id":"sh/mtcfypkn","slide":4,"name":"Calltouch    -   -","bbox":[2198.67,650.67,222.67,85.33]}
+{"kind":"textbox","id":"sh/nulw7u18","slide":4,"textChars":4,"textLines":1}
+{"kind":"textbox","id":"sh/fm5c3q54","slide":4,"textChars":77,"textLines":3}
+{"kind":"textbox","id":"sh/18nu50nu","slide":4,"textChars":4,"textLines":1}
+{"kind":"textbox","id":"sh/0netcvm9","slide":4,"textChars":131,"textLines":4}
+{"kind":"textbox","id":"sh/dknu10ny","slide":4,"textChars":4,"textLines":1}
+{"kind":"textbox","id":"sh/sjut8vmd","slide":4,"textChars":85,"textLines":4}
+{"kind":"textbox","id":"sh/8jq9c72t","slide":4,"textChars":4,"textLines":1}
+{"kind":"textbox","id":"sh/tkjq5c3e","slide":4,"textChars":76,"textLines":3}
+{"kind":"textbox","id":"sh/7ih83mlo","slide":4,"textChars":4,"textLines":1}
+{"kind":"textbox","id":"sh/gna9gr25","slide":4,"textChars":180,"textLines":3}
+{"kind":"textbox","id":"sh/ulsrehkz","slide":4,"textChars":4,"textLines":1}
+{"kind":"textbox","id":"sh/vm1s7mlk","slide":4,"textChars":147,"textLines":2}
+{"kind":"textbox","id":"sh/xsfqxs36","slide":4,"textChars":4,"textLines":1}
+{"kind":"textbox","id":"sh/do761ova","slide":4,"textChars":70,"textLines":3}
+{"kind":"textbox","id":"sh/bmpozed4","slide":4,"textChars":4,"textLines":1}
+{"kind":"textbox","id":"sh/qlg769wj","slide":4,"textChars":198,"textLines":6}
+{"kind":"textbox","id":"sh/6psve183","slide":4,"textChars":12,"textLines":1}
+{"kind":"textbox","id":"sh/0ba143al","slide":4,"textChars":475,"textLines":5}
+{"kind":"textbox","id":"sh/sna103ap","slide":4,"textChars":525,"textLines":6}
+{"kind":"shape","id":"sh/9grq98vi","slide":4,"name":"Прямая соединительная линия 67","bbox":[160.31,1311.67,0,86.93]}
+{"kind":"shape","id":"sh/7a1cn6po","slide":4,"name":"Прямая соединительная линия 70","bbox":[1117.06,1311.67,0,86.93]}
+{"kind":"textbox","id":"sh/8badgbq9","slide":4,"textChars":49,"textLines":3}
+{"kind":"image","id":"im/id8b6dgj","slide":4,"name":"Рисунок 44","bbox":[0,2.79,2560,1440]}
+{"kind":"image","id":"im/hczux8zy","slide":4,"name":"Vector 5361","bbox":[246.67,841.33,2186.67,5.33]}
+{"kind":"image","id":"im/wbqt43yd","slide":4,"name":"Frame 2147223503","bbox":[265.33,282.67,2176,576]}
+{"kind":"image","id":"im/vqhcvih8","slide":4,"name":"Frame 2147223495","bbox":[128,829.33,2176,602.67]}
+{"kind":"image","id":"im/up8b2dgn","slide":4,"name":"Рисунок 68","bbox":[168.67,49.17,373.65,65.83]}
+{"kind":"slide","id":"sl/i107q5of","slide":5,"title":"СALLTOUCH — СЕРВИС РАЗВИТИЯ БИЗНЕСА","textShapes":8}
+{"kind":"shape","id":"sh/i54fmlc7","slide":5,"name":"Скругленный прямоугольник 14","bbox":[175,570.67,747.67,752]}
+{"kind":"shape","id":"sh/j6dwfqds","slide":5,"name":"Скругленный прямоугольник 14","bbox":[943.83,570.67,747.67,752]}
+{"kind":"shape","id":"sh/sb6xsvu9","slide":5,"name":"Скругленный прямоугольник 14","bbox":[1719.17,570.67,747.67,752]}
+{"kind":"shape","id":"sh/tcfel0vu","slide":5,"name":"Скругленный прямоугольник 14","bbox":[175,386.67,2291.83,157.33]}
+{"kind":"textbox","id":"sh/032tgr6d","slide":5,"textChars":35,"textLines":1}
+{"kind":"textbox","id":"sh/n6dcr65o","slide":5,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/m5kbi1oj","slide":5,"textChars":128,"textLines":2}
+{"kind":"textbox","id":"sh/w32dkbuh","slide":5,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/x4vedgvm","slide":5,"textChars":110,"textLines":4}
+{"kind":"textbox","id":"sh/ahkvi1cb","slide":5,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/v2twb6dw","slide":5,"textChars":129,"textLines":3}
+{"kind":"textbox","id":"sh/58vehgvy","slide":5,"textChars":25,"textLines":1}
+{"kind":"shape","id":"sh/hgrmpwj2","slide":5,"name":"Скругленный прямоугольник 14","bbox":[223,619.21,83.83,84.32]}
+{"kind":"shape","id":"sh/gfi5grih","slide":5,"name":"Скругленный прямоугольник 14","bbox":[995,619.21,83.83,84.32]}
+{"kind":"shape","id":"sh/fe94nm1w","slide":5,"name":"Скругленный прямоугольник 14","bbox":[1767,619.21,83.83,84.32]}
+{"kind":"image","id":"im/lgbydg7i","slide":5,"name":"Рисунок 2","bbox":[0,0,2560,1440]}
+{"kind":"image","id":"im/mhkf61o3","slide":5,"name":"темный фон_02 2","geometry":"roundRect","bbox":[175,570.67,747.67,752]}
+{"kind":"image","id":"im/7itgf6p8","slide":5,"name":"темный фон_02 2","geometry":"roundRect","bbox":[943.83,570.67,747.67,752]}
+{"kind":"image","id":"im/8j2x8b6t","slide":5,"name":"темный фон_02 2","geometry":"roundRect","bbox":[1716.67,570.67,747.67,752]}
+{"kind":"image","id":"im/9kbyhg7e","slide":5,"name":"Рисунок 3","geometry":"roundRect","bbox":[175,386.67,2293.33,157.33]}
+{"kind":"image","id":"im/ulkfaloz","slide":5,"name":"Рисунок 13","bbox":[168.67,49.17,373.65,65.83]}
+{"kind":"image","id":"im/vmdgjqpk","slide":5,"name":"Рисунок 23","bbox":[237.89,634.68,53.05,53.05]}
+{"kind":"image","id":"im/5gfi9krm","slide":5,"name":"Рисунок 25","bbox":[1011.75,636.28,53.05,53.05]}
+{"kind":"image","id":"im/4f6hgfq1","slide":5,"name":"Рисунок 27","bbox":[1783.75,635.74,53.05,53.05]}
+{"kind":"slide","id":"sl/x8f69ofe","slide":6,"title":"Успешный бизнес не строится на случайностях и интуиции.","textShapes":9}
+{"kind":"shape","id":"sh/twfux0ne","slide":6,"name":"Скругленный прямоугольник 14","bbox":[168.67,378.56,2289.33,237.9]}
+{"kind":"shape","id":"sh/dcnm98zm","slide":6,"name":"Прямоугольник: скругленные углы 20","bbox":[171,720,390.33,173.33]}
+{"kind":"textbox","id":"sh/7m98ru9g","slide":6,"textChars":129,"textLines":2}
+{"kind":"shape","id":"sh/ydgnit07","slide":6,"name":"Прямоугольник: скругленные углы 25","bbox":[171,921.11,390.33,173.33]}
+{"kind":"shape","id":"sh/zep4byhs","slide":6,"name":"Прямоугольник: скругленные углы 26","bbox":[171,1122.21,390.33,173.33]}
+{"kind":"textbox","id":"sh/oryp8fah","slide":6,"textChars":16,"textLines":1}
+{"kind":"textbox","id":"sh/pc76hkr2","slide":6,"textChars":16,"textLines":1}
+{"kind":"shape","id":"sh/va98j210","slide":6,"name":"Прямоугольник: скругленные углы 33","bbox":[965,818.67,695,173.33]}
+{"kind":"shape","id":"sh/u907axkf","slide":6,"name":"Прямоугольник: скругленные углы 34","bbox":[965,1021.11,695,173.33]}
+{"kind":"shape","id":"sh/hcrqlcj6","slide":6,"name":"Прямоугольник: скругленные углы 35","bbox":[1859.5,818.67,604.5,173.33]}
+{"kind":"shape","id":"sh/wbipc72l","slide":6,"name":"Прямоугольник: скругленные углы 36","bbox":[1859.5,1021.11,604.5,173.33]}
+{"kind":"textbox","id":"sh/h4bupgn6","slide":6,"textChars":15,"textLines":1}
+{"kind":"textbox","id":"sh/w32twb6l","slide":6,"textChars":30,"textLines":1}
+{"kind":"textbox","id":"sh/v2tcn650","slide":6,"textChars":32,"textLines":1}
+{"kind":"textbox","id":"sh/u1kbu1ov","slide":6,"textChars":26,"textLines":1}
+{"kind":"textbox","id":"sh/5svutgni","slide":6,"textChars":25,"textLines":1}
+{"kind":"textbox","id":"sh/j6dcr65c","slide":6,"textChars":28,"textLines":1}
+{"kind":"shape","id":"sh/1sbuh0fi","slide":6,"name":"Прямая соединительная линия 46","bbox":[1660,905.33,199.5,1.33]}
+{"kind":"shape","id":"sh/8f6x8jid","slide":6,"name":"Прямая соединительная линия 50","bbox":[1660,1109.36,199.5,1.33]}
+{"kind":"image","id":"im/gnq90bid","slide":6,"name":"Рисунок 3","bbox":[0,2.79,2560,1440]}
+{"kind":"image","id":"im/hozqtgzy","slide":6,"name":"Рисунок 14","bbox":[168.67,49.17,373.65,65.83]}
+{"kind":"image","id":"im/ip8r2l0j","slide":6,"name":"Рисунок 28","bbox":[206.94,748.27,55.72,55.72]}
+{"kind":"notice","message":"Truncated: omitted 1558 lines. Increase maxChars or narrow target."}

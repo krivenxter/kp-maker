@@ -1,0 +1,84 @@
+[
+  {
+    "id": "yourmed-candy-digital",
+    "company": "YourMed × Candy Digital",
+    "industry": "medical",
+    "products": ["programmatic"],
+    "description": "Программатик принёс 4 млн показов за три месяца в офтальмологии",
+    "metrics": [{ "value": "73%", "label": "доходимость", "period": "3 месяца" }],
+    "logo": "/case-logos/yourmed-candy-digital.png",
+    "url": "не указано",
+    "sourceDeck": "Calltouch All Products.pptx",
+    "sourceSlide": 17,
+    "status": "draft",
+    "verification": { "level": "needs-review", "note": "Гиперссылка на слайде ведёт на другой кейс про ИИ Ассистента." }
+  },
+  {
+    "id": "mavis-agm",
+    "company": "МАВИС × AGM",
+    "industry": "real-estate",
+    "products": ["programmatic"],
+    "description": "Программатик привлёк девять горячих лидов в воронку застройщика",
+    "metrics": [
+      { "value": "2", "label": "сделки", "period": "не указано" },
+      { "value": "1,2 млн", "label": "охват", "period": "не указано" }
+    ],
+    "logo": "/case-logos/mavis-agm.png",
+    "url": "не указано",
+    "sourceDeck": "Calltouch All Products.pptx",
+    "sourceSlide": 17,
+    "status": "draft",
+    "verification": { "level": "needs-review", "note": "Гиперссылка на слайде ведёт на другой кейс про ИИ Ассистента." }
+  },
+  {
+    "id": "crocus-fitness",
+    "company": "Crocus Fitness",
+    "industry": "other",
+    "products": ["programmatic"],
+    "description": "Раскачали сеть премиальных фитнес-клубов с помощью программатик-рекламы",
+    "metrics": [
+      { "value": "765", "label": "звонков", "period": "не указано" },
+      { "value": "1 070", "label": "отправок форм", "period": "не указано" }
+    ],
+    "logo": "/case-logos/crocus-fitness.png",
+    "url": "не указано",
+    "sourceDeck": "Calltouch All Products.pptx",
+    "sourceSlide": 17,
+    "status": "draft",
+    "verification": { "level": "needs-review", "note": "Гиперссылка на слайде ведёт на другой кейс про ИИ Ассистента." }
+  },
+  {
+    "id": "chery-targeted-sms",
+    "company": "CHERY",
+    "industry": "automotive",
+    "products": ["targeted-sms"],
+    "description": "Автодилер привлёк целевые лиды с помощью таргетированной СМС-рассылки",
+    "metrics": [
+      { "value": "−10%", "label": "стоимость звонка", "period": "не указано" },
+      { "value": "<5 тысяч ₽", "label": "стоимость лида", "period": "не указано" }
+    ],
+    "logo": "/case-logos/chery-targeted-sms.png",
+    "url": "https://www.calltouch.ru/blog/kak-avtodileru-privlekat-czelevye-lidy-po-6-500-rublej-opyt-chery-poshagovo/",
+    "sourceDeck": "Calltouch All Products.pptx",
+    "sourceSlide": 25,
+    "status": "draft",
+    "verification": { "level": "needs-review", "note": "На слайде указано меньше 5 000 ₽ за лид, а в заголовке кейса — 6 500 ₽." }
+  },
+  {
+    "id": "avtoliga",
+    "company": "АВТОЛИГА",
+    "industry": "automotive",
+    "products": ["autodial-lead-form"],
+    "description": "Автодилер повысил конверсию с помощью Прозвона лид-форм и аналитики",
+    "metrics": [
+      { "value": "+85,7%", "label": "конверсия в продажу", "period": "не указано" },
+      { "value": "+20%", "label": "трафик сайта", "period": "не указано" }
+    ],
+    "logo": "/case-logos/avtoliga.png",
+    "url": "https://www.calltouch.ru/blog/tyuning-marketinga-kak-skvoznaya-analitika-pomogla-gk-avtoliga-povysit-konversiyu-na-50/",
+    "sourceDeck": "Calltouch All Products.pptx",
+    "sourceSlide": 41,
+    "status": "draft",
+    "verification": { "level": "needs-review", "note": "На слайде указано +85,7%, а в адресе и заголовке источника — 50%." }
+  }
+]

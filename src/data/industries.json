@@ -1,0 +1,6 @@
+[
+  { "id": "automotive", "name": "Автомобили" },
+  { "id": "real-estate", "name": "Недвижимость" },
+  { "id": "medical", "name": "Медицина" },
+  { "id": "other", "name": "Другая отрасль" }
+]

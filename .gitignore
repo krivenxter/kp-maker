@@ -1,0 +1,9 @@
+node_modules
+dist
+.env
+.DS_Store
+coverage
+tmp/pptx
+tmp/pdf-export
+*.log
+*.tsbuildinfo

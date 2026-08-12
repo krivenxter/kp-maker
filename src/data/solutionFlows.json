@@ -1,0 +1,39 @@
+[
+  {
+    "id": "calltracking+analytics",
+    "productIds": ["calltracking", "analytics"],
+    "headline": "Полный путь клиента — от рекламы до продажи",
+    "explanation": "Коллтрекинг фиксирует источник обращения, CRM хранит сделку, аналитика связывает результат с расходами.",
+    "steps": [
+      { "title": "Реклама", "description": "Клиент приходит из онлайн- или офлайн-канала", "productId": "calltracking" },
+      { "title": "Коллтрекинг", "description": "Фиксирует источник до кампании и ключевого слова", "productId": "calltracking" },
+      { "title": "Обращение", "description": "Звонок и данные клиента сохраняются автоматически", "productId": "calltracking" },
+      { "title": "CRM", "description": "Сделка и выручка возвращаются из CRM", "productId": "analytics" },
+      { "title": "Аналитика", "description": "Расходы и продажи объединяются в отчёте", "productId": "analytics" },
+      { "title": "ROI", "description": "Видна окупаемость каждого рекламного канала", "productId": "analytics" }
+    ],
+    "benefits": [
+      { "title": "Полный путь клиента", "description": "От первого рекламного контакта до сделки и выручки", "productId": "calltracking" },
+      { "title": "ROI по каналам", "description": "Понятно, какие источники приносят продажи, а не только заявки", "productId": "analytics" },
+      { "title": "Единое окно", "description": "Маркетинг и продажи работают с одними данными", "productId": "analytics" }
+    ]
+  },
+  {
+    "id": "ai-operator+analytics",
+    "productIds": ["ai-operator", "analytics"],
+    "headline": "От входящего звонка до контроля результата",
+    "explanation": "ИИ Оператор принимает обращение, передаёт данные в CRM, аналитика показывает качество и конверсию.",
+    "steps": [
+      { "title": "Звонок", "description": "Клиент обращается в компанию в любое время", "productId": "ai-operator" },
+      { "title": "ИИ Оператор", "description": "Ведёт естественный диалог и отвечает 24/7", "productId": "ai-operator" },
+      { "title": "Сбор данных", "description": "Уточняет потребность и фиксирует контакты", "productId": "ai-operator" },
+      { "title": "CRM", "description": "Квалифицированный лид передаётся менеджеру", "productId": "analytics" },
+      { "title": "Аналитика", "description": "Показывает качество, конверсию и результат", "productId": "analytics" }
+    ],
+    "benefits": [
+      { "title": "Приём звонков 24/7", "description": "До 100% обращений принимаются ночью, в выходные и в пик", "productId": "ai-operator" },
+      { "title": "Данные в CRM", "description": "Контакты и результат разговора сразу готовы для работы", "productId": "ai-operator" },
+      { "title": "Контроль качества", "description": "Видны обработка, конверсия и итог каждого обращения", "productId": "analytics" }
+    ]
+  }
+]
