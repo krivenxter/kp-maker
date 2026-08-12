@@ -9,8 +9,8 @@ import { columns, LAYOUT } from '../design/layout';
 import { accentForBrand, COLORS, fontProfileForBrand, paletteForTheme, presentationThemeOf, SLIDE, surfaceMode, textStyle, type PresentationTheme } from '../design/tokens';
 import { flowIconPath } from '../design/productIcons';
 
-function addIconTile(pptx: PptxGenJS, slide: PptxGenJS.Slide, icon: string, x: number, y: number, size: number) {
-  slide.addShape(pptx.ShapeType.roundRect, { x, y, w: size, h: size, rectRadius: 0.06, fill: { color: 'FFFFFF', transparency: 90 }, line: { color: 'FFFFFF', transparency: 100 } });
+function addIconTile(pptx: PptxGenJS, slide: PptxGenJS.Slide, icon: string, x: number, y: number, size: number, mode: 'dark' | 'light' = 'dark') {
+  slide.addShape(pptx.ShapeType.roundRect, { x, y, w: size, h: size, rectRadius: 0.06, fill: { color: mode === 'light' ? 'DDE5E7' : 'FFFFFF', transparency: mode === 'light' ? 0 : 90 }, line: { color: mode === 'light' ? 'D0DCE0' : 'FFFFFF', transparency: mode === 'light' ? 0 : 100 } });
   const inner = size * 0.63;
   addImageFit(slide, icon, { x: x + (size - inner) / 2, y: y + (size - inner) / 2, w: inner, h: inner }, 'contain');
 }
@@ -38,7 +38,8 @@ export function renderCoverSlide(pptx: PptxGenJS, proposal: ProposalDocument, as
   const fonts = fontProfileForBrand(proposal.client.brandId);
   const palette = paletteForTheme(theme);
   const mode = surfaceMode(theme, 'dark');
-  addBackground(pptx, slide, mode, mode === 'light' ? (assets.lightBackground ?? assets.darkBackground) : assets.darkBackground);
+  const iconAssets = mode === 'light' ? (assets.uiIconsDark ?? assets.uiIcons) : assets.uiIcons;
+  addBackground(pptx, slide, mode, mode === 'light' ? (assets.lightBackground ?? assets.darkBackground) : assets.darkBackground, theme);
   addBrandHeader(pptx, slide, mode, mode === 'light' ? assets.logoDark : assets.logoLight, proposal.client.name, accent, fonts, proposal.client.site);
   slide.addText('КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ', { x: 0.78, y: 1.2, w: 5.8, h: 0.25, ...textStyle(fonts, 'caption'), bold: true, charSpacing: 2.2, color: accent, margin: 0 });
   addAdaptiveText(slide, `РЕШЕНИЯ CALLTOUCH\nДЛЯ ${proposal.client.name.toUpperCase()}`, { ...LAYOUT.coverTitle, ...textStyle(fonts, 'display'), color: palette.text, margin: 0, valign: 'middle' }, { maxLines: 2, minFontSize: 20 });
@@ -48,18 +49,18 @@ export function renderCoverSlide(pptx: PptxGenJS, proposal: ProposalDocument, as
   if (manager) {
     const box = LAYOUT.managerCard;
     addCard(pptx, slide, box, mode, { fill: mode === 'light' ? palette.card : '222B35', line: mode === 'light' ? palette.line : '7B8E98', fillTransparency: mode === 'light' ? 0 : 34, lineTransparency: mode === 'light' ? 0 : 58 });
-    addManagerAvatar(pptx, slide, manager.photoDataUrl, assets.uiIcons?.userPlaceholder, { x: box.x + 0.2, y: box.y + 0.2, w: 0.5, h: 0.5 }, accent, false);
+    addManagerAvatar(pptx, slide, manager.photoDataUrl, iconAssets?.userPlaceholder, { x: box.x + 0.2, y: box.y + 0.2, w: 0.5, h: 0.5 }, accent, false);
     const contentX = box.x + 0.82;
     addAdaptiveText(slide, manager.name, { x: contentX, y: box.y + 0.16, w: 2.95, h: 0.2, ...textStyle(fonts, 'body'), color: palette.text, margin: 0, wrap: false }, { singleLine: true, minFontSize: 7 });
     addAdaptiveText(slide, manager.position, { x: contentX, y: box.y + 0.4, w: 2.95, h: 0.16, ...textStyle(fonts, 'caption'), color: palette.muted, margin: 0, valign: 'top', wrap: false }, { singleLine: true, minFontSize: 6 });
     const contactY = box.y + 0.74;
     const emailIconX = contentX;
     const emailTextX = emailIconX + 0.23;
-    addImageFit(slide, assets.uiIcons?.email ?? '', { x: emailIconX, y: contactY + 0.01, w: 0.15, h: 0.15 }, 'contain');
+    addImageFit(slide, iconAssets?.email ?? '', { x: emailIconX, y: contactY + 0.01, w: 0.15, h: 0.15 }, 'contain');
     addAdaptiveText(slide, manager.email, { x: emailTextX, y: contactY - 0.01, w: 1.7, h: 0.18, ...textStyle(fonts, 'caption'), color: palette.text, margin: 0, valign: 'middle', wrap: false }, { singleLine: true, minFontSize: 6 });
     const phoneIconX = box.x + 2.65;
     const phoneTextX = phoneIconX + 0.23;
-    addImageFit(slide, assets.uiIcons?.phone ?? '', { x: phoneIconX, y: contactY + 0.01, w: 0.15, h: 0.15 }, 'contain');
+    addImageFit(slide, iconAssets?.phone ?? '', { x: phoneIconX, y: contactY + 0.01, w: 0.15, h: 0.15 }, 'contain');
     addAdaptiveText(slide, manager.phone, { x: phoneTextX, y: contactY - 0.01, w: 1.15, h: 0.18, ...textStyle(fonts, 'caption'), color: palette.text, margin: 0, valign: 'middle', wrap: false }, { singleLine: true, minFontSize: 5.5 });
   }
   addNotes(slide);
@@ -71,7 +72,7 @@ export function renderContextSlide(pptx: PptxGenJS, proposal: ProposalDocument, 
   const fonts = fontProfileForBrand(proposal.client.brandId);
   const palette = paletteForTheme(theme);
   const mode = surfaceMode(theme, 'dark');
-  addBackground(pptx, slide, mode);
+  addBackground(pptx, slide, mode, undefined, theme);
   addBrandHeader(pptx, slide, mode, mode === 'light' ? assets.logoDark : assets.logoLight, proposal.client.name, accent, fonts, proposal.client.site);
   addTitle(slide, proposal.project.summary ? 'Что мы увидели по проекту' : 'Параметры проекта', mode, 'Контекст', accent, fonts);
 
@@ -107,7 +108,7 @@ export function renderConfigurationSlide(pptx: PptxGenJS, proposal: ProposalDocu
   const fonts = fontProfileForBrand(proposal.client.brandId);
   const palette = paletteForTheme(theme);
   const mode = surfaceMode(theme, 'dark');
-  addBackground(pptx, slide, mode);
+  addBackground(pptx, slide, mode, undefined, theme);
   addBrandHeader(pptx, slide, mode, mode === 'light' ? assets.logoDark : assets.logoLight, proposal.client.name, accent, fonts, proposal.client.site);
   addTitle(slide, 'Рекомендуемая конфигурация', mode, 'Решение', accent, fonts);
   const count = proposal.products.length;
@@ -129,11 +130,11 @@ export function renderConfigurationSlide(pptx: PptxGenJS, proposal: ProposalDocu
   addNotes(slide);
 }
 
-export function renderPricingSlide(pptx: PptxGenJS, proposal: ProposalDocument, assets: PresentationAssets, _theme: PresentationTheme = presentationThemeOf(proposal)) {
+export function renderPricingSlide(pptx: PptxGenJS, proposal: ProposalDocument, assets: PresentationAssets, theme: PresentationTheme = presentationThemeOf(proposal)) {
   const slide = pptx.addSlide();
   const accent = accentForBrand(proposal.client.brandId);
   const fonts = fontProfileForBrand(proposal.client.brandId);
-  addBackground(pptx, slide, 'light');
+  addBackground(pptx, slide, 'light', undefined, theme);
   addBrandHeader(pptx, slide, 'light', assets.logoDark, proposal.client.name, accent, fonts, proposal.client.site);
   addTitle(slide, 'Коммерческое предложение', 'light', 'Расчёт', accent, fonts);
   const plans = proposal.pricing.plans;
@@ -150,7 +151,7 @@ export function renderPricingSlide(pptx: PptxGenJS, proposal: ProposalDocument, 
     addAdaptiveText(slide, plan.name.toUpperCase(), { x: 0.72, y: 1.68, w: 5.8, h: 0.3, ...textStyle(fonts, 'heading'), color: COLORS.ink, margin: 0, wrap: false }, { singleLine: true, minFontSize: 9 });
     if (plan.recommended) addPill(pptx, slide, 'РЕКОМЕНДУЕМ', { x: 6.88, y: 1.64, w: 1.12 }, accent, fonts);
 
-    addCard(pptx, slide, listBox, 'light', { fill: COLORS.white, line: COLORS.line });
+    addCard(pptx, slide, listBox, 'light', { fill: theme === 'light' ? 'F1F4F5' : COLORS.white, line: COLORS.line });
     slide.addText('СОСТАВ ТАРИФА', { x: listBox.x + 0.24, y: listBox.y + 0.18, w: 2.4, h: 0.18, ...textStyle(fonts, 'caption'), bold: true, charSpacing: 1.1, color: '718087', margin: 0 });
     if (showDiscount) {
       addAdaptiveText(slide, 'ПОЛНАЯ СТОИМОСТЬ', { x: listBox.x + listBox.w - 3.18, y: listBox.y + 0.18, w: 1.38, h: 0.18, ...textStyle(fonts, 'caption'), color: '718087', align: 'right', margin: 0, wrap: false }, { singleLine: true, minFontSize: 6 });
@@ -167,7 +168,7 @@ export function renderPricingSlide(pptx: PptxGenJS, proposal: ProposalDocument, 
       slide.addShape(pptx.ShapeType.line, { x: listBox.x + 0.24, y: y + 0.34, w: listBox.w - 0.48, h: 0, line: { color: COLORS.line, width: 0.6 } });
     });
 
-    addCard(pptx, slide, totalsBox, 'light', { fill: plan.recommended ? (accent === COLORS.gold ? 'EAF4F7' : COLORS.cyanSoft) : COLORS.white, line: plan.recommended ? accent : COLORS.line });
+    addCard(pptx, slide, totalsBox, 'light', { fill: plan.recommended ? (theme === 'light' ? 'E9EEF0' : accent === COLORS.gold ? 'EAF4F7' : COLORS.cyanSoft) : theme === 'light' ? 'F1F4F5' : COLORS.white, line: plan.recommended ? accent : COLORS.line });
     slide.addText('ИТОГО ПО ТАРИФУ', { x: totalsBox.x + 0.26, y: totalsBox.y + 0.2, w: totalsBox.w - 0.52, h: 0.18, ...textStyle(fonts, 'caption'), bold: true, charSpacing: 1.1, color: '718087', margin: 0 });
     slide.addText('ЕЖЕМЕСЯЧНО', { x: totalsBox.x + 0.26, y: totalsBox.y + 0.68, w: totalsBox.w - 0.52, h: 0.18, ...textStyle(fonts, 'caption'), color: '718087', margin: 0 });
     addAdaptiveText(slide, formatMoney(totals.monthlyTotal), { x: totalsBox.x + 0.26, y: totalsBox.y + 0.94, w: totalsBox.w - 0.52, h: 0.42, ...textStyle(fonts, 'title'), color: accent, margin: 0, wrap: false }, { singleLine: true, minFontSize: 14 });
@@ -183,7 +184,7 @@ export function renderPricingSlide(pptx: PptxGenJS, proposal: ProposalDocument, 
     plans.forEach((plan, index) => {
     const box = boxes[index];
     const totals = calculatePlanTotals(plan);
-    addCard(pptx, slide, box, 'light', { fill: plan.recommended ? (accent === COLORS.gold ? 'EAF4F7' : COLORS.cyanSoft) : COLORS.white, line: plan.recommended ? accent : COLORS.line });
+    addCard(pptx, slide, box, 'light', { fill: plan.recommended ? (theme === 'light' ? 'E9EEF0' : accent === COLORS.gold ? 'EAF4F7' : COLORS.cyanSoft) : theme === 'light' ? 'F1F4F5' : COLORS.white, line: plan.recommended ? accent : COLORS.line });
     addAdaptiveText(slide, plan.name.toUpperCase(), { x: box.x + 0.22, y: box.y + 0.2, w: box.w - 0.44, h: 0.3, ...textStyle(fonts, 'heading'), color: COLORS.ink, margin: 0, wrap: false }, { singleLine: true, minFontSize: 8 });
     if (plan.recommended) addPill(pptx, slide, 'РЕКОМЕНДУЕМ', { x: box.x + box.w - 1.35, y: box.y + 0.16, w: 1.12 }, accent, fonts);
 
@@ -225,7 +226,7 @@ export function renderFlowSlide(pptx: PptxGenJS, proposal: ProposalDocument, ass
   const fonts = fontProfileForBrand(proposal.client.brandId);
   const palette = paletteForTheme(theme);
   const mode = surfaceMode(theme, 'dark');
-  addBackground(pptx, slide, mode);
+  addBackground(pptx, slide, mode, undefined, theme);
   addBrandHeader(pptx, slide, mode, mode === 'light' ? assets.logoDark : assets.logoLight, proposal.client.name, accent, fonts, proposal.client.site);
   addTitle(slide, 'Как это будет работать', mode, 'Сценарий', accent, fonts);
   const flow = selectFlow(proposal.products.map((item) => item.productId));
@@ -243,7 +244,7 @@ export function renderFlowSlide(pptx: PptxGenJS, proposal: ProposalDocument, ass
     addCard(pptx, slide, box, mode, { fill: mode === 'light' ? (index % 2 ? palette.cardAlt : palette.card) : (index % 2 ? '20333B' : '19262C'), line: index === 2 ? accent : palette.line });
     const semanticIconPath = flowIconPath(step.title, step.description, step.productId);
     const icon = assets.flowIcons?.[semanticIconPath] ?? assets.productIcons[step.productId];
-    if (icon) addIconTile(pptx, slide, icon, box.x + 0.14, box.y + 0.15, 0.26);
+    if (icon) addIconTile(pptx, slide, icon, box.x + 0.14, box.y + 0.15, 0.26, mode);
     else slide.addShape(pptx.ShapeType.ellipse, { x: box.x + 0.14, y: box.y + 0.13, w: 0.32, h: 0.32, fill: { color: accent }, line: { color: accent } });
     slide.addText(String(index + 1).padStart(2, '0'), { x: box.x + box.w - 0.42, y: box.y + 0.16, w: 0.26, h: 0.18, ...textStyle(fonts, 'caption'), color: accent, margin: 0, align: 'right' });
     addAdaptiveText(slide, step.title, { x: box.x + 0.14, y: box.y + 0.61, w: box.w - 0.28, h: 0.28, ...textStyle(fonts, 'caption'), color: palette.text, margin: 0 }, { maxLines: 2, minFontSize: 6.5 });
@@ -256,7 +257,7 @@ export function renderFlowSlide(pptx: PptxGenJS, proposal: ProposalDocument, ass
     addCard(pptx, slide, box, mode, { fill: mode === 'light' ? palette.card : undefined, line: palette.line });
     const semanticIconPath = flowIconPath(benefit.title, benefit.description, benefit.productId);
     const icon = assets.flowIcons?.[semanticIconPath] ?? assets.productIcons[benefit.productId];
-    if (icon) addIconTile(pptx, slide, icon, box.x + 0.2, box.y + 0.19, 0.3);
+    if (icon) addIconTile(pptx, slide, icon, box.x + 0.2, box.y + 0.19, 0.3, mode);
     else slide.addShape(pptx.ShapeType.ellipse, { x: box.x + 0.2, y: box.y + 0.2, w: 0.34, h: 0.34, fill: { color: accent }, line: { color: accent } });
     addAdaptiveText(slide, benefit.title, { x: box.x + 0.62, y: box.y + 0.19, w: box.w - 0.82, h: 0.35, ...textStyle(fonts, 'body'), color: palette.text, margin: 0, valign: 'middle' }, { maxLines: 2, minFontSize: 7.5 });
     addAdaptiveText(slide, benefit.description, { x: box.x + 0.2, y: box.y + 0.7, w: box.w - 0.4, h: 0.62, ...textStyle(fonts, 'caption'), color: palette.mutedStrong, margin: 0, valign: 'top' }, { maxLines: 3, minFontSize: 6 });

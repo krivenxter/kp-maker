@@ -83,7 +83,10 @@ describe('buildPreviewScenes', () => {
     const firstImages = lightScenes[0].elements.filter((element) => element.kind === 'image').map((element) => String(element.options.data));
     expect(firstImages).toContain('/backgrounds-light/prez-bg-1.png');
     expect(firstImages).toContain('/logos/calltouch-dark.svg');
-    expect(lightScenes[1].background?.color).toBe('F3F7F9');
+    expect(firstImages).toContain('/icons/ui/gridicons_user.svg?tint=142027');
+    expect(firstImages).toContain('/icons/ui/mail-solid.svg?tint=142027');
+    expect(firstImages).toContain('/icons/ui/phone-solid.svg?tint=142027');
+    expect(lightScenes[1].background?.color).toBe(COLORS.white);
     const lightTextColors = lightScenes.slice(1, 7).flatMap((scene) => scene.elements)
       .filter((element) => element.kind === 'text')
       .map((element) => String(element.options.color));

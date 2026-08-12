@@ -6,11 +6,11 @@ import { accentForBrand, COLORS, fontProfileForBrand, textStyle, type Presentati
 import type { PresentationAssets } from '../engine/assets';
 import { addAdaptiveText, addBackground, addBrandHeader, addCard, addCaseLogo, addNotes, addTitle } from '../helpers/pptxHelpers';
 
-export function renderCasesSlide(pptx: PptxGenJS, proposal: ProposalDocument, assets: PresentationAssets, _theme?: PresentationTheme) {
+export function renderCasesSlide(pptx: PptxGenJS, proposal: ProposalDocument, assets: PresentationAssets, theme: PresentationTheme = proposal.presentationTheme) {
   const slide = pptx.addSlide();
   const accent = accentForBrand(proposal.client.brandId);
   const fonts = fontProfileForBrand(proposal.client.brandId);
-  addBackground(pptx, slide, 'light');
+  addBackground(pptx, slide, 'light', undefined, theme);
   addBrandHeader(pptx, slide, 'light', assets.logoDark, proposal.client.name, accent, fonts, proposal.client.site);
   addTitle(slide, 'Кейсы похожих клиентов', 'light', 'Результаты', accent, fonts);
   const selectedCases = [
@@ -20,7 +20,7 @@ export function renderCasesSlide(pptx: PptxGenJS, proposal: ProposalDocument, as
   const boxes = columns(selectedCases.length, 1.76, 4.52);
   selectedCases.forEach((item, index) => {
     const box = boxes[index];
-    addCard(pptx, slide, box, 'light', { fill: index === 0 ? (accent === COLORS.gold ? 'EAF4F7' : 'EBFAFD') : COLORS.white });
+    addCard(pptx, slide, box, 'light', { fill: index === 0 ? (theme === 'light' ? 'E9EEF0' : accent === COLORS.gold ? 'EAF4F7' : 'EBFAFD') : theme === 'light' ? 'F1F4F5' : COLORS.white });
     const caseLogo = assets.caseLogos?.[item.id];
     const companyX = caseLogo ? box.x + 1.08 : box.x + 0.26;
     if (caseLogo) {

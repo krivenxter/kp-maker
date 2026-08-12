@@ -44,8 +44,8 @@ const PRESENTATION_PALETTES: Record<PresentationTheme, PresentationPalette> = {
   },
   light: {
     background: COLORS.white,
-    card: COLORS.paper,
-    cardAlt: 'EAF4F7',
+    card: 'F1F4F5',
+    cardAlt: 'E9EEF0',
     text: COLORS.ink,
     muted: '718087',
     mutedStrong: '52636B',

@@ -1,5 +1,5 @@
 import type PptxGenJS from 'pptxgenjs';
-import { COLORS, FONT_PROFILES, RADIUS, SLIDE, textStyle, type FontProfile } from '../design/tokens';
+import { COLORS, FONT_PROFILES, RADIUS, SLIDE, textStyle, type FontProfile, type PresentationTheme } from '../design/tokens';
 import { LAYOUT } from '../design/layout';
 
 export type Slide = PptxGenJS.Slide;
@@ -170,20 +170,20 @@ export function addImageFit(slide: Slide, imageData: string, box: ImageBox, fit:
 }
 
 export function addCaseLogo(pptx: PptxGenJS, slide: Slide, imageData: string, box: ImageBox, mode: 'dark' | 'light', darkImageData?: string) {
-  const plateColor = mode === 'dark' ? COLORS.white : 'E4F8FC';
+  const plateColor = mode === 'dark' ? COLORS.white : 'EEF2F3';
   slide.addShape(pptx.ShapeType.roundRect, {
     ...box,
     rectRadius: Math.min(0.08, box.h * 0.22),
     fill: { color: plateColor, transparency: mode === 'dark' ? 90 : 0 },
-    line: { color: mode === 'dark' ? COLORS.white : 'B9E8F0', transparency: mode === 'dark' ? 72 : 0, width: 0.5 },
+    line: { color: mode === 'dark' ? COLORS.white : 'D4DEE1', transparency: mode === 'dark' ? 72 : 0, width: 0.5 },
   });
   const insetX = Math.min(0.06, box.w * 0.1);
   const insetY = Math.min(0.06, box.h * 0.16);
   addImageFit(slide, mode === 'light' ? (darkImageData ?? imageData) : imageData, { x: box.x + insetX, y: box.y + insetY, w: box.w - insetX * 2, h: box.h - insetY * 2 }, 'contain');
 }
 
-export function addBackground(pptx: PptxGenJS, slide: Slide, mode: 'dark' | 'light', imageData?: string) {
-  slide.background = { color: mode === 'dark' ? COLORS.dark : COLORS.paper };
+export function addBackground(pptx: PptxGenJS, slide: Slide, mode: 'dark' | 'light', imageData?: string, theme: PresentationTheme = 'dark') {
+  slide.background = { color: mode === 'dark' ? COLORS.dark : theme === 'light' ? COLORS.white : COLORS.paper };
   if (imageData) addImageFit(slide, imageData, { x: 0, y: 0, w: SLIDE.width, h: SLIDE.height }, 'cover');
 }
 

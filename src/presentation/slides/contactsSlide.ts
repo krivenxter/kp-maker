@@ -17,7 +17,8 @@ export function renderContactsSlide(pptx: PptxGenJS, proposal: ProposalDocument,
   const fonts = fontProfileForBrand(proposal.client.brandId);
   const palette = paletteForTheme(theme);
   const mode = surfaceMode(theme, 'dark');
-  addBackground(pptx, slide, mode, mode === 'light' ? (assets.lightFinalBackground ?? assets.finalBackground) : assets.finalBackground);
+  const iconAssets = mode === 'light' ? (assets.uiIconsDark ?? assets.uiIcons) : assets.uiIcons;
+  addBackground(pptx, slide, mode, mode === 'light' ? (assets.lightFinalBackground ?? assets.finalBackground) : assets.finalBackground, theme);
   addBrandHeader(pptx, slide, mode, mode === 'light' ? assets.logoDark : assets.logoLight, proposal.client.name, accent, fonts, proposal.client.site);
   addAdaptiveText(slide, 'ОБСУДИМ ЗАПУСК', { x: 0.76, y: 2.0, w: 6.2, h: 0.82, ...textStyle(fonts, 'display'), color: palette.text, margin: 0, wrap: false }, { singleLine: true, minFontSize: 22 });
   addAdaptiveText(slide, `Решения Calltouch для ${proposal.client.name}`, { x: 0.78, y: 2.96, w: 5.4, h: 0.42, ...textStyle(fonts, 'body'), color: palette.mutedStrong, margin: 0 }, { maxLines: 2, minFontSize: 8 });
@@ -25,15 +26,15 @@ export function renderContactsSlide(pptx: PptxGenJS, proposal: ProposalDocument,
   if (manager) {
     const box = { x: 7.5, y: 2.08, w: 4.45, h: 1.82 };
     addCard(pptx, slide, box, mode, { fill: mode === 'light' ? palette.card : '222B35', line: mode === 'light' ? palette.line : '7B8E98', fillTransparency: mode === 'light' ? 0 : 34, lineTransparency: mode === 'light' ? 0 : 58 });
-    addManagerAvatar(pptx, slide, manager.photoDataUrl, assets.uiIcons?.userPlaceholder, { x: box.x + 0.34, y: box.y + 0.3, w: 0.66, h: 0.66 }, accent);
+    addManagerAvatar(pptx, slide, manager.photoDataUrl, iconAssets?.userPlaceholder, { x: box.x + 0.34, y: box.y + 0.3, w: 0.66, h: 0.66 }, accent);
     const contactX = box.x + 1.18;
     addAdaptiveText(slide, manager.name, { x: contactX, y: box.y + 0.27, w: 2.8, h: 0.26, ...textStyle(fonts, 'heading'), color: palette.text, margin: 0, wrap: false }, { singleLine: true, minFontSize: 9 });
     addAdaptiveText(slide, manager.position, { x: contactX, y: box.y + 0.6, w: 2.8, h: 0.28, ...textStyle(fonts, 'caption'), color: palette.muted, margin: 0, valign: 'top' }, { maxLines: 2, minFontSize: 6.5 });
     const contactIconX = contactX;
     const contactTextX = contactX + 0.27;
-    addImageFit(slide, assets.uiIcons?.email ?? '', { x: contactIconX, y: box.y + 1.005, w: 0.17, h: 0.17 }, 'contain');
+    addImageFit(slide, iconAssets?.email ?? '', { x: contactIconX, y: box.y + 1.005, w: 0.17, h: 0.17 }, 'contain');
     addAdaptiveText(slide, manager.email, { x: contactTextX, y: box.y + 0.98, w: 2.73, h: 0.22, ...textStyle(fonts, 'caption'), color: palette.text, margin: 0, valign: 'middle', wrap: false }, { singleLine: true, minFontSize: 6 });
-    addImageFit(slide, assets.uiIcons?.phone ?? '', { x: contactIconX, y: box.y + 1.285, w: 0.17, h: 0.17 }, 'contain');
+    addImageFit(slide, iconAssets?.phone ?? '', { x: contactIconX, y: box.y + 1.285, w: 0.17, h: 0.17 }, 'contain');
     addAdaptiveText(slide, manager.phone, { x: contactTextX, y: box.y + 1.26, w: 2.73, h: 0.22, ...textStyle(fonts, 'caption'), color: palette.text, margin: 0, valign: 'middle', wrap: false }, { singleLine: true, minFontSize: 6 });
   }
   addNotes(slide);

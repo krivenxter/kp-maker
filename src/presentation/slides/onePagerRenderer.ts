@@ -15,8 +15,8 @@ function addManagerAvatar(pptx: PptxGenJS, slide: PptxGenJS.Slide, photo: string
   else if (placeholderIcon) addImageFit(slide, placeholderIcon, { x: x + 0.1, y: y + 0.08, w: 0.22, h: 0.22 }, 'contain', { transparency: 48 });
 }
 
-function addIconTile(pptx: PptxGenJS, slide: PptxGenJS.Slide, icon: string, x: number, y: number, size: number) {
-  slide.addShape(pptx.ShapeType.roundRect, { x, y, w: size, h: size, rectRadius: 0.06, fill: { color: 'FFFFFF', transparency: 90 }, line: { color: 'FFFFFF', transparency: 100 } });
+function addIconTile(pptx: PptxGenJS, slide: PptxGenJS.Slide, icon: string, x: number, y: number, size: number, mode: 'dark' | 'light' = 'dark') {
+  slide.addShape(pptx.ShapeType.roundRect, { x, y, w: size, h: size, rectRadius: 0.06, fill: { color: mode === 'light' ? 'DDE5E7' : 'FFFFFF', transparency: mode === 'light' ? 0 : 90 }, line: { color: mode === 'light' ? 'D0DCE0' : 'FFFFFF', transparency: mode === 'light' ? 0 : 100 } });
   const inner = size * 0.63;
   addImageFit(slide, icon, { x: x + (size - inner) / 2, y: y + (size - inner) / 2, w: inner, h: inner }, 'contain');
 }
@@ -61,7 +61,7 @@ export function renderOnePager(pptx: PptxGenJS, proposal: ProposalDocument, asse
   const caseItem = selectOnePagerCase(proposal);
   const manager = resolveManager(proposal);
 
-  addBackground(pptx, slide, mode, mode === 'light' ? (assets.lightBackground ?? assets.darkBackground) : assets.darkBackground);
+  addBackground(pptx, slide, mode, mode === 'light' ? (assets.lightBackground ?? assets.darkBackground) : assets.darkBackground, theme);
   addBrandHeader(pptx, slide, mode, mode === 'light' ? assets.logoDark : assets.logoLight, proposal.client.name, accent, fonts, proposal.client.site);
   slide.addText('КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ', { x: SLIDE.marginX, y: 1.08, w: 5.2, h: 0.2, ...textStyle(fonts, 'caption'), bold: true, charSpacing: 1.8, color: accent, margin: 0 });
   addAdaptiveText(slide, `РЕШЕНИЕ ДЛЯ ${proposal.client.name.toUpperCase()}`, { x: SLIDE.marginX, y: 1.36, w: 6.95, h: 0.72, ...textStyle(fonts, 'title'), color: palette.text, margin: 0, valign: 'top' }, { maxLines: 2, minFontSize: 14 });
@@ -106,7 +106,7 @@ export function renderOnePager(pptx: PptxGenJS, proposal: ProposalDocument, asse
   benefits.forEach((benefit, index) => {
     const x = SLIDE.marginX + index * 2.42;
     const icon = assets.flowIcons?.[flowIconPath(benefit.title, benefit.description, benefit.productId)] ?? assets.productIcons[benefit.productId];
-    if (icon) addIconTile(pptx, slide, icon, x, 5.52, 0.2);
+    if (icon) addIconTile(pptx, slide, icon, x, 5.52, 0.2, mode);
     addAdaptiveText(slide, benefit.title, { x: x + 0.32, y: 5.52, w: 1.85, h: 0.2, ...textStyle(fonts, 'caption'), color: palette.text, margin: 0, valign: 'top' }, { maxLines: 2, minFontSize: 6 });
     addAdaptiveText(slide, benefit.description, { x: x + 0.32, y: 5.75, w: 1.85, h: 0.5, ...textStyle(fonts, 'caption'), color: palette.muted, margin: 0, valign: 'top' }, { maxLines: 3, minFontSize: 5.5 });
   });
