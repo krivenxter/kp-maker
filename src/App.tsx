@@ -95,6 +95,9 @@ export default function App() {
   const [demoId, setDemoId] = useState(demoFixtures[0].id);
   const [status, setStatus] = useState('');
   const [busy, setBusy] = useState(false);
+  const [exportType, setExportType] = useState<'pptx' | 'pdf'>();
+  const [exportStartedAt, setExportStartedAt] = useState<number>();
+  const [exportElapsedSeconds, setExportElapsedSeconds] = useState(0);
   const [mobilePreview, setMobilePreview] = useState(false);
   const [productQuery, setProductQuery] = useState('');
   const [productCategory, setProductCategory] = useState(productCategories[0]);
@@ -149,6 +152,14 @@ export default function App() {
       document.removeEventListener('visibilitychange', saveWhenHidden);
     };
   }, []);
+
+  useEffect(() => {
+    if (!busy || !exportStartedAt) return;
+    const updateElapsed = () => setExportElapsedSeconds(Math.floor((Date.now() - exportStartedAt) / 1000));
+    updateElapsed();
+    const timer = window.setInterval(updateElapsed, 250);
+    return () => window.clearInterval(timer);
+  }, [busy, exportStartedAt]);
 
   useEffect(() => {
     const closeDraftMenu = (event: PointerEvent) => {
@@ -321,21 +332,34 @@ export default function App() {
   const runExport = async (type: 'pptx' | 'pdf') => {
     if (!validation.success) return setStatus('Экспорт заблокирован: исправьте ошибки проверки.');
     if (exportFormat !== 'full' && onePagerWarnings.length) return setStatus('One-pager не сформирован: сократите информацию по предупреждениям.');
-    setBusy(true); setStatus(type === 'pptx' ? 'Собираю редактируемый PPTX…' : 'Передаю PPTX в PDF-сервис…');
+    const startedAt = Date.now();
+    setExportType(type); setExportStartedAt(startedAt); setExportElapsedSeconds(0); setBusy(true);
     try {
       const normalized = buildProposal(validation.data);
       if (type === 'pptx') {
         const { downloadPptx, downloadOnePagerPptx } = await import('./export/pptx');
-        if (exportFormat === 'full' || exportFormat === 'both') await downloadPptx(normalized);
-        if (exportFormat === 'onepager' || exportFormat === 'both') await downloadOnePagerPptx(normalized);
+        if (exportFormat === 'full' || exportFormat === 'both') {
+          setStatus(exportFormat === 'both' ? 'Собираю полное КП в PPTX…' : 'Собираю редактируемый PPTX…');
+          await downloadPptx(normalized);
+        }
+        if (exportFormat === 'onepager' || exportFormat === 'both') {
+          setStatus(exportFormat === 'both' ? 'Собираю One-pager в PPTX…' : 'Собираю редактируемый One-pager…');
+          await downloadOnePagerPptx(normalized);
+        }
       } else {
         const { downloadPdf } = await import('./export/pdf');
-        if (exportFormat === 'full' || exportFormat === 'both') await downloadPdf(normalized, 'full');
-        if (exportFormat === 'onepager' || exportFormat === 'both') await downloadPdf(normalized, 'onepager');
+        if (exportFormat === 'full' || exportFormat === 'both') {
+          setStatus(exportFormat === 'both' ? 'Конвертирую полное КП через LibreOffice…' : 'Конвертирую PPTX в PDF через LibreOffice…');
+          await downloadPdf(normalized, 'full');
+        }
+        if (exportFormat === 'onepager' || exportFormat === 'both') {
+          setStatus(exportFormat === 'both' ? 'Конвертирую One-pager через LibreOffice…' : 'Конвертирую PPTX в PDF через LibreOffice…');
+          await downloadPdf(normalized, 'onepager');
+        }
       }
       setStatus(type === 'pptx' ? 'PPTX готов.' : 'PDF готов.');
     } catch (error) { setStatus(error instanceof Error ? error.message : 'Не удалось выполнить экспорт.'); }
-    finally { setBusy(false); }
+    finally { setBusy(false); setExportType(undefined); setExportStartedAt(undefined); }
   };
 
   const focusIssue = (path: string) => {
@@ -447,7 +471,7 @@ export default function App() {
 
         {step === 3 && <ReviewStep proposal={proposal} register={register} issueFor={issueFor} valid={validation.success} issues={issues} onePagerWarnings={onePagerWarnings} showOnePagerWarnings={exportFormat !== 'full'} onIssueClick={focusIssue} addCustomCase={addCustomCase} recommendCases={recommendCases} toggleCase={toggleCase} removeCustomCase={removeCustomCase} addCustomCaseMetric={addCustomCaseMetric} removeCustomCaseMetric={removeCustomCaseMetric} />}
 
-        {step === 3 ? <ExportDock valid={validation.success} issueCount={issues.length} busy={busy} status={status} format={exportFormat} onePagerBlocked={exportFormat !== 'full' && onePagerWarnings.length > 0} pdfState={pdfState} onFormatChange={setExportFormat} onExport={(type) => { void runExport(type); }} /> : <div className="step-actions"><button className="button ghost-dark" disabled={step === 0} onClick={() => setStep(step - 1)}>Назад</button><button className="button primary" disabled={step === steps.length - 1} onClick={() => setStep(step + 1)}>Далее</button></div>}
+        {step === 3 ? <ExportDock valid={validation.success} issueCount={issues.length} busy={busy} status={status} format={exportFormat} onePagerBlocked={exportFormat !== 'full' && onePagerWarnings.length > 0} pdfState={pdfState} exportType={exportType} elapsedSeconds={exportElapsedSeconds} onFormatChange={setExportFormat} onExport={(type) => { void runExport(type); }} /> : <div className="step-actions"><button className="button ghost-dark" disabled={step === 0} onClick={() => setStep(step - 1)}>Назад</button><button className="button primary" disabled={step === steps.length - 1} onClick={() => setStep(step + 1)}>Далее</button></div>}
       </section>
       <aside className="preview-pane"><div className="preview-heading"><div><span>Превью</span><b>{exportFormat === 'onepager' ? '1 слайд' : exportFormat === 'both' ? '8 сцен' : '7 слайдов'}</b></div><small>{exportFormat === 'both' ? 'Полное КП + отдельный One-pager' : 'Та же сцена, что экспортируется в PPTX'}</small></div><ProposalPreview proposal={proposal} mode={exportFormat} activeSlide={step === 0 ? 0 : step === 1 ? 2 : step === 2 ? 3 : 6} /></aside>
     </main>

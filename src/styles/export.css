@@ -12,14 +12,25 @@
 .export-readiness > i { width: 10px; height: 10px; flex: 0 0 auto; border-radius: 50%; box-shadow: 0 0 0 4px rgba(255,255,255,.07); }
 .export-readiness > i.ready { background: #43d48c; }
 .export-readiness > i.blocked { background: #ef6678; }
+.export-readiness > i.working { background: var(--cyan); animation: export-pulse 1.2s ease-in-out infinite; }
 .export-readiness > div { display: flex; min-width: 0; flex-direction: column; gap: 2px; }
 .export-readiness b { overflow: hidden; font-size: var(--type-label-size); text-overflow: ellipsis; white-space: nowrap; }
 .export-readiness span { overflow: hidden; color: #9fb0b7; font-size: var(--type-caption-size); text-overflow: ellipsis; white-space: nowrap; }
+.export-dock[aria-busy="true"] .export-readiness span { overflow: visible; text-overflow: clip; white-space: normal; }
 .export-actions { display: flex; gap: 8px; }
 .export-dock .export-actions .button { white-space: nowrap; }
+.export-dock .button.exporting { opacity: 1; }
+.button-spinner { display: inline-block; width: 13px; height: 13px; border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%; animation: export-spin .72s linear infinite; }
 .export-format { display: flex; gap: 3px; padding: 3px; background: #243239; border: 1px solid #3a484f; border-radius: 10px; }
 .export-format button { min-height: 32px; padding: 7px 9px; color: #aebcc2; background: transparent; border: 0; border-radius: 7px; font-size: var(--type-caption-size); font-weight: var(--type-label-weight); line-height: var(--type-label-line); white-space: nowrap; }
 .export-format button.active { color: #102027; background: var(--cyan); box-shadow: none; }
+
+@keyframes export-spin { to { transform: rotate(360deg); } }
+@keyframes export-pulse { 0%, 100% { box-shadow: 0 0 0 4px rgba(25,198,230,.08); } 50% { box-shadow: 0 0 0 7px rgba(25,198,230,.2); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .button-spinner, .export-readiness > i.working { animation: none; }
+}
 
 @media (max-width: 1080px) {
   .export-dock { right: calc(45% + 14px); left: 28px; grid-template-columns: minmax(130px, 1fr) auto; }
