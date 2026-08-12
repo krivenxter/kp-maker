@@ -16,7 +16,7 @@ function addManagerAvatar(pptx: PptxGenJS, slide: PptxGenJS.Slide, photo: string
 }
 
 function addIconTile(pptx: PptxGenJS, slide: PptxGenJS.Slide, icon: string, x: number, y: number, size: number, mode: 'dark' | 'light' = 'dark') {
-  slide.addShape(pptx.ShapeType.roundRect, { x, y, w: size, h: size, rectRadius: 0.06, fill: { color: mode === 'light' ? 'F0F3F4' : 'FFFFFF', transparency: mode === 'light' ? 0 : 90 }, line: { color: mode === 'light' ? 'E0E7E9' : 'FFFFFF', transparency: mode === 'light' ? 0 : 100 } });
+  slide.addShape(pptx.ShapeType.roundRect, { x, y, w: size, h: size, rectRadius: 0.06, fill: { color: mode === 'light' ? 'F5F7F8' : 'FFFFFF', transparency: mode === 'light' ? 0 : 90 }, line: { color: mode === 'light' ? 'E8EDEF' : 'FFFFFF', transparency: mode === 'light' ? 0 : 100 } });
   const inner = size * 0.63;
   addImageFit(slide, icon, { x: x + (size - inner) / 2, y: y + (size - inner) / 2, w: inner, h: inner }, 'contain');
 }
