@@ -68,6 +68,28 @@ async function tintRasterDataUrl(dataUrl: string, color: string): Promise<string
   }
 }
 
+async function rasterizeDataUrl(dataUrl: string, scale = 8): Promise<string | undefined> {
+  try {
+    const image = new Image();
+    image.src = dataUrl;
+    await new Promise<void>((resolve, reject) => {
+      image.onload = () => resolve();
+      image.onerror = () => reject(new Error('Не удалось загрузить SVG'));
+    });
+    const canvas = document.createElement('canvas');
+    canvas.width = Math.max(1, Math.round(image.naturalWidth * scale));
+    canvas.height = Math.max(1, Math.round(image.naturalHeight * scale));
+    const context = canvas.getContext('2d');
+    if (!context) return undefined;
+    context.imageSmoothingEnabled = true;
+    context.imageSmoothingQuality = 'high';
+    context.drawImage(image, 0, 0, canvas.width, canvas.height);
+    return canvas.toDataURL('image/png');
+  } catch {
+    return undefined;
+  }
+}
+
 async function fetchTintedIconDataUrl(url: string, accent: string): Promise<string | undefined> {
   try {
     const response = await fetch(url);
@@ -147,9 +169,13 @@ export async function loadPresentationAssets(productIcons: Array<{ id: string; i
     ...MANROPE_STATIC_FILES,
   ];
   const fontBuffers = await Promise.all(fontRequests.map(async (path) => [path, await fetchArrayBuffer(path)] as const));
+  const [logoLightSvg, logoDarkSvg] = await Promise.all([
+    fetchDataUrl('/logos/calltouch-light.svg'),
+    fetchDataUrl('/logos/calltouch-dark.svg'),
+  ]);
   return {
-    logoLight: await fetchDataUrl('/logos/calltouch-light.svg'),
-    logoDark: await fetchDataUrl('/logos/calltouch-dark.svg'),
+    logoLight: logoLightSvg ? (await rasterizeDataUrl(logoLightSvg) ?? logoLightSvg) : undefined,
+    logoDark: logoDarkSvg ? (await rasterizeDataUrl(logoDarkSvg) ?? logoDarkSvg) : undefined,
     darkBackground: await rasterizeToPng(`/backgrounds/${coverBackgroundId}.webp`),
     finalBackground: await rasterizeToPng('/backgrounds/prez-bg-6.webp'),
     productIcons: Object.fromEntries(iconEntries.filter((entry): entry is readonly [string, string] => Boolean(entry[1]))),
