@@ -114,7 +114,7 @@ export function createPdfServer(): Server {
 
 export function startPdfServer(port = defaultPort): Server {
   const server = createPdfServer();
-  server.listen(port, () => console.log(`PDF adapter: http://localhost:${port}`));
+  server.listen(port, '0.0.0.0', () => console.log(`PDF adapter: http://0.0.0.0:${port}`));
   return server;
 }
 
