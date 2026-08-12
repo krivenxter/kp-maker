@@ -64,7 +64,7 @@ export function textStyle(fonts: FontProfile, role: TypographyRole) {
   return {
     fontFace: heading ? fonts.heading : fonts.body,
     fontSize: preset.size,
-    bold: role !== 'body' && role !== 'caption',
+    bold: role !== 'body' && role !== 'caption' && fonts.heading !== 'Dela Gothic One',
     lineSpacing: preset.lineSpacing,
     ...(heading ? capsHeadingSpacing(fonts, preset.size) : {}),
   } as const;

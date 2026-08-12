@@ -42,7 +42,7 @@ export function ReviewStep(props: Props) {
         const checked = proposal.caseIds.includes(item.id);
         return <label className={checked ? 'selected' : ''} key={item.id}>
           <input type="checkbox" checked={checked} onChange={() => toggleCase(item.id)} />
-          <span className="case-option-heading"><span className="case-logo"><img src={item.logo.replace('/case-logos/', '/case-logos-dark/')} alt="" /></span><b>{item.company}</b></span>
+          <span className="case-option-heading"><span className="case-logo"><img src={item.logo} alt="" /></span><b>{item.company}</b></span>
           <span className="case-option-description">{item.description}</span>
           <span className="case-option-metrics">{item.metrics.map((metric, metricIndex) => <span className="case-option-metric" key={`${item.id}-metric-${metricIndex}`}><b>{metric.value}</b> · {metric.label}</span>)}</span>
         </label>;

@@ -35,7 +35,7 @@ function addPriceSummary(pptx: PptxGenJS, slide: PptxGenJS.Slide, proposal: Prop
     totals.monthlySoftware ? `ПО ${formatMoney(totals.monthlySoftware)}` : '',
     totals.monthlyCommunication ? `Связь ${formatMoney(totals.monthlyCommunication)}` : '',
   ].filter(Boolean).join(' · ');
-  const monthlyTotalStyle = { ...textStyle(fonts, 'heading'), fontFace: 'Dela Gothic One', fontSize: 18, lineSpacing: 20 };
+  const monthlyTotalStyle = { ...textStyle(fonts, 'heading'), fontFace: 'Dela Gothic One', fontSize: 18, lineSpacing: 20, bold: false };
   addAdaptiveText(slide, plan.name.toUpperCase(), { x: x + 0.22, y: y + 0.49, w: w - 0.44, h: 0.18, ...textStyle(fonts, 'caption'), bold: true, color: COLORS.white, margin: 0, wrap: false }, { singleLine: true, minFontSize: 6.5 });
   addAdaptiveText(slide, monthlyLines || 'Ежемесячный платёж', { x: x + 0.22, y: y + 0.73, w: w - 0.44, h: 0.18, ...textStyle(fonts, 'caption'), color: 'B6C4CA', margin: 0 }, { maxLines: 1, minFontSize: 6.5 });
   if (layout === 'onepager_discount' && totals.listMonthlyTotal > totals.monthlyTotal) {
@@ -115,7 +115,7 @@ export function renderOnePager(pptx: PptxGenJS, proposal: ProposalDocument, asse
     if (caseLogo) addCaseLogo(pptx, slide, caseLogo, { x: box.x + 0.22, y: box.y + 0.4, w: 0.68, h: 0.28 }, 'dark', assets.caseLogosDark?.[caseItem.id]);
     addAdaptiveText(slide, caseItem.company, { x: box.x + (caseLogo ? 0.98 : 0.22), y: box.y + 0.4, w: caseLogo ? 1.12 : 1.5, h: 0.28, ...textStyle(fonts, 'caption'), color: COLORS.white, margin: 0, valign: 'middle', wrap: false }, { singleLine: true, minFontSize: 5.5 });
     addAdaptiveText(slide, caseItem.description, { x: box.x + 0.22, y: box.y + 0.82, w: 1.82, h: 0.35, ...textStyle(fonts, 'caption'), color: 'B6C4CA', margin: 0, valign: 'top' }, { maxLines: 3, minFontSize: 5.5 });
-    addAdaptiveText(slide, primaryMetric.value, { x: box.x + 2.02, y: box.y + 0.7, w: 2.05, h: 0.42, ...textStyle(fonts, 'title'), fontFace: 'Dela Gothic One', fontSize: 18, lineSpacing: 20, color: accent, align: 'right', margin: 0, wrap: false }, { singleLine: true, minFontSize: 12 });
+    addAdaptiveText(slide, primaryMetric.value, { x: box.x + 2.02, y: box.y + 0.7, w: 2.05, h: 0.42, ...textStyle(fonts, 'title'), fontFace: 'Dela Gothic One', fontSize: 18, lineSpacing: 20, bold: false, color: accent, align: 'right', margin: 0, wrap: false }, { singleLine: true, minFontSize: 12 });
     addAdaptiveText(slide, primaryMetric.label, { x: box.x + 2.02, y: box.y + 1.12, w: 2.05, h: 0.24, ...textStyle(fonts, 'caption'), color: COLORS.white, align: 'right', margin: 0, valign: 'top' }, { maxLines: 2, minFontSize: 5.5 });
     if (caseItem.url && caseItem.url !== 'не указано') {
       const button = { x: box.x + 2.73, y: box.y + 0.16, w: 1.14, h: 0.24 };

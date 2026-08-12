@@ -228,7 +228,7 @@ label em, .form-error { color: var(--danger); font-size: var(--type-body-size); 
 .case-options .case-option-heading { display: flex; align-items: center; gap: 7px; width: 100%; color: #142027; }
 .case-options .case-option-heading b { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .case-options .case-logo { display: grid; flex: 0 0 42px; width: 42px; height: 26px; place-items: center; padding: 4px; overflow: hidden; background: #e4f8fc; border: 1px solid #b9e8f0; border-radius: 6px; }
-.case-options .case-logo img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.case-options .case-logo img { display: block; width: 100%; height: 100%; object-fit: contain; filter: brightness(0) saturate(100%); opacity: .72; }
 .case-options .case-option-description { display: block; min-height: 30px; color: var(--muted); font-size: var(--type-caption-size); font-weight: var(--type-caption-weight); line-height: var(--type-caption-line); }
 .case-options .case-option-metrics { display: flex; width: 100%; flex-direction: column; gap: 2px; margin-top: auto; }
 .case-options .case-option-metric { display: block; color: var(--muted); font-size: var(--type-caption-size); font-weight: var(--type-caption-weight); line-height: var(--type-caption-line); }

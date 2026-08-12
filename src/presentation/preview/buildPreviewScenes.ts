@@ -67,6 +67,9 @@ class PreviewDeckRecorder {
 function makePreviewSafe(proposal: ProposalDocument): ProposalDocument {
   const fixture = demoFixtures.find((item) => item.proposal.client.brandId === proposal.client.brandId) ?? demoFixtures[1];
   const fallback = structuredClone(fixture.proposal);
+  const backgroundId = ['prez-bg-1', 'prez-bg-2', 'prez-bg-3', 'prez-bg-4', 'prez-bg-5'].includes(proposal.cover.backgroundId ?? '')
+    ? proposal.cover.backgroundId
+    : fallback.cover.backgroundId;
   return {
     ...fallback,
     ...proposal,
@@ -92,6 +95,7 @@ function makePreviewSafe(proposal: ProposalDocument): ProposalDocument {
     cover: {
       ...fallback.cover,
       ...proposal.cover,
+      backgroundId,
       subtitle: proposal.cover.subtitle.trim() || fallback.cover.subtitle,
     },
   };
