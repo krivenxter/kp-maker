@@ -16,13 +16,7 @@ RUN apt-get update \
 
 WORKDIR /app
 
-RUN corepack enable \
-  && corepack prepare pnpm@11.21.0 --activate
-COPY package.json pnpm-lock.yaml ./
-RUN pnpm install --frozen-lockfile
-
 COPY server ./server
-COPY tsconfig.node.json ./
 COPY calltouch-assets/fonts ./calltouch-assets/fonts
 
 # Используем те же шрифты, что и генератор PPTX, чтобы LibreOffice не делал
@@ -33,4 +27,4 @@ RUN mkdir -p /usr/local/share/fonts/calltouch \
 
 EXPOSE 4174
 
-CMD ["pnpm", "server"]
+CMD ["node", "--experimental-strip-types", "server/exportPdf.ts"]
