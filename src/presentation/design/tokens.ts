@@ -159,3 +159,7 @@ export const CARD_GAP = 0.18;
 export function accentForBrand(brandId: string): string {
   return brandId === 'exlantix' ? COLORS.gold : COLORS.cyan;
 }
+
+export function accentTextColor(accent: string): string {
+  return accent.toUpperCase() === COLORS.cyan ? COLORS.white : COLORS.ink;
+}

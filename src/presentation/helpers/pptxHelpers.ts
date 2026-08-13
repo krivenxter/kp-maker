@@ -1,5 +1,5 @@
 import type PptxGenJS from 'pptxgenjs';
-import { COLORS, FONT_PROFILES, RADIUS, SLIDE, textStyle, type FontProfile, type PresentationTheme } from '../design/tokens';
+import { accentTextColor, COLORS, FONT_PROFILES, RADIUS, SLIDE, textStyle, type FontProfile, type PresentationTheme } from '../design/tokens';
 import { LAYOUT } from '../design/layout';
 
 export type Slide = PptxGenJS.Slide;
@@ -219,7 +219,7 @@ export function addCard(pptx: PptxGenJS, slide: Slide, box: { x: number; y: numb
 
 export function addPill(pptx: PptxGenJS, slide: Slide, text: string, box: { x: number; y: number; w: number; h?: number }, accent: string = COLORS.cyan, fonts: FontProfile = FONT_PROFILES.neutral) {
   slide.addShape(pptx.ShapeType.roundRect, { x: box.x, y: box.y, w: box.w, h: box.h ?? 0.3, rectRadius: 0.14, fill: { color: accent, transparency: 8 }, line: { color: accent, transparency: 100 } });
-  addAdaptiveText(slide, text, { x: box.x + 0.08, y: box.y + 0.03, w: box.w - 0.16, h: (box.h ?? 0.3) - 0.05, ...textStyle(fonts, 'caption'), color: COLORS.ink, margin: 0, align: 'center', valign: 'middle', wrap: false }, { singleLine: true, minFontSize: 6 });
+  addAdaptiveText(slide, text, { x: box.x + 0.08, y: box.y + 0.03, w: box.w - 0.16, h: (box.h ?? 0.3) - 0.05, ...textStyle(fonts, 'caption'), color: accentTextColor(accent), margin: 0, align: 'center', valign: 'middle', wrap: false }, { singleLine: true, minFontSize: 6 });
 }
 
 export function addArrow(pptx: PptxGenJS, slide: Slide, x: number, y: number, w: number, color: string = COLORS.cyan) {

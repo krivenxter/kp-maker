@@ -4,7 +4,7 @@ import type { ProposalDocument } from '../../schemas/proposal';
 import { calculatePlanTotals, formatMoney } from '../../domain/pricingCalculator';
 import { getOnePagerBenefits, getOnePagerProducts, selectOnePagerCase, selectOnePagerLayout, selectOnePagerPlan } from '../../domain/onePager';
 import { resolveManager } from '../../domain/resolveManager';
-import { accentForBrand, COLORS, fontProfileForBrand, paletteForTheme, presentationThemeOf, SLIDE, surfaceMode, textStyle, type PresentationTheme } from '../design/tokens';
+import { accentForBrand, accentTextColor, COLORS, fontProfileForBrand, paletteForTheme, presentationThemeOf, SLIDE, surfaceMode, textStyle, type PresentationTheme } from '../design/tokens';
 import type { PresentationAssets } from '../engine/assets';
 import { addAdaptiveText, addBackground, addBrandHeader, addCard, addCaseLogo, addImageFit, addNotes } from '../helpers/pptxHelpers';
 import { flowIconPath } from '../design/productIcons';
@@ -124,7 +124,7 @@ export function renderOnePager(pptx: PptxGenJS, proposal: ProposalDocument, asse
     addAdaptiveText(slide, primaryMetric.label, { x: box.x + 1.9, y: box.y + 1.12, w: 1.93, h: 0.24, ...textStyle(fonts, 'caption'), color: palette.text, align: 'right', margin: 0, valign: 'top' }, { maxLines: 2, minFontSize: 5.5 });
     if (caseItem.url && caseItem.url !== 'не указано') {
       const button = { x: box.x + 2.73, y: box.y + 0.16, w: 1.14, h: 0.24 };
-      addAdaptiveText(slide, 'Подробнее →', { ...button, shape: pptx.ShapeType.roundRect, rectRadius: 0.08, fill: { color: accent }, line: { color: accent, transparency: 100 }, ...textStyle(fonts, 'caption'), bold: true, color: COLORS.ink, underline: { style: 'none', color: COLORS.ink }, align: 'center', valign: 'middle', margin: [0.02, 0.03, 0.02, 0.03], wrap: false }, { singleLine: true, minFontSize: 7 });
+      addAdaptiveText(slide, 'Подробнее →', { ...button, shape: pptx.ShapeType.roundRect, rectRadius: 0.08, fill: { color: accent }, line: { color: accent, transparency: 100 }, ...textStyle(fonts, 'caption'), bold: true, color: accentTextColor(accent), underline: { style: 'none', color: accentTextColor(accent) }, align: 'center', valign: 'middle', margin: [0.02, 0.03, 0.02, 0.03], wrap: false }, { singleLine: true, minFontSize: 7 });
       slide.addShape(pptx.ShapeType.roundRect, { ...button, rectRadius: 0.1, fill: { color: accent, transparency: 100 }, line: { color: accent, transparency: 100 }, hyperlink: { url: caseItem.url } });
     }
   }

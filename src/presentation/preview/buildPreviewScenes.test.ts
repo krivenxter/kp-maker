@@ -207,6 +207,17 @@ describe('buildPreviewScenes', () => {
     }
   });
 
+  it('использует белый текст на циановых плашках', () => {
+    const textOnCyan = demoFixtures.flatMap((fixture) => [
+      ...buildPreviewScenes(fixture.proposal),
+      ...buildOnePagerPreviewScenes(fixture.proposal),
+    ]).flatMap((scene) => scene.elements)
+      .filter((element) => element.kind === 'text')
+      .filter((element) => String((element.options.fill as { color?: unknown } | undefined)?.color).toUpperCase() === COLORS.cyan);
+    expect(textOnCyan.length).toBeGreaterThan(0);
+    expect(textOnCyan.every((element) => String(element.options.color).toUpperCase() === COLORS.white)).toBe(true);
+  });
+
   it('сохраняет компактный жирный текст кнопки кейса в One-pager', () => {
     const onePager = buildOnePagerPreviewScenes(proposal)[0];
     const button = onePager.elements.find((element) => element.kind === 'text' && element.text === 'Подробнее →');

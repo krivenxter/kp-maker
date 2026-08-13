@@ -2,7 +2,7 @@ import type PptxGenJS from 'pptxgenjs';
 import casesData from '../../data/cases.json';
 import type { ProposalDocument } from '../../schemas/proposal';
 import { columns } from '../design/layout';
-import { accentForBrand, COLORS, fontProfileForBrand, textStyle, type PresentationTheme } from '../design/tokens';
+import { accentForBrand, accentTextColor, COLORS, fontProfileForBrand, textStyle, type PresentationTheme } from '../design/tokens';
 import type { PresentationAssets } from '../engine/assets';
 import { addAdaptiveText, addBackground, addBrandHeader, addCard, addCaseLogo, addNotes, addTitle } from '../helpers/pptxHelpers';
 
@@ -38,7 +38,7 @@ export function renderCasesSlide(pptx: PptxGenJS, proposal: ProposalDocument, as
     });
     if (item.url && item.url !== 'не указано') {
       const button = { x: box.x + 0.26, y: box.y + 4, w: 1.48, h: 0.34 };
-      addAdaptiveText(slide, 'Подробнее →', { ...button, shape: pptx.ShapeType.roundRect, rectRadius: 0.08, fill: { color: accent }, line: { color: accent, transparency: 100 }, ...textStyle(fonts, 'caption'), bold: true, color: COLORS.ink, underline: { style: 'none', color: COLORS.ink }, margin: [0.03, 0.05, 0.03, 0.05], align: 'center', valign: 'middle', wrap: false }, { singleLine: true, minFontSize: 7 });
+      addAdaptiveText(slide, 'Подробнее →', { ...button, shape: pptx.ShapeType.roundRect, rectRadius: 0.08, fill: { color: accent }, line: { color: accent, transparency: 100 }, ...textStyle(fonts, 'caption'), bold: true, color: accentTextColor(accent), underline: { style: 'none', color: accentTextColor(accent) }, margin: [0.03, 0.05, 0.03, 0.05], align: 'center', valign: 'middle', wrap: false }, { singleLine: true, minFontSize: 7 });
       slide.addShape(pptx.ShapeType.roundRect, { ...button, rectRadius: 0.1, fill: { color: accent, transparency: 100 }, line: { color: accent, transparency: 100 }, hyperlink: { url: item.url } });
     }
   });

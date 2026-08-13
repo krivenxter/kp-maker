@@ -88,7 +88,7 @@ button:disabled { cursor: not-allowed; opacity: .48; }
 .stepper button i { display: grid; place-items: center; width: 26px; height: 26px; flex: 0 0 auto; border: 1px solid #bdc9ce; border-radius: 50%; font-style: normal; font-size: var(--type-body-size); font-weight: var(--type-body-weight); line-height: var(--type-body-line); }
 .stepper button span { font-size: var(--type-label-size); font-weight: var(--type-label-weight); line-height: var(--type-label-line); }
 .stepper button.active { color: #142027; }
-.stepper button.active i { color: #142027; background: var(--cyan); border-color: var(--cyan); }
+.stepper button.active i { color: white; background: var(--cyan); border-color: var(--cyan); }
 .stepper button.done i { color: #142027; background: #dff9fd; border-color: #9cecf6; }
 .progress { height: 3px; background: #dfe7ea; }
 .progress i { display: block; height: 100%; background: var(--cyan); transition: width .2s ease; }
@@ -113,7 +113,7 @@ input:focus, textarea:focus, select:focus { border-color: #25bcd7; box-shadow: 0
 input[type="number"] { appearance: textfield; }
 input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button { margin: 0; appearance: none; }
 input[type="checkbox"] { position: relative; width: 18px; height: 18px; flex: 0 0 auto; appearance: none; padding: 0; background: white; border: 1px solid #aebdc3; border-radius: 5px; cursor: pointer; }
-input[type="checkbox"]::after { content: ""; position: absolute; inset: 3px; background: #102027; mask: url('/icons/ui/check.svg') center / contain no-repeat; -webkit-mask: url('/icons/ui/check.svg') center / contain no-repeat; opacity: 0; }
+input[type="checkbox"]::after { content: ""; position: absolute; inset: 3px; background: white; mask: url('/icons/ui/check.svg') center / contain no-repeat; -webkit-mask: url('/icons/ui/check.svg') center / contain no-repeat; opacity: 0; }
 input[type="checkbox"]:checked { background: var(--cyan); border-color: var(--cyan); }
 input[type="checkbox"]:checked::after { opacity: 1; }
 input[type="checkbox"]:focus-visible { outline: 0; box-shadow: 0 0 0 3px rgba(25,198,230,.18); }
@@ -195,7 +195,7 @@ label em, .form-error { color: var(--danger); font-size: var(--type-body-size); 
 .product-options b { font-size: var(--type-label-size); font-weight: var(--type-label-weight); line-height: var(--type-label-line); }
 .product-options small { color: var(--muted); font-size: var(--type-caption-size); font-weight: var(--type-caption-weight); line-height: var(--type-caption-line); }
 .product-options i { display: grid; place-items: center; width: 24px; height: 24px; color: #142027; background: white; border: 1px solid #c8d4d9; border-radius: 50%; font-style: normal; }
-.product-options button.selected .product-toggle { background: var(--cyan); border-color: var(--cyan); }
+.product-options button.selected .product-toggle { color: white; background: var(--cyan); border-color: var(--cyan); }
 .product-toggle .ui-icon { width: 14px; height: 14px; }
 .product-empty { padding: 28px 12px; color: var(--muted); text-align: center; font-size: var(--type-body-size); font-weight: var(--type-body-weight); line-height: var(--type-body-line); }
 .step-content > details { margin: 26px 0 10px; padding: 0 16px 16px; background: #f7f9fa; border: 1px solid #e1e7e9; border-radius: 12px; }
@@ -275,7 +275,7 @@ label em, .form-error { color: var(--danger); font-size: var(--type-body-size); 
 
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 38px; padding: 9px 14px; border-radius: 9px; border: 1px solid transparent; font-size: var(--type-label-size); font-weight: var(--type-label-weight); line-height: var(--type-label-line); }
 .button .ui-icon { width: 15px; height: 15px; }
-.button.primary { color: #111a1f; background: var(--cyan); border-color: var(--cyan); }
+.button.primary { color: white; background: var(--cyan); border-color: var(--cyan); }
 .button.secondary { color: #18252b; background: #e6f7fa; border-color: #a9e9f1; }
 .button.ghost { color: white; background: transparent; border-color: #435159; }
 .button.ghost-dark { color: #42535b; background: white; border-color: #cbd6da; }
