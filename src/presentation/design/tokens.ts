@@ -81,20 +81,53 @@ export type FontProfile = {
   body: string;
   headingFile: string;
   bodyFile: string;
+  bodyFiles: ReadonlyArray<{ path: string; fontType: 'ttf' | 'otf' }>;
 };
+
+// Меняется в одном месте, чтобы быстро сравнить Museo Sans Cyrl и Manrope
+// во всех UI-, preview-, PPTX- и PDF-рендерах.
+export const ACTIVE_BODY_FONT: 'museo' | 'manrope' = 'museo';
+
+const BODY_FONT_PROFILES = {
+  museo: {
+    family: 'Museo Sans Cyrl',
+    browserFile: '/fonts/museosanscyrl-300.woff2',
+    files: [
+      { path: '/fonts/museosanscyrl-300.otf', fontType: 'otf' as const },
+      { path: '/fonts/museosanscyrl-700.otf', fontType: 'otf' as const },
+    ],
+  },
+  manrope: {
+    family: 'Manrope',
+    browserFile: '/fonts/google/Manrope-Variable.ttf',
+    files: [
+      { path: '/fonts/static/Manrope_400Regular.ttf', fontType: 'ttf' as const },
+      { path: '/fonts/static/Manrope_500Medium.ttf', fontType: 'ttf' as const },
+      { path: '/fonts/static/Manrope_600SemiBold.ttf', fontType: 'ttf' as const },
+      { path: '/fonts/static/Manrope_700Bold.ttf', fontType: 'ttf' as const },
+      { path: '/fonts/static/Manrope_800ExtraBold.ttf', fontType: 'ttf' as const },
+    ],
+  },
+} as const;
+
+export function activeBodyFontProfile() {
+  return BODY_FONT_PROFILES[ACTIVE_BODY_FONT];
+}
 
 export const FONT_PROFILES: Record<'neutral' | 'exlantix', FontProfile> = {
   neutral: {
     heading: 'Dela Gothic One',
-    body: 'Manrope',
+    body: activeBodyFontProfile().family,
     headingFile: '/fonts/DelaGothicOne-Regular.ttf',
-    bodyFile: '/fonts/google/Manrope-Variable.ttf',
+    bodyFile: activeBodyFontProfile().browserFile,
+    bodyFiles: activeBodyFontProfile().files,
   },
   exlantix: {
     heading: 'Unbounded',
-    body: 'Manrope',
+    body: activeBodyFontProfile().family,
     headingFile: '/fonts/google/Unbounded-Variable.ttf',
-    bodyFile: '/fonts/google/Manrope-Variable.ttf',
+    bodyFile: activeBodyFontProfile().browserFile,
+    bodyFiles: activeBodyFontProfile().files,
   },
 };
 

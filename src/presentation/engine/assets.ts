@@ -5,6 +5,7 @@ import { UI_ICONS } from '../design/uiIcons';
 export type EmbeddedFontAsset = {
   fontFace: string;
   fontFile: ArrayBuffer;
+  fontType: 'ttf' | 'otf';
 };
 
 export type PresentationAssets = {
@@ -132,14 +133,6 @@ async function fetchArrayBuffer(url: string): Promise<ArrayBuffer | undefined> {
   }
 }
 
-const MANROPE_STATIC_FILES = [
-  '/fonts/static/Manrope_400Regular.ttf',
-  '/fonts/static/Manrope_500Medium.ttf',
-  '/fonts/static/Manrope_600SemiBold.ttf',
-  '/fonts/static/Manrope_700Bold.ttf',
-  '/fonts/static/Manrope_800ExtraBold.ttf',
-] as const;
-
 const UNBOUNDED_STATIC_FILES = [
   '/fonts/static/Unbounded_300Light.ttf',
   '/fonts/static/Unbounded_400Regular.ttf',
@@ -169,10 +162,12 @@ export async function loadPresentationAssets(productIcons: Array<{ id: string; i
   const uiIconDarkEntries = await Promise.all(Object.entries(UI_ICONS).map(async ([name, path]) => [name, await fetchTintedIconDataUrl(path, COLORS.ink)] as const));
   const fontProfile = fontProfileForBrand(brandId);
   const fontRequests = [
-    ...(fontProfile.heading === 'Dela Gothic One' ? [fontProfile.headingFile] : UNBOUNDED_STATIC_FILES),
-    ...MANROPE_STATIC_FILES,
+    ...(fontProfile.heading === 'Dela Gothic One'
+      ? [{ path: fontProfile.headingFile, fontType: 'ttf' as const, fontFace: fontProfile.heading }]
+      : UNBOUNDED_STATIC_FILES.map((path) => ({ path, fontType: 'ttf' as const, fontFace: fontProfile.heading }))),
+    ...fontProfile.bodyFiles.map((font) => ({ ...font, fontFace: fontProfile.body })),
   ];
-  const fontBuffers = await Promise.all(fontRequests.map(async (path) => [path, await fetchArrayBuffer(path)] as const));
+  const fontBuffers = await Promise.all(fontRequests.map(async (font) => [font, await fetchArrayBuffer(font.path)] as const));
   const [logoLightSvg, logoDarkSvg] = await Promise.all([
     fetchDataUrl('/logos/calltouch-light.svg'),
     fetchDataUrl('/logos/calltouch-dark.svg'),
@@ -191,9 +186,10 @@ export async function loadPresentationAssets(productIcons: Array<{ id: string; i
     flowIcons: Object.fromEntries(flowIconEntries.filter((entry): entry is readonly [string, string] => Boolean(entry[1]))),
     uiIcons: Object.fromEntries(uiIconEntries.filter((entry): entry is readonly [string, string] => Boolean(entry[1]))),
     uiIconsDark: Object.fromEntries(uiIconDarkEntries.filter((entry): entry is readonly [string, string] => Boolean(entry[1]))),
-    fonts: fontBuffers.filter((entry): entry is readonly [string, ArrayBuffer] => Boolean(entry[1])).map(([path, fontFile]) => ({
-      fontFace: path.includes('/Manrope_') ? 'Manrope' : path.includes('/Unbounded_') ? 'Unbounded' : 'Dela Gothic One',
+    fonts: fontBuffers.filter((entry): entry is readonly [typeof fontRequests[number], ArrayBuffer] => Boolean(entry[1])).map(([font, fontFile]) => ({
+      fontFace: font.fontFace,
       fontFile,
+      fontType: font.fontType,
     })),
   };
 }

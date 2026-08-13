@@ -63,9 +63,9 @@ const assets = {
   ]))),
   uiIconsDark: Object.fromEntries(await Promise.all(Object.entries(UI_ICONS).map(async ([name, path]) => [name, await tintedSvgDataUrl(resolve(root, `calltouch-assets${path}`), '142027')]))),
   fonts: [
-    { fontFace: fontProfile.heading, fontFile: await arrayBuffer(resolve(root, `calltouch-assets${fontProfile.headingFile}`)) },
-    { fontFace: fontProfile.body, fontFile: await arrayBuffer(resolve(root, `calltouch-assets${fontProfile.bodyFile}`)) },
-    ...(fontProfile.heading === 'Dela Gothic One' ? [] : [{ fontFace: 'Dela Gothic One', fontFile: await arrayBuffer(resolve(root, `calltouch-assets${delaFontProfile.headingFile}`)) }]),
+    { fontFace: fontProfile.heading, fontFile: await arrayBuffer(resolve(root, `calltouch-assets${fontProfile.headingFile}`)), fontType: 'ttf' as const },
+    ...await Promise.all(fontProfile.bodyFiles.map(async (font) => ({ fontFace: fontProfile.body, fontFile: await arrayBuffer(resolve(root, `calltouch-assets${font.path}`)), fontType: font.fontType }))),
+    ...(fontProfile.heading === 'Dela Gothic One' ? [] : [{ fontFace: 'Dela Gothic One', fontFile: await arrayBuffer(resolve(root, `calltouch-assets${delaFontProfile.headingFile}`)), fontType: 'ttf' as const }]),
   ],
 };
 

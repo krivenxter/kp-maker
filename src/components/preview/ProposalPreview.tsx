@@ -48,7 +48,7 @@ function TextElement({ element }: { element: Extract<PreviewElement, { kind: 'te
     justifyContent: string(options, 'align') === 'center' ? 'center' : string(options, 'align') === 'right' ? 'flex-end' : 'flex-start',
     overflow: 'hidden',
     color: color(options.color, '#142027'),
-    fontFamily: `"${string(options, 'fontFace', 'Manrope')}", sans-serif`,
+    fontFamily: `"${string(options, 'fontFace', 'Museo Sans Cyrl')}", sans-serif`,
     fontSize: `${fontSize}px`,
     fontWeight: options.bold ? 700 : 400,
     letterSpacing: `${number(options, 'charSpacing') * 4 / 3}px`,

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { demoFixtures } from '../../data/demoFixtures';
-import { COLORS, SLIDE } from '../design/tokens';
+import { COLORS, fontProfileForBrand, SLIDE } from '../design/tokens';
 import { buildOnePagerPreviewScenes, buildPreviewScenes } from './buildPreviewScenes';
 
 describe('buildPreviewScenes', () => {
@@ -50,8 +50,18 @@ describe('buildPreviewScenes', () => {
       .filter((element) => element.kind === 'text')
       .map((element) => element.options.fontFace);
     expect(fontFaces).toContain('Unbounded');
-    expect(fontFaces).toContain('Manrope');
+    expect(fontFaces).toContain('Museo Sans Cyrl');
     expect(fontFaces.includes('Arial')).toBe(false);
+  });
+
+  it('использует активный профиль Museo Sans Cyrl с двумя встроенными начертаниями', () => {
+    const profile = fontProfileForBrand('neutral');
+    expect(profile.body).toBe('Museo Sans Cyrl');
+    expect(profile.bodyFiles.map((font) => font.path)).toEqual([
+      '/fonts/museosanscyrl-300.otf',
+      '/fonts/museosanscyrl-700.otf',
+    ]);
+    expect(profile.bodyFiles.every((font) => font.fontType === 'otf')).toBe(true);
   });
 
   it('использует ограниченный набор базовых и адаптивных типографических стилей', () => {

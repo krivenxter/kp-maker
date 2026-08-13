@@ -1,3 +1,5 @@
+import { activeBodyFontProfile } from '../../presentation/design/tokens';
+
 export type ExportFormat = 'full' | 'onepager' | 'both';
 
 type Props = {
@@ -28,8 +30,17 @@ export function ExportDock({ valid, issueCount, busy, status, format, onePagerBl
   const ready = valid && !onePagerBlocked;
   const blocked = busy || !ready;
   const estimate = exportEstimate(exportType, format);
+  const bodyFont = activeBodyFontProfile();
+  const fontDownloads = [
+    ...bodyFont.files.map((font) => {
+      const filename = font.path.split('/').pop() ?? 'font.otf';
+      const weight = filename.match(/(?:-|_)(300|400|500|600|700|800)/)?.[1];
+      return { href: font.path, filename, label: `${bodyFont.family}${weight ? ` ${weight}` : ''}` };
+    }),
+    { href: '/fonts/DelaGothicOne-Regular.ttf', filename: 'DelaGothicOne-Regular.ttf', label: 'Dela Gothic One' },
+  ];
   const downloadFonts = () => {
-    [['/fonts/google/Manrope-Variable.ttf', 'Manrope-Variable.ttf'], ['/fonts/DelaGothicOne-Regular.ttf', 'DelaGothicOne-Regular.ttf']].forEach(([href, filename], index) => {
+    fontDownloads.forEach(({ href, filename }, index) => {
       window.setTimeout(() => {
         const link = document.createElement('a');
         link.href = href;
@@ -65,11 +76,10 @@ export function ExportDock({ valid, issueCount, busy, status, format, onePagerBl
           <p>В PPTX они уже встраиваются автоматически. Скачайте файлы, если нужно установить их отдельно.</p>
           <div className="font-download-all">
             <button type="button" onClick={downloadFonts}>Скачать всё</button>
-            <span>2 файла</span>
+            <span>{fontDownloads.length} файла</span>
           </div>
           <div className="font-download-links">
-            <a href="/fonts/google/Manrope-Variable.ttf" download="Manrope-Variable.ttf">Manrope</a>
-            <a href="/fonts/DelaGothicOne-Regular.ttf" download="DelaGothicOne-Regular.ttf">Dela Gothic One</a>
+            {fontDownloads.map((font) => <a href={font.href} download={font.filename} key={font.filename}>{font.label}</a>)}
           </div>
         </div>
       </details>
