@@ -13,7 +13,7 @@ export function columns(count: number, top: number, height: number, left: number
 export const LAYOUT = {
   contentTop: 1.42,
   contentBottom: 7.08,
-  coverTitle: { x: 0.76, y: 1.48, w: 7.2, h: 1.35 },
-  coverSubtitle: { x: 0.78, y: 2.88, w: 6.5, h: 0.72 },
+  coverTitle: { x: 0.76, y: 1.48, w: 9.4, h: 2.025 },
+  coverSubtitle: { x: 0.78, y: 3.62, w: 6.5, h: 0.72 },
   managerCard: { x: 0.78, y: 5.78, w: 4.1, h: 1.08 },
 } as const;

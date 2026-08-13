@@ -6,7 +6,7 @@ import { calculatePlanTotals, formatMoney, normalizeLineItem } from '../../domai
 import { selectFlow } from '../../domain/selectFlow';
 import { resolveManager } from '../../domain/resolveManager';
 import { columns, LAYOUT } from '../design/layout';
-import { accentForBrand, COLORS, fontProfileForBrand, paletteForTheme, presentationThemeOf, SLIDE, surfaceMode, textStyle, type PresentationTheme } from '../design/tokens';
+import { accentForBrand, COLORS, COVER_TITLE_SCALE, fontProfileForBrand, paletteForTheme, presentationThemeOf, SLIDE, surfaceMode, textStyle, TYPOGRAPHY, type PresentationTheme } from '../design/tokens';
 import { flowIconPath } from '../design/productIcons';
 
 function addIconTile(pptx: PptxGenJS, slide: PptxGenJS.Slide, icon: string, x: number, y: number, size: number, mode: 'dark' | 'light' = 'dark') {
@@ -42,7 +42,7 @@ export function renderCoverSlide(pptx: PptxGenJS, proposal: ProposalDocument, as
   addBackground(pptx, slide, mode, mode === 'light' ? (assets.lightBackground ?? assets.darkBackground) : assets.darkBackground, theme);
   addBrandHeader(pptx, slide, mode, mode === 'light' ? assets.logoDark : assets.logoLight, proposal.client.name, accent, fonts, proposal.client.site);
   slide.addText('КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ', { x: 0.78, y: 1.2, w: 5.8, h: 0.25, ...textStyle(fonts, 'caption'), bold: true, charSpacing: 2.2, color: accent, margin: 0 });
-  addAdaptiveText(slide, `РЕШЕНИЯ CALLTOUCH\nДЛЯ ${proposal.client.name.toUpperCase()}`, { ...LAYOUT.coverTitle, ...textStyle(fonts, 'display'), color: palette.text, margin: 0, valign: 'middle' }, { maxLines: 2, minFontSize: 20 });
+  addAdaptiveText(slide, `РЕШЕНИЯ CALLTOUCH\nДЛЯ ${proposal.client.name.toUpperCase()}`, { ...LAYOUT.coverTitle, ...textStyle(fonts, 'display'), fontSize: TYPOGRAPHY.display.size * COVER_TITLE_SCALE, lineSpacing: TYPOGRAPHY.display.lineSpacing * COVER_TITLE_SCALE, color: palette.text, margin: 0, valign: 'middle' }, { maxLines: 2, minFontSize: 30 });
   addAdaptiveText(slide, proposal.cover.subtitle, { ...LAYOUT.coverSubtitle, ...textStyle(fonts, 'body'), color: palette.mutedStrong, margin: 0 }, { maxLines: 2, minFontSize: 8 });
 
   const manager = resolveManager(proposal);

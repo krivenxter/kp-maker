@@ -74,6 +74,8 @@ export const TYPOGRAPHY = {
   caption: { size: 8, lineSpacing: 10 },
 } as const;
 
+export const COVER_TITLE_SCALE = 1.5;
+
 export type TypographyRole = keyof typeof TYPOGRAPHY;
 
 export type FontProfile = {

@@ -13,6 +13,22 @@ describe('buildPreviewScenes', () => {
     expect(scenes.every((scene) => scene.elements.length > 0)).toBe(true);
   });
 
+  it('увеличивает заголовок обложки и сохраняет зазор до подзаголовка', () => {
+    const coverTexts = scenes[0].elements.filter((element) => element.kind === 'text');
+    const title = coverTexts.find((element) => element.kind === 'text' && element.text.startsWith('РЕШЕНИЯ CALLTOUCH'));
+    const subtitle = coverTexts.find((element) => element.kind === 'text' && element.text === proposal.cover.subtitle);
+    expect(title?.kind).toBe('text');
+    expect(subtitle?.kind).toBe('text');
+    if (title?.kind === 'text' && subtitle?.kind === 'text') {
+      expect(title.options.fontSize).toBe(45);
+      expect(title.options.lineSpacing).toBe(48);
+      expect(title.options.w).toBe(9.4);
+      expect(title.options.h).toBe(2.025);
+      expect(subtitle.options.y).toBe(3.62);
+      expect(Number(subtitle.options.y)).toBeGreaterThan(Number(title.options.y) + Number(title.options.h));
+    }
+  });
+
   it('использует только разрешённые логотипы', () => {
     const sources = scenes.flatMap((scene) => scene.elements)
       .filter((element) => element.kind === 'image')
@@ -69,7 +85,7 @@ describe('buildPreviewScenes', () => {
     const textStyles = new Set(scenes.flatMap((scene) => scene.elements)
       .filter((element) => element.kind === 'text')
       .map((element) => [element.options.fontFace, element.options.fontSize, element.options.bold, element.options.lineSpacing].join('|')));
-    expect(textStyles.size).toBeLessThanOrEqual(8);
+    expect(textStyles.size).toBeLessThanOrEqual(9);
   });
 
   it('не передаёт PowerPoint ненадёжное автосжатие текста', () => {
