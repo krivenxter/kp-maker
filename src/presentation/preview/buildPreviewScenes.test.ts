@@ -34,8 +34,12 @@ describe('buildPreviewScenes', () => {
       .filter((element) => element.kind === 'image')
       .map((element) => element.options.data);
     expect(sources).toContain('/logos/calltouch-light.svg');
-    expect(sources).toContain('/logos/calltouch-dark.svg');
     expect(sources.includes('/logos/calltouch-white.svg')).toBe(false);
+    const lightScenes = buildPreviewScenes({ ...structuredClone(proposal), presentationTheme: 'light' });
+    const lightSources = lightScenes.flatMap((scene) => scene.elements)
+      .filter((element) => element.kind === 'image')
+      .map((element) => element.options.data);
+    expect(lightSources).toContain('/logos/calltouch-dark.svg');
   });
 
   it('показывает сайт клиента в верхней плашке и не выводит номера слайдов', () => {
@@ -127,6 +131,20 @@ describe('buildPreviewScenes', () => {
     const onePagerImages = buildOnePagerPreviewScenes(lightProposal)[0].elements.filter((element) => element.kind === 'image').map((element) => String(element.options.data));
     expect(onePagerImages).toContain('/logos/calltouch-dark.svg');
     expect(onePagerImages.some((source) => source.includes('case-logos-dark'))).toBe(true);
+  });
+
+  it('переключает расчёт и кейсы в тёмную палитру без тёмного текста на тёмных поверхностях', () => {
+    expect(scenes.slice(1).every((scene) => scene.background?.color === COLORS.dark)).toBe(true);
+    expect(scenes[3].background?.color).toBe(COLORS.dark);
+    expect(scenes[5].background?.color).toBe(COLORS.dark);
+    const contentTextColors = scenes.slice(1, 6).flatMap((scene) => scene.elements)
+      .filter((element) => element.kind === 'text')
+      .map((element) => String(element.options.color).toUpperCase());
+    expect(contentTextColors).not.toContain('718087');
+    expect(contentTextColors).not.toContain('52636B');
+    const caseImages = scenes[5].elements.filter((element) => element.kind === 'image').map((element) => String(element.options.data));
+    expect(caseImages.every((source) => !source.includes('/case-logos-dark/'))).toBe(true);
+    expect(caseImages.some((source) => source.includes('/case-logos/'))).toBe(true);
   });
 
   it('уплотняет подписи продуктов и отступает метрику кейса от края One-pager', () => {

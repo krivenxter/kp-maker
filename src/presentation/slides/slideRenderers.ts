@@ -134,9 +134,11 @@ export function renderPricingSlide(pptx: PptxGenJS, proposal: ProposalDocument, 
   const slide = pptx.addSlide();
   const accent = accentForBrand(proposal.client.brandId);
   const fonts = fontProfileForBrand(proposal.client.brandId);
-  addBackground(pptx, slide, 'light', undefined, theme);
-  addBrandHeader(pptx, slide, 'light', assets.logoDark, proposal.client.name, accent, fonts, proposal.client.site);
-  addTitle(slide, 'Коммерческое предложение', 'light', 'Расчёт', accent, fonts);
+  const palette = paletteForTheme(theme);
+  const mode = surfaceMode(theme, 'dark');
+  addBackground(pptx, slide, mode, undefined, theme);
+  addBrandHeader(pptx, slide, mode, mode === 'light' ? assets.logoDark : assets.logoLight, proposal.client.name, accent, fonts, proposal.client.site);
+  addTitle(slide, 'Коммерческое предложение', mode, 'Расчёт', accent, fonts);
   const plans = proposal.pricing.plans;
   if (plans.length === 1) {
     const plan = plans[0];
@@ -148,33 +150,33 @@ export function renderPricingSlide(pptx: PptxGenJS, proposal: ProposalDocument, 
     const showDiscount = proposal.pricing.displayMode === 'full_vs_discount';
     const savings = (totals.listMonthlyTotal + totals.listOneTimeTotal) - (totals.monthlyTotal + totals.oneTimeTotal);
 
-    addAdaptiveText(slide, plan.name.toUpperCase(), { x: 0.72, y: 1.68, w: 5.8, h: 0.3, ...textStyle(fonts, 'heading'), color: COLORS.ink, margin: 0, wrap: false }, { singleLine: true, minFontSize: 9 });
+    addAdaptiveText(slide, plan.name.toUpperCase(), { x: 0.72, y: 1.68, w: 5.8, h: 0.3, ...textStyle(fonts, 'heading'), color: palette.text, margin: 0, wrap: false }, { singleLine: true, minFontSize: 9 });
     if (plan.recommended) addPill(pptx, slide, 'РЕКОМЕНДУЕМ', { x: 6.88, y: 1.64, w: 1.12 }, accent, fonts);
 
-    addCard(pptx, slide, listBox, 'light', { fill: theme === 'light' ? 'FAFBFC' : COLORS.white, line: COLORS.line });
-    slide.addText('СОСТАВ ТАРИФА', { x: listBox.x + 0.24, y: listBox.y + 0.18, w: 2.4, h: 0.18, ...textStyle(fonts, 'caption'), bold: true, charSpacing: 1.1, color: '718087', margin: 0 });
+    addCard(pptx, slide, listBox, mode, { fill: palette.card, line: palette.line });
+    slide.addText('СОСТАВ ТАРИФА', { x: listBox.x + 0.24, y: listBox.y + 0.18, w: 2.4, h: 0.18, ...textStyle(fonts, 'caption'), bold: true, charSpacing: 1.1, color: palette.muted, margin: 0 });
     if (showDiscount) {
-      addAdaptiveText(slide, 'ПОЛНАЯ СТОИМОСТЬ', { x: listBox.x + listBox.w - 3.18, y: listBox.y + 0.18, w: 1.38, h: 0.18, ...textStyle(fonts, 'caption'), color: '718087', align: 'right', margin: 0, wrap: false }, { singleLine: true, minFontSize: 6 });
+      addAdaptiveText(slide, 'ПОЛНАЯ СТОИМОСТЬ', { x: listBox.x + listBox.w - 3.18, y: listBox.y + 0.18, w: 1.38, h: 0.18, ...textStyle(fonts, 'caption'), color: palette.muted, align: 'right', margin: 0, wrap: false }, { singleLine: true, minFontSize: 6 });
       slide.addText('СО СКИДКОЙ', { x: listBox.x + listBox.w - 1.56, y: listBox.y + 0.18, w: 1.3, h: 0.18, ...textStyle(fonts, 'caption'), color: accent, align: 'right', margin: 0 });
     } else {
-      slide.addText('СТОИМОСТЬ', { x: listBox.x + listBox.w - 1.56, y: listBox.y + 0.18, w: 1.3, h: 0.18, ...textStyle(fonts, 'caption'), color: '718087', align: 'right', margin: 0 });
+      slide.addText('СТОИМОСТЬ', { x: listBox.x + listBox.w - 1.56, y: listBox.y + 0.18, w: 1.3, h: 0.18, ...textStyle(fonts, 'caption'), color: palette.muted, align: 'right', margin: 0 });
     }
 
     items.forEach((item, itemIndex) => {
       const y = listBox.y + 0.67 + itemIndex * 0.52;
-      addAdaptiveText(slide, item.title, { x: listBox.x + 0.24, y, w: showDiscount ? listBox.w - 3.78 : listBox.w - 2.05, h: 0.24, ...textStyle(fonts, 'body'), color: COLORS.ink, margin: 0, wrap: false }, { singleLine: true, minFontSize: 7.5 });
-      if (showDiscount) addAdaptiveText(slide, formatMoney(item.listPrice * item.quantity), { x: listBox.x + listBox.w - 3.18, y, w: 1.38, h: 0.24, ...textStyle(fonts, 'body'), color: '718087', align: 'right', margin: 0, wrap: false }, { singleLine: true, minFontSize: 7.5 });
-      addAdaptiveText(slide, formatMoney(item.finalPrice ?? 0), { x: listBox.x + listBox.w - 1.56, y, w: 1.3, h: 0.24, ...textStyle(fonts, 'body'), color: COLORS.ink, align: 'right', margin: 0, wrap: false }, { singleLine: true, minFontSize: 7.5 });
-      slide.addShape(pptx.ShapeType.line, { x: listBox.x + 0.24, y: y + 0.34, w: listBox.w - 0.48, h: 0, line: { color: COLORS.line, width: 0.6 } });
+      addAdaptiveText(slide, item.title, { x: listBox.x + 0.24, y, w: showDiscount ? listBox.w - 3.78 : listBox.w - 2.05, h: 0.24, ...textStyle(fonts, 'body'), color: palette.text, margin: 0, wrap: false }, { singleLine: true, minFontSize: 7.5 });
+      if (showDiscount) addAdaptiveText(slide, formatMoney(item.listPrice * item.quantity), { x: listBox.x + listBox.w - 3.18, y, w: 1.38, h: 0.24, ...textStyle(fonts, 'body'), color: palette.muted, align: 'right', margin: 0, wrap: false }, { singleLine: true, minFontSize: 7.5 });
+      addAdaptiveText(slide, formatMoney(item.finalPrice ?? 0), { x: listBox.x + listBox.w - 1.56, y, w: 1.3, h: 0.24, ...textStyle(fonts, 'body'), color: palette.text, align: 'right', margin: 0, wrap: false }, { singleLine: true, minFontSize: 7.5 });
+      slide.addShape(pptx.ShapeType.line, { x: listBox.x + 0.24, y: y + 0.34, w: listBox.w - 0.48, h: 0, line: { color: palette.line, width: 0.6 } });
     });
 
-    addCard(pptx, slide, totalsBox, 'light', { fill: plan.recommended ? (theme === 'light' ? 'F5F7F8' : accent === COLORS.gold ? 'EAF4F7' : COLORS.cyanSoft) : theme === 'light' ? 'FAFBFC' : COLORS.white, line: plan.recommended ? accent : COLORS.line });
-    slide.addText('ИТОГО ПО ТАРИФУ', { x: totalsBox.x + 0.26, y: totalsBox.y + 0.2, w: totalsBox.w - 0.52, h: 0.18, ...textStyle(fonts, 'caption'), bold: true, charSpacing: 1.1, color: '718087', margin: 0 });
-    slide.addText('ЕЖЕМЕСЯЧНО', { x: totalsBox.x + 0.26, y: totalsBox.y + 0.68, w: totalsBox.w - 0.52, h: 0.18, ...textStyle(fonts, 'caption'), color: '718087', margin: 0 });
+    addCard(pptx, slide, totalsBox, mode, { fill: plan.recommended ? palette.cardAlt : palette.card, line: plan.recommended ? accent : palette.line });
+    slide.addText('ИТОГО ПО ТАРИФУ', { x: totalsBox.x + 0.26, y: totalsBox.y + 0.2, w: totalsBox.w - 0.52, h: 0.18, ...textStyle(fonts, 'caption'), bold: true, charSpacing: 1.1, color: palette.muted, margin: 0 });
+    slide.addText('ЕЖЕМЕСЯЧНО', { x: totalsBox.x + 0.26, y: totalsBox.y + 0.68, w: totalsBox.w - 0.52, h: 0.18, ...textStyle(fonts, 'caption'), color: palette.muted, margin: 0 });
     addAdaptiveText(slide, formatMoney(totals.monthlyTotal), { x: totalsBox.x + 0.26, y: totalsBox.y + 0.94, w: totalsBox.w - 0.52, h: 0.42, ...textStyle(fonts, 'title'), color: accent, margin: 0, wrap: false }, { singleLine: true, minFontSize: 14 });
-    slide.addShape(pptx.ShapeType.line, { x: totalsBox.x + 0.26, y: totalsBox.y + 1.53, w: totalsBox.w - 0.52, h: 0, line: { color: plan.recommended ? accent : COLORS.line, transparency: 62, width: 0.7 } });
-    slide.addText('РАЗОВО', { x: totalsBox.x + 0.26, y: totalsBox.y + 1.76, w: totalsBox.w - 0.52, h: 0.18, ...textStyle(fonts, 'caption'), color: '718087', margin: 0 });
-    addAdaptiveText(slide, formatMoney(totals.oneTimeTotal), { x: totalsBox.x + 0.26, y: totalsBox.y + 2.02, w: totalsBox.w - 0.52, h: 0.42, ...textStyle(fonts, 'title'), color: COLORS.ink, margin: 0, wrap: false }, { singleLine: true, minFontSize: 14 });
+    slide.addShape(pptx.ShapeType.line, { x: totalsBox.x + 0.26, y: totalsBox.y + 1.53, w: totalsBox.w - 0.52, h: 0, line: { color: plan.recommended ? accent : palette.line, transparency: 62, width: 0.7 } });
+    slide.addText('РАЗОВО', { x: totalsBox.x + 0.26, y: totalsBox.y + 1.76, w: totalsBox.w - 0.52, h: 0.18, ...textStyle(fonts, 'caption'), color: palette.muted, margin: 0 });
+    addAdaptiveText(slide, formatMoney(totals.oneTimeTotal), { x: totalsBox.x + 0.26, y: totalsBox.y + 2.02, w: totalsBox.w - 0.52, h: 0.42, ...textStyle(fonts, 'title'), color: palette.text, margin: 0, wrap: false }, { singleLine: true, minFontSize: 14 });
     if (showDiscount && savings > 0) addAdaptiveText(slide, `Экономия в первый месяц · ${formatMoney(savings)}`, { x: totalsBox.x + 0.26, y: totalsBox.y + cardHeight - 0.38, w: totalsBox.w - 0.52, h: 0.18, ...textStyle(fonts, 'caption'), bold: true, color: accent, margin: 0, wrap: false }, { singleLine: true, minFontSize: 6 });
   } else {
     const boxes = columns(plans.length, 1.67, 4.78);
@@ -184,39 +186,39 @@ export function renderPricingSlide(pptx: PptxGenJS, proposal: ProposalDocument, 
     plans.forEach((plan, index) => {
     const box = boxes[index];
     const totals = calculatePlanTotals(plan);
-    addCard(pptx, slide, box, 'light', { fill: plan.recommended ? (theme === 'light' ? 'F5F7F8' : accent === COLORS.gold ? 'EAF4F7' : COLORS.cyanSoft) : theme === 'light' ? 'FAFBFC' : COLORS.white, line: plan.recommended ? accent : COLORS.line });
-    addAdaptiveText(slide, plan.name.toUpperCase(), { x: box.x + 0.22, y: box.y + 0.2, w: box.w - 0.44, h: 0.3, ...textStyle(fonts, 'heading'), color: COLORS.ink, margin: 0, wrap: false }, { singleLine: true, minFontSize: 8 });
+    addCard(pptx, slide, box, mode, { fill: plan.recommended ? palette.cardAlt : palette.card, line: plan.recommended ? accent : palette.line });
+    addAdaptiveText(slide, plan.name.toUpperCase(), { x: box.x + 0.22, y: box.y + 0.2, w: box.w - 0.44, h: 0.3, ...textStyle(fonts, 'heading'), color: palette.text, margin: 0, wrap: false }, { singleLine: true, minFontSize: 8 });
     if (plan.recommended) addPill(pptx, slide, 'РЕКОМЕНДУЕМ', { x: box.x + box.w - 1.35, y: box.y + 0.16, w: 1.12 }, accent, fonts);
 
     if (plans.length === 1 && proposal.pricing.displayMode === 'full_vs_discount') {
-      slide.addText('ПОЛНАЯ СТОИМОСТЬ', { x: box.x + box.w - 4.0, y: box.y + 0.75, w: 1.65, h: 0.25, ...textStyle(fonts, 'caption'), color: '718087', align: 'right', margin: 0 });
+      slide.addText('ПОЛНАЯ СТОИМОСТЬ', { x: box.x + box.w - 4.0, y: box.y + 0.75, w: 1.65, h: 0.25, ...textStyle(fonts, 'caption'), color: palette.muted, align: 'right', margin: 0 });
       slide.addText('С УЧЁТОМ СКИДКИ', { x: box.x + box.w - 2.1, y: box.y + 0.75, w: 1.85, h: 0.25, ...textStyle(fonts, 'caption'), color: accent, align: 'right', margin: 0 });
     }
 
     const items = plan.lineItems.map(normalizeLineItem);
     items.slice(0, 6).forEach((item, itemIndex) => {
       const y = box.y + 1.12 + itemIndex * 0.47;
-      addAdaptiveText(slide, item.title, { x: box.x + 0.22, y, w: plans.length === 1 ? box.w - 4.5 : box.w - 1.65, h: 0.25, ...textStyle(fonts, 'body'), color: COLORS.ink, margin: 0, wrap: false }, { singleLine: true, minFontSize: 7 });
+      addAdaptiveText(slide, item.title, { x: box.x + 0.22, y, w: plans.length === 1 ? box.w - 4.5 : box.w - 1.65, h: 0.25, ...textStyle(fonts, 'body'), color: palette.text, margin: 0, wrap: false }, { singleLine: true, minFontSize: 7 });
       if (plans.length === 1 && proposal.pricing.displayMode === 'full_vs_discount') {
-        slide.addText(formatMoney(item.listPrice * item.quantity), { x: box.x + box.w - 4.0, y, w: 1.65, h: 0.25, ...textStyle(fonts, 'body'), color: '718087', align: 'right', margin: 0 });
-        slide.addText(formatMoney(item.finalPrice ?? 0), { x: box.x + box.w - 2.1, y, w: 1.85, h: 0.25, ...textStyle(fonts, 'body'), color: COLORS.ink, align: 'right', margin: 0 });
+        slide.addText(formatMoney(item.listPrice * item.quantity), { x: box.x + box.w - 4.0, y, w: 1.65, h: 0.25, ...textStyle(fonts, 'body'), color: palette.muted, align: 'right', margin: 0 });
+        slide.addText(formatMoney(item.finalPrice ?? 0), { x: box.x + box.w - 2.1, y, w: 1.85, h: 0.25, ...textStyle(fonts, 'body'), color: palette.text, align: 'right', margin: 0 });
       } else {
-        addAdaptiveText(slide, formatMoney(item.finalPrice ?? 0), { x: box.x + box.w - 1.5, y, w: 1.27, h: 0.25, ...textStyle(fonts, 'body'), color: COLORS.ink, align: 'right', margin: 0, wrap: false }, { singleLine: true, minFontSize: 7 });
+        addAdaptiveText(slide, formatMoney(item.finalPrice ?? 0), { x: box.x + box.w - 1.5, y, w: 1.27, h: 0.25, ...textStyle(fonts, 'body'), color: palette.text, align: 'right', margin: 0, wrap: false }, { singleLine: true, minFontSize: 7 });
       }
-      slide.addShape(pptx.ShapeType.line, { x: box.x + 0.22, y: y + 0.31, w: box.w - 0.44, h: 0, line: { color: COLORS.line, width: 0.6 } });
+      slide.addShape(pptx.ShapeType.line, { x: box.x + 0.22, y: y + 0.31, w: box.w - 0.44, h: 0, line: { color: palette.line, width: 0.6 } });
     });
 
     const totalsY = box.y + 3.84;
-    slide.addText('ЕЖЕМЕСЯЧНО', { x: box.x + 0.22, y: totalsY, w: box.w * 0.45, h: 0.18, ...textStyle(fonts, 'caption'), color: '718087', margin: 0 });
+    slide.addText('ЕЖЕМЕСЯЧНО', { x: box.x + 0.22, y: totalsY, w: box.w * 0.45, h: 0.18, ...textStyle(fonts, 'caption'), color: palette.muted, margin: 0 });
     addAdaptiveText(slide, formatMoney(totals.monthlyTotal), { x: box.x + 0.22, y: totalsY + 0.22, w: box.w * 0.45, h: 0.44, ...multiTotalStyle, color: accent, margin: 0, wrap: false }, { singleLine: true, minFontSize: plans.length === 3 ? 11 : 14 });
-    slide.addText('РАЗОВО', { x: box.x + box.w * 0.54, y: totalsY, w: box.w * 0.38, h: 0.18, ...textStyle(fonts, 'caption'), color: '718087', margin: 0 });
-    addAdaptiveText(slide, formatMoney(totals.oneTimeTotal), { x: box.x + box.w * 0.54, y: totalsY + 0.22, w: box.w * 0.38, h: 0.44, ...multiTotalStyle, color: COLORS.ink, margin: 0, wrap: false }, { singleLine: true, minFontSize: plans.length === 3 ? 11 : 14 });
+    slide.addText('РАЗОВО', { x: box.x + box.w * 0.54, y: totalsY, w: box.w * 0.38, h: 0.18, ...textStyle(fonts, 'caption'), color: palette.muted, margin: 0 });
+    addAdaptiveText(slide, formatMoney(totals.oneTimeTotal), { x: box.x + box.w * 0.54, y: totalsY + 0.22, w: box.w * 0.38, h: 0.44, ...multiTotalStyle, color: palette.text, margin: 0, wrap: false }, { singleLine: true, minFontSize: plans.length === 3 ? 11 : 14 });
     });
   }
   const legal = proposal.pricing.includedMinutes !== undefined
     ? `${legalTerms.call_forwarding_v1.template.replace('{includedMinutes}', String(proposal.pricing.includedMinutes))} ${legalTerms.call_forwarding_v1.rates}`
     : Object.values(legalTerms.categories).map((item) => `${item.label} — ${item.tax}`).join(' · ');
-  addAdaptiveText(slide, legal, { x: 0.72, y: 6.62, w: 11.9, h: 0.34, ...textStyle(fonts, 'caption'), color: '718087', margin: 0 }, { maxLines: 2, minFontSize: 6 });
+  addAdaptiveText(slide, legal, { x: 0.72, y: 6.62, w: 11.9, h: 0.34, ...textStyle(fonts, 'caption'), color: palette.muted, margin: 0 }, { maxLines: 2, minFontSize: 6 });
   addNotes(slide);
 }
 
