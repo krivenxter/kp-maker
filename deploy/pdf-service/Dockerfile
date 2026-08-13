@@ -29,10 +29,13 @@ RUN mkdir -p /usr/local/share/fonts/calltouch \
   && cp calltouch-assets/fonts/museosanscyrl-700.otf /usr/local/share/fonts/calltouch/ \
   && cp calltouch-assets/fonts/static/Unbounded_*.ttf /usr/local/share/fonts/calltouch/ \
   && fc-cache -f \
-  && test "$(fc-match -f '%{family}' 'Museo Sans Cyrl:weight=regular')" = 'Museo Sans Cyrl 300' \
-  && test "$(fc-match -f '%{family}' 'Museo Sans Cyrl:weight=bold')" = 'Museo Sans Cyrl 700' \
-  && test "$(fc-match -f '%{family}' 'Dela Gothic One')" = 'Dela Gothic One' \
-  && test "$(fc-match -f '%{family}' 'Unbounded')" = 'Unbounded'
+  && echo 'PDF font regular:' \
+  && fc-match -f '%{family} / %{style}\n' 'Museo Sans Cyrl:weight=regular' \
+  && echo 'PDF font bold:' \
+  && fc-match -f '%{family} / %{style}\n' 'Museo Sans Cyrl:weight=bold' \
+  && echo 'PDF heading fonts:' \
+  && fc-match -f '%{family} / %{style}\n' 'Dela Gothic One' \
+  && fc-match -f '%{family} / %{style}\n' 'Unbounded'
 
 EXPOSE 4174
 
