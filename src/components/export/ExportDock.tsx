@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import { activeBodyFontProfile } from '../../presentation/design/tokens';
 
 export type ExportFormat = 'full' | 'onepager' | 'both';
@@ -27,6 +28,8 @@ function formatElapsed(seconds: number) {
 }
 
 export function ExportDock({ valid, issueCount, busy, status, format, onePagerBlocked, pdfState, exportType, elapsedSeconds = 0, onFormatChange, onExport }: Props) {
+  const [fontsOpen, setFontsOpen] = useState(false);
+  const fontDownloadRef = useRef<HTMLDetailsElement>(null);
   const ready = valid && !onePagerBlocked;
   const blocked = busy || !ready;
   const estimate = exportEstimate(exportType, format);
@@ -49,6 +52,21 @@ export function ExportDock({ valid, issueCount, busy, status, format, onePagerBl
       }, index * 120);
     });
   };
+  useEffect(() => {
+    if (!fontsOpen) return undefined;
+    const closeOnOutsideClick = (event: PointerEvent) => {
+      if (fontDownloadRef.current && !fontDownloadRef.current.contains(event.target as Node)) setFontsOpen(false);
+    };
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setFontsOpen(false);
+    };
+    document.addEventListener('pointerdown', closeOnOutsideClick);
+    document.addEventListener('keydown', closeOnEscape);
+    return () => {
+      document.removeEventListener('pointerdown', closeOnOutsideClick);
+      document.removeEventListener('keydown', closeOnEscape);
+    };
+  }, [fontsOpen]);
   return <div className="export-dock" aria-busy={busy}>
     <div className="export-readiness">
       <i className={busy ? 'working' : ready ? 'ready' : 'blocked'} aria-hidden="true" />
@@ -69,7 +87,7 @@ export function ExportDock({ valid, issueCount, busy, status, format, onePagerBl
       <button className={`button primary ${busy && exportType === 'pptx' ? 'exporting' : ''}`} disabled={blocked} onClick={() => onExport('pptx')}>
         {busy && exportType === 'pptx' ? <><i className="button-spinner" aria-hidden="true" />PPTX · {formatElapsed(elapsedSeconds)}</> : 'Скачать PPTX'}
       </button>
-      <details className="font-download">
+      <details ref={fontDownloadRef} className="font-download" open={fontsOpen} onToggle={(event) => setFontsOpen(event.currentTarget.open)}>
         <summary aria-label="Шрифты для PPTX">Aa <span>Шрифты</span></summary>
         <div className="font-download-popover">
           <b>Шрифты для редактирования</b>
