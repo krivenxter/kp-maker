@@ -34,7 +34,6 @@ export function AccessGate({ children }: Props) {
 
   return <main className="access-gate">
     <section className="access-card" aria-labelledby="access-title">
-      <img src="/logos/calltouch-light.svg" alt="Calltouch" className="access-logo" />
       <div className="access-lock" aria-hidden="true"><img src="/icons/lock.svg" alt="" /></div>
       <div className="access-brand">Конструктор КП</div>
       <h1 id="access-title">Внутренний инструмент</h1>
