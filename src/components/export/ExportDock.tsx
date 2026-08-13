@@ -28,6 +28,16 @@ export function ExportDock({ valid, issueCount, busy, status, format, onePagerBl
   const ready = valid && !onePagerBlocked;
   const blocked = busy || !ready;
   const estimate = exportEstimate(exportType, format);
+  const downloadFonts = () => {
+    [['/fonts/google/Manrope-Variable.ttf', 'Manrope-Variable.ttf'], ['/fonts/DelaGothicOne-Regular.ttf', 'DelaGothicOne-Regular.ttf']].forEach(([href, filename], index) => {
+      window.setTimeout(() => {
+        const link = document.createElement('a');
+        link.href = href;
+        link.download = filename;
+        link.click();
+      }, index * 120);
+    });
+  };
   return <div className="export-dock" aria-busy={busy}>
     <div className="export-readiness">
       <i className={busy ? 'working' : ready ? 'ready' : 'blocked'} aria-hidden="true" />
@@ -53,6 +63,10 @@ export function ExportDock({ valid, issueCount, busy, status, format, onePagerBl
         <div className="font-download-popover">
           <b>Шрифты для редактирования</b>
           <p>В PPTX они уже встраиваются автоматически. Скачайте файлы, если нужно установить их отдельно.</p>
+          <div className="font-download-all">
+            <button type="button" onClick={downloadFonts}>Скачать всё</button>
+            <span>2 файла</span>
+          </div>
           <div className="font-download-links">
             <a href="/fonts/google/Manrope-Variable.ttf" download="Manrope-Variable.ttf">Manrope</a>
             <a href="/fonts/DelaGothicOne-Regular.ttf" download="DelaGothicOne-Regular.ttf">Dela Gothic One</a>

@@ -33,6 +33,10 @@
 .font-download-popover { position: absolute; right: 0; bottom: calc(100% + 10px); width: 244px; padding: 13px; color: #26353c; background: #fff; border: 1px solid #dce5e8; border-radius: 11px; box-shadow: 0 12px 28px rgba(16,30,36,.22); }
 .font-download-popover b { display: block; font-size: var(--type-label-size); line-height: 1.25; }
 .font-download-popover p { margin: 6px 0 10px; color: #718087; font-size: var(--type-caption-size); line-height: 1.4; }
+.font-download-all { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+.font-download-all button { display: inline-flex; align-items: center; justify-content: center; padding: 7px 10px; color: #26353c; background: #eef2f3; border: 1px solid #d4dee2; border-radius: 7px; font: inherit; font-size: var(--type-caption-size); font-weight: 700; cursor: pointer; }
+.font-download-all button:hover, .font-download-all button:focus-visible { background: #e5ecee; border-color: #bdcbd0; outline: 0; }
+.font-download-all span { color: #93a2a8; font-size: var(--type-caption-size); }
 .font-download-links { display: flex; flex-wrap: wrap; gap: 6px; }
 .font-download-links a { padding: 5px 7px; color: #52636b; background: #f4f7f8; border: 1px solid #dce5e8; border-radius: 6px; font-size: var(--type-caption-size); font-weight: 700; text-decoration: none; }
 .font-download-links a:hover, .font-download-links a:focus-visible { color: #142027; border-color: #aebdc2; outline: 0; }
