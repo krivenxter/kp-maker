@@ -97,7 +97,7 @@ export function renderOnePager(pptx: PptxGenJS, proposal: ProposalDocument, asse
     const image = assets.productVisuals?.[product.id] ?? assets.productIcons[product.id];
     if (image) addImageFit(slide, image, { x, y: y + 0.01, w: visualSize, h: visualSize }, 'contain');
     addAdaptiveText(slide, product.shortName, { x: x + visualSize + 0.14, y, w: 3.36 - visualSize, h: 0.2, ...textStyle(fonts, 'caption'), color: palette.text, margin: 0, valign: 'top', wrap: false }, { singleLine: true, minFontSize: 6 });
-    addAdaptiveText(slide, product.shortValue, { x: x + visualSize + 0.14, y: y + 0.27, w: 3.36 - visualSize, h: 0.31, ...textStyle(fonts, 'caption'), color: palette.muted, margin: 0, valign: 'top' }, { maxLines: 2, minFontSize: 6 });
+    addAdaptiveText(slide, product.shortValue, { x: x + visualSize + 0.14, y: y + 0.21, w: 3.36 - visualSize, h: 0.31, ...textStyle(fonts, 'caption'), color: palette.muted, margin: 0, valign: 'top' }, { maxLines: 2, minFontSize: 6 });
   });
 
   const benefitsBox = { x: 0.58, y: 4.98, w: 7.56, h: 1.55 };
@@ -120,8 +120,8 @@ export function renderOnePager(pptx: PptxGenJS, proposal: ProposalDocument, asse
     if (caseLogo) addCaseLogo(pptx, slide, caseLogo, { x: box.x + 0.22, y: box.y + 0.4, w: 0.68, h: 0.28 }, mode, assets.caseLogosDark?.[caseItem.id]);
     addAdaptiveText(slide, caseItem.company, { x: box.x + (caseLogo ? 0.98 : 0.22), y: box.y + 0.4, w: caseLogo ? 1.12 : 1.5, h: 0.28, ...textStyle(fonts, 'caption'), color: palette.text, margin: 0, valign: 'middle', wrap: false }, { singleLine: true, minFontSize: 5.5 });
     addAdaptiveText(slide, caseItem.description, { x: box.x + 0.22, y: box.y + 0.82, w: 1.82, h: 0.35, ...textStyle(fonts, 'caption'), color: palette.muted, margin: 0, valign: 'top' }, { maxLines: 3, minFontSize: 5.5 });
-    addAdaptiveText(slide, primaryMetric.value, { x: box.x + 2.02, y: box.y + 0.7, w: 2.05, h: 0.42, ...textStyle(fonts, 'title'), fontFace: 'Dela Gothic One', fontSize: 18, lineSpacing: 20, bold: false, color: accent, align: 'right', margin: 0, wrap: false }, { singleLine: true, minFontSize: 12 });
-    addAdaptiveText(slide, primaryMetric.label, { x: box.x + 2.02, y: box.y + 1.12, w: 2.05, h: 0.24, ...textStyle(fonts, 'caption'), color: palette.text, align: 'right', margin: 0, valign: 'top' }, { maxLines: 2, minFontSize: 5.5 });
+    addAdaptiveText(slide, primaryMetric.value, { x: box.x + 1.9, y: box.y + 0.7, w: 1.93, h: 0.42, ...textStyle(fonts, 'title'), fontFace: 'Dela Gothic One', fontSize: 18, lineSpacing: 20, bold: false, color: accent, align: 'right', margin: 0, wrap: false }, { singleLine: true, minFontSize: 12 });
+    addAdaptiveText(slide, primaryMetric.label, { x: box.x + 1.9, y: box.y + 1.12, w: 1.93, h: 0.24, ...textStyle(fonts, 'caption'), color: palette.text, align: 'right', margin: 0, valign: 'top' }, { maxLines: 2, minFontSize: 5.5 });
     if (caseItem.url && caseItem.url !== 'не указано') {
       const button = { x: box.x + 2.73, y: box.y + 0.16, w: 1.14, h: 0.24 };
       addAdaptiveText(slide, 'Подробнее →', { ...button, shape: pptx.ShapeType.roundRect, rectRadius: 0.08, fill: { color: accent }, line: { color: accent, transparency: 100 }, ...textStyle(fonts, 'caption'), bold: true, color: COLORS.ink, underline: { style: 'none', color: COLORS.ink }, align: 'center', valign: 'middle', margin: [0.02, 0.03, 0.02, 0.03], wrap: false }, { singleLine: true, minFontSize: 7 });

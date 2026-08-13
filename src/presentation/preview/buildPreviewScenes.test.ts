@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { demoFixtures } from '../../data/demoFixtures';
+import { getOnePagerProducts, selectOnePagerCase } from '../../domain/onePager';
 import { COLORS, fontProfileForBrand, SLIDE } from '../design/tokens';
 import { buildOnePagerPreviewScenes, buildPreviewScenes } from './buildPreviewScenes';
 
@@ -112,6 +113,27 @@ describe('buildPreviewScenes', () => {
     expect(onePagerImages.some((source) => source.includes('case-logos-dark'))).toBe(true);
   });
 
+  it('уплотняет подписи продуктов и отступает метрику кейса от края One-pager', () => {
+    const onePager = buildOnePagerPreviewScenes(proposal)[0].elements.filter((element) => element.kind === 'text');
+    const firstProduct = getOnePagerProducts(proposal)[0];
+    const productTitle = onePager.find((element) => element.text === firstProduct.shortName);
+    const productSubtitle = onePager.find((element) => element.text === firstProduct.shortValue);
+    expect(productTitle?.kind).toBe('text');
+    expect(productSubtitle?.kind).toBe('text');
+    if (productTitle?.kind === 'text' && productSubtitle?.kind === 'text') {
+      expect(productSubtitle.options.y).toBe((productTitle.options.y as number) + 0.21);
+    }
+    const primaryMetric = selectOnePagerCase(proposal)?.metrics[0];
+    const metricValue = onePager.find((element) => element.text === primaryMetric?.value);
+    const metricLabel = onePager.find((element) => element.text === primaryMetric?.label);
+    expect(metricValue?.kind).toBe('text');
+    expect(metricLabel?.kind).toBe('text');
+    if (metricValue?.kind === 'text' && metricLabel?.kind === 'text') {
+      expect((metricValue.options.x as number) + (metricValue.options.w as number)).toBeLessThanOrEqual(12.3);
+      expect((metricLabel.options.x as number) + (metricLabel.options.w as number)).toBeLessThanOrEqual(12.3);
+    }
+  });
+
   it('оставляет в One-pager только рекомендуемый тариф', () => {
     const proposalWithThreePlans = demoFixtures[3].proposal;
     const onePagerTexts = buildOnePagerPreviewScenes(proposalWithThreePlans)[0].elements
@@ -136,7 +158,7 @@ describe('buildPreviewScenes', () => {
       expect(Number(label.options.y)).toBeCloseTo(6.1, 4);
       expect(metric.options.fontFace).toBe('Dela Gothic One');
       expect(Number(metric.options.fontSize)).toBe(18);
-      expect(Number(metric.options.w)).toBeCloseTo(2.05, 4);
+      expect(Number(metric.options.w)).toBeCloseTo(1.93, 4);
       expect(metric.options.wrap).toBe(false);
     }
     const company = onePagerScene.elements.find((element) => element.kind === 'text' && element.text === 'JETOUR');
