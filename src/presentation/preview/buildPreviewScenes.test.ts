@@ -86,6 +86,12 @@ describe('buildPreviewScenes', () => {
     expect(onePagerImages.some((source) => source.includes('/case-logos'))).toBe(true);
   });
 
+  it('центрирует названия кейсов относительно логотипных плашек', () => {
+    const caseTexts = scenes[5].elements.filter((element) => element.kind === 'text' && ['JETOUR', 'СЗ ДЗИККИТ', 'АМ МЕДИКА'].includes(element.text));
+    expect(caseTexts.length).toBeGreaterThan(0);
+    expect(caseTexts.every((element) => element.kind === 'text' && element.options.valign === 'middle')).toBe(true);
+  });
+
   it('переключает все сцены в светлую палитру и использует тёмные логотипы', () => {
     const lightProposal = structuredClone(proposal);
     lightProposal.presentationTheme = 'light';

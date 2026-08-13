@@ -26,7 +26,7 @@ export function renderCasesSlide(pptx: PptxGenJS, proposal: ProposalDocument, as
     if (caseLogo) {
       addCaseLogo(pptx, slide, caseLogo, { x: box.x + 0.26, y: box.y + 0.24, w: 0.7, h: 0.36 }, 'light', assets.caseLogosDark?.[item.id]);
     }
-    addAdaptiveText(slide, item.company, { x: companyX, y: box.y + 0.28, w: box.x + box.w - 0.26 - companyX, h: 0.28, ...textStyle(fonts, 'heading'), color: COLORS.ink, margin: 0, wrap: false }, { singleLine: true, minFontSize: 8 });
+    addAdaptiveText(slide, item.company, { x: companyX, y: box.y + 0.24, w: box.x + box.w - 0.26 - companyX, h: 0.36, ...textStyle(fonts, 'heading'), color: COLORS.ink, margin: 0, valign: 'middle', wrap: false }, { singleLine: true, minFontSize: 8 });
     addAdaptiveText(slide, item.description, { x: box.x + 0.26, y: box.y + 0.86, w: box.w - 0.52, h: 0.82, ...textStyle(fonts, 'body'), color: '52636B', margin: 0 }, { maxLines: 4, minFontSize: 8 });
     const metrics = item.metrics.slice(0, 3);
     const metricStartY = box.y + 1.82;
