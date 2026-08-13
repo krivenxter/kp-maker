@@ -17,13 +17,25 @@
 .export-readiness b { overflow: hidden; font-size: var(--type-label-size); text-overflow: ellipsis; white-space: nowrap; }
 .export-readiness span { overflow: hidden; color: #9fb0b7; font-size: var(--type-caption-size); text-overflow: ellipsis; white-space: nowrap; }
 .export-dock[aria-busy="true"] .export-readiness span { overflow: visible; text-overflow: clip; white-space: normal; }
-.export-actions { display: flex; gap: 8px; }
+.export-actions { display: flex; align-items: center; gap: 8px; }
 .export-dock .export-actions .button { white-space: nowrap; }
+.export-dock .export-actions .button.secondary { color: #26353c; background: #eef2f3; border-color: #d4dee2; }
 .export-dock .button.exporting { opacity: 1; }
 .button-spinner { display: inline-block; width: 13px; height: 13px; border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%; animation: export-spin .72s linear infinite; }
 .export-format { display: flex; gap: 3px; padding: 3px; background: #243239; border: 1px solid #3a484f; border-radius: 10px; }
 .export-format button { min-height: 32px; padding: 7px 9px; color: #aebcc2; background: transparent; border: 0; border-radius: 7px; font-size: var(--type-caption-size); font-weight: var(--type-label-weight); line-height: var(--type-label-line); white-space: nowrap; }
-.export-format button.active { color: #102027; background: var(--cyan); box-shadow: none; }
+.export-format button.active { color: #f6fafb; background: #3b4b53; box-shadow: inset 0 0 0 1px rgba(255,255,255,.08); }
+
+.font-download { position: relative; flex: 0 0 auto; }
+.font-download > summary { display: inline-flex; min-height: 32px; align-items: center; gap: 5px; padding: 6px 8px; color: #9fb0b7; border: 1px solid transparent; border-radius: 8px; font-size: var(--type-caption-size); font-weight: var(--type-label-weight); line-height: var(--type-label-line); cursor: pointer; list-style: none; white-space: nowrap; }
+.font-download > summary::-webkit-details-marker { display: none; }
+.font-download > summary:hover, .font-download[open] > summary { color: #e1eaed; background: #243239; border-color: #3a484f; }
+.font-download-popover { position: absolute; right: 0; bottom: calc(100% + 10px); width: 244px; padding: 13px; color: #26353c; background: #fff; border: 1px solid #dce5e8; border-radius: 11px; box-shadow: 0 12px 28px rgba(16,30,36,.22); }
+.font-download-popover b { display: block; font-size: var(--type-label-size); line-height: 1.25; }
+.font-download-popover p { margin: 6px 0 10px; color: #718087; font-size: var(--type-caption-size); line-height: 1.4; }
+.font-download-links { display: flex; flex-wrap: wrap; gap: 6px; }
+.font-download-links a { padding: 5px 7px; color: #52636b; background: #f4f7f8; border: 1px solid #dce5e8; border-radius: 6px; font-size: var(--type-caption-size); font-weight: 700; text-decoration: none; }
+.font-download-links a:hover, .font-download-links a:focus-visible { color: #142027; border-color: #aebdc2; outline: 0; }
 
 @keyframes export-spin { to { transform: rotate(360deg); } }
 @keyframes export-pulse { 0%, 100% { box-shadow: 0 0 0 4px rgba(25,198,230,.08); } 50% { box-shadow: 0 0 0 7px rgba(25,198,230,.2); } }
@@ -41,6 +53,10 @@
   .export-dock { right: 12px; bottom: 12px; left: 12px; grid-template-columns: 1fr; gap: 8px; }
   .export-format { justify-content: stretch; }
   .export-format button { flex: 1; }
+  .export-actions { flex-wrap: wrap; }
   .export-actions .button { flex: 1; }
+  .font-download { width: 100%; }
+  .font-download > summary { justify-content: center; width: 100%; }
+  .font-download-popover { right: 0; left: 0; width: auto; }
   main.show-mobile-preview .export-dock { display: none; }
 }

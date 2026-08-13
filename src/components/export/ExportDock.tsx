@@ -48,6 +48,17 @@ export function ExportDock({ valid, issueCount, busy, status, format, onePagerBl
       <button className={`button primary ${busy && exportType === 'pptx' ? 'exporting' : ''}`} disabled={blocked} onClick={() => onExport('pptx')}>
         {busy && exportType === 'pptx' ? <><i className="button-spinner" aria-hidden="true" />PPTX · {formatElapsed(elapsedSeconds)}</> : 'Скачать PPTX'}
       </button>
+      <details className="font-download">
+        <summary aria-label="Шрифты для PPTX">Aa <span>Шрифты</span></summary>
+        <div className="font-download-popover">
+          <b>Шрифты для редактирования</b>
+          <p>В PPTX они уже встраиваются автоматически. Скачайте файлы, если нужно установить их отдельно.</p>
+          <div className="font-download-links">
+            <a href="/fonts/google/Manrope-Variable.ttf" download="Manrope-Variable.ttf">Manrope</a>
+            <a href="/fonts/DelaGothicOne-Regular.ttf" download="DelaGothicOne-Regular.ttf">Dela Gothic One</a>
+          </div>
+        </div>
+      </details>
     </div>
   </div>;
 }
