@@ -379,6 +379,10 @@ export default function App() {
     <header className="app-header">
       <img src="/logos/calltouch-light.svg" alt="Calltouch" />
       <div><b>Конструктор КП</b><span>Внутренний инструмент</span></div>
+      <div className="app-release" aria-label="Версия приложения">
+        <b>v1.0</b>
+        <span>Обновлено 13 авг.</span>
+      </div>
       <div className="header-actions">
         <div className="demo-picker"><span>Пример заполнения</span><CustomSelect className="header-select" value={demoId} onChange={setDemoId} options={demoFixtures.map((item) => ({ value: item.id, label: item.name }))} /></div>
         <button className="button ghost" onClick={applyDemo}>Загрузить пример</button>
