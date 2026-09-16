@@ -1,7 +1,6 @@
 import { useMemo, useState } from 'react';
 import type { UseFormRegister, UseFormSetValue } from 'react-hook-form';
 import type { ProposalDocument } from '../../schemas/proposal';
-import { calculateFinalPrice, formatMoney } from '../../domain/pricingCalculator';
 import { calculateFinalPrice, calculatePlanTotals, formatMoney, getForwardingMinutesByCommunicationFee } from '../../domain/pricingCalculator';
 import { calculateCalltouchPricing, type CalltouchPricingResult, type CalltouchRegion, type CalltouchTariffType } from '../../domain/calltouchPricing';
 import { CustomSelect } from '../ui/CustomSelect';

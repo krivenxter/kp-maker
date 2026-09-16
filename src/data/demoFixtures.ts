@@ -81,8 +81,8 @@ export const demoFixtures: Array<{ id: string; name: string; proposal: ProposalD
         { productId: 'analytics', reason: 'Показывает ROI рекламы на основании сделок CRM.' },
       ],
       pricing: {
-        displayMode: 'final_only', includedMinutes: 300,
         displayMode: 'final_only',
+        includedMinutes: 300,
         plans: [
           { id: 'standard', name: 'Стандарт', recommended: false, lineItems: [
             { id: 'std-po', productId: 'calltracking', title: 'ПО', category: 'software', billingType: 'recurring', quantity: 1, unit: 'месяц', listPrice: 20000, discountPercent: 0, finalPrice: 20000, note: '' },
@@ -114,8 +114,8 @@ export const demoFixtures: Array<{ id: string; name: string; proposal: ProposalD
         { productId: 'sms', reason: 'Автоматизирует сообщения клиентской базе.' },
       ],
       pricing: {
-        displayMode: 'final_only', includedMinutes: 500,
         displayMode: 'final_only',
+        includedMinutes: 500,
         plans: ['Базовый', 'Расширенный', 'Премиум'].map((name, index) => ({
           id: `plan-${index + 1}`, name, recommended: index === 1,
           lineItems: [
@@ -133,7 +133,6 @@ export const demoFixtures: Array<{ id: string; name: string; proposal: ProposalD
 export const blankProposal: ProposalDocument = {
   ...structuredClone(demoFixtures[1].proposal),
   client: { name: '', brandId: 'neutral', site: '', industry: 'other' },
-  project: { ...structuredClone(demoFixtures[1].proposal.project), goal: '', summary: '', traffic: '', sessions: '', channels: [], crm: '', currentCalltracking: '', integrations: [], additionalContext: '' },
   project: { ...structuredClone(demoFixtures[1].proposal.project), goal: '', summary: '', traffic: '', sessions: '', channels: [], crm: '', currentCalltracking: '', staticPhones: '', cityCode: '', forwardingTarget: '', requiredModules: [], integrations: [], additionalContext: '' },
   products: [],
   pricing: { displayMode: 'full_vs_discount', plans: [] },

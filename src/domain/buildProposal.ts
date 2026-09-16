@@ -9,8 +9,6 @@ export function buildProposal(input: ProposalDocument): ProposalDocument {
       ...input.project,
       goal: input.project.goal.trim(),
       summary: input.project.summary.trim(),
-      channels: input.project.channels.map((item) => item.trim()).filter(Boolean),
-      integrations: input.project.integrations.map((item) => item.trim()).filter(Boolean),
       traffic: (input.project.traffic ?? '').trim(),
       sessions: (input.project.sessions ?? '').trim(),
       channels: (input.project.channels ?? []).map((item) => item.trim()).filter(Boolean),

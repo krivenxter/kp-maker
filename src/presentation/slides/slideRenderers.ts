@@ -2,7 +2,6 @@ import type PptxGenJS from 'pptxgenjs';
 import productsData from '../../data/products.json';
 import legalTerms from '../../data/legalTerms.json';
 import type { ProposalDocument } from '../../schemas/proposal';
-import { calculatePlanTotals, formatMoney, normalizeLineItem } from '../../domain/pricingCalculator';
 import { calculatePlanTotals, formatMoney, getForwardingMinutesByCommunicationFee, normalizeLineItem } from '../../domain/pricingCalculator';
 import { selectFlow } from '../../domain/selectFlow';
 import { resolveManager } from '../../domain/resolveManager';
@@ -104,18 +103,12 @@ export function renderContextSlide(pptx: PptxGenJS, proposal: ProposalDocument, 
     ['Сервисы / модули', modulesText],
     ['Интеграции', proposal.project.integrations.join(', ')],
     ['Дополнительные вводные', proposal.project.additionalContext],
-  ].filter(([, value]) => value);
-  const startY = proposal.project.summary ? 2.8 : 1.75;
-  const rowHeight = Math.min(0.57, 4.05 / Math.max(entries.length, 1));
   ].filter(([, value]) => Boolean(value));
   const startY = proposal.project.summary ? 2.75 : 1.70;
   const availableHeight = 6.95 - startY;
   const rowHeight = Math.min(0.55, availableHeight / Math.max(entries.length, 1));
   entries.forEach(([label, value], index) => {
     const y = startY + index * rowHeight;
-    slide.addText(label.toUpperCase(), { x: 0.82, y, w: 2.35, h: rowHeight - 0.08, ...textStyle(fonts, 'caption'), color: index === 0 ? accent : palette.muted, margin: 0, valign: 'middle' });
-    addAdaptiveText(slide, value, { x: 3.22, y, w: 9.0, h: rowHeight - 0.08, ...textStyle(fonts, 'body'), color: palette.text, margin: 0, valign: 'middle' }, { maxLines: 2, minFontSize: 7.5 });
-    slide.addShape(pptx.ShapeType.line, { x: 0.82, y: y + rowHeight - 0.06, w: 11.4, h: 0, line: { color: palette.line, width: 0.7 } });
     slide.addText(label.toUpperCase(), { x: 0.82, y, w: 2.35, h: rowHeight - 0.05, ...textStyle(fonts, 'caption'), color: index === 0 ? accent : palette.muted, margin: 0, valign: 'middle' });
     addAdaptiveText(slide, value, { x: 3.22, y, w: 9.0, h: rowHeight - 0.05, ...textStyle(fonts, 'body'), color: palette.text, margin: 0, valign: 'middle' }, { maxLines: 2, minFontSize: 6.5 });
     slide.addShape(pptx.ShapeType.line, { x: 0.82, y: y + rowHeight - 0.03, w: 11.4, h: 0, line: { color: palette.line, width: 0.7 } });
@@ -236,9 +229,6 @@ export function renderPricingSlide(pptx: PptxGenJS, proposal: ProposalDocument, 
     addAdaptiveText(slide, formatMoney(totals.oneTimeTotal), { x: box.x + box.w * 0.54, y: totalsY + 0.22, w: box.w * 0.38, h: 0.44, ...multiTotalStyle, color: palette.text, margin: 0, wrap: false }, { singleLine: true, minFontSize: plans.length === 3 ? 11 : 14 });
     });
   }
-  const legal = proposal.pricing.includedMinutes !== undefined
-    ? `${legalTerms.call_forwarding_v1.template.replace('{includedMinutes}', String(proposal.pricing.includedMinutes))} ${legalTerms.call_forwarding_v1.rates}`
-    : Object.values(legalTerms.categories).map((item) => `${item.label} — ${item.tax}`).join(' · ');
   const recommendedPlan = proposal.pricing.plans.find((p) => p.recommended) ?? proposal.pricing.plans[0];
   const recommendedTotals = recommendedPlan ? calculatePlanTotals(recommendedPlan) : null;
   const calculatedMinutes = recommendedTotals ? getForwardingMinutesByCommunicationFee(recommendedTotals.monthlyCommunication) : 3000;
