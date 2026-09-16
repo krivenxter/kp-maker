@@ -390,3 +390,185 @@ label em, .form-error { color: var(--danger); font-size: var(--type-body-size); 
   .line-editor .grow { grid-column: span 2; }
   .step-actions { right: 18px; bottom: 22px; left: 18px; }
 }
+
+/* Исходные данные проекта */
+.project-raw-data {
+  margin: 24px 0;
+  padding: 18px 20px;
+  background: #f8fafb;
+  border: 1px solid #dce5e8;
+  border-radius: 14px;
+}
+.project-raw-data h2 {
+  margin: 0 0 4px;
+}
+.project-raw-data p.subtitle {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: var(--type-caption-size);
+}
+.modules-field {
+  margin-bottom: 18px;
+}
+.modules-toggle-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+.module-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: white;
+  border: 1px solid #cdd8dc;
+  border-radius: 20px;
+  color: #2c3e47;
+  font-size: var(--type-label-size);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all .16s ease;
+}
+.module-chip:hover {
+  border-color: #0ea9c5;
+  background: #f4fcfe;
+}
+.module-chip.selected {
+  background: #e3f8fb;
+  border-color: var(--cyan);
+  color: #086b7c;
+  font-weight: 600;
+}
+.module-chip .chip-check {
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #a8bcc4;
+  font-size: 10px;
+  color: transparent;
+}
+.module-chip.selected .chip-check {
+  background: var(--cyan);
+  border-color: var(--cyan);
+  color: white;
+}
+
+/* Калькулятор цен Calltouch */
+.calltouch-calc-box {
+  margin-bottom: 24px;
+  padding: 18px 20px;
+  background: linear-gradient(180deg, #f3fafb 0%, #edf7f9 100%);
+  border: 1px solid #bcecf4;
+  border-radius: 14px;
+}
+.calltouch-calc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.calltouch-calc-header h3 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--type-heading-size);
+  font-weight: 700;
+  color: #123038;
+}
+.calltouch-calc-header a {
+  color: #0ea9c5;
+  font-size: var(--type-caption-size);
+  text-decoration: underline;
+}
+.calc-tariff-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.calc-tariff-btn {
+  padding: 9px 12px;
+  background: white;
+  border: 1px solid #c7dbe0;
+  border-radius: 8px;
+  font-size: var(--type-label-size);
+  font-weight: 600;
+  color: #243c44;
+  cursor: pointer;
+  text-align: center;
+  transition: all .16s;
+}
+.calc-tariff-btn:hover {
+  border-color: var(--cyan);
+  background: #fbfdfe;
+}
+.calc-tariff-btn.active {
+  background: var(--cyan);
+  border-color: var(--cyan);
+  color: white;
+}
+.calc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.calc-grid label {
+  margin-bottom: 0;
+}
+.calc-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding: 10px 14px;
+  background: rgba(255,255,255,.7);
+  border-radius: 8px;
+  border: 1px solid #d4e7eb;
+}
+.calc-result-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 14px 18px;
+  background: white;
+  border: 1px solid #bfe8f0;
+  border-radius: 10px;
+}
+.calc-stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+.calc-stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.calc-stat-item span {
+  font-size: var(--type-caption-size);
+  color: var(--muted);
+}
+.calc-stat-item b {
+  font-size: var(--type-label-size);
+  color: #15242b;
+}
+.calc-stat-item.highlight b {
+  color: #0b8fa7;
+  font-size: 16px;
+}
+.calc-apply-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

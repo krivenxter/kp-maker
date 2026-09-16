@@ -20,6 +20,13 @@ export function migrateProposalDocument(input: unknown): unknown {
   delete migrated.aiEnhancement;
   delete migrated.specialConditions;
   if (migrated.cover && typeof migrated.cover === 'object') delete (migrated.cover as Record<string, unknown>).benefitIds;
+  if (migrated.project && typeof migrated.project === 'object') {
+    const proj = migrated.project as Record<string, unknown>;
+    if (proj.staticPhones === undefined) proj.staticPhones = '';
+    if (proj.cityCode === undefined) proj.cityCode = '';
+    if (proj.forwardingTarget === undefined) proj.forwardingTarget = '';
+    if (!Array.isArray(proj.requiredModules)) proj.requiredModules = [];
+  }
   if (Array.isArray(migrated.caseIds)) {
     const legacyCaseIds: Record<string, string> = {
       automir: 'jetour',
@@ -67,6 +74,10 @@ export const proposalSchema = z.object({
     channels: z.array(z.string().max(40)).max(8).default([]),
     crm: z.string().max(60).default(''),
     currentCalltracking: z.string().max(60).default(''),
+    staticPhones: z.string().max(60).default(''),
+    cityCode: z.string().max(80).default(''),
+    forwardingTarget: z.string().max(120).default(''),
+    requiredModules: z.array(z.string().max(40)).max(8).default([]),
     integrations: z.array(z.string().max(40)).max(8).default([]),
     additionalContext: z.string().max(180).default(''),
   }),

@@ -62,3 +62,19 @@ export function calculatePlanTotals(plan: TariffPlan): PricingTotals {
 export function formatMoney(value: number): string {
   return `${new Intl.NumberFormat('ru-RU').format(value)} ₽`;
 }
+
+/**
+ * Лесенка минут переадресации на городские номера в зависимости от абонентской платы за связь по тарифу:
+ * - в пределах 4 000 руб включительно — 3 000 минут;
+ * - от 4 001 руб до 7 000 руб включительно — 5 000 минут;
+ * - от 7 001 руб до 12 000 руб включительно — 10 000 минут;
+ * - от 12 001 руб до 23 000 руб включительно — 20 000 минут;
+ * - свыше 23 001 руб — 40 000 минут.
+ */
+export function getForwardingMinutesByCommunicationFee(monthlyCommunicationFee: number): number {
+  if (monthlyCommunicationFee <= 4000) return 3000;
+  if (monthlyCommunicationFee <= 7000) return 5000;
+  if (monthlyCommunicationFee <= 12000) return 10000;
+  if (monthlyCommunicationFee <= 23000) return 20000;
+  return 40000;
+}

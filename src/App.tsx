@@ -469,6 +469,63 @@ export default function App() {
             <label><span className="field-label-text">Текущий коллтрекинг <span className="optional-note">необязательно</span></span><input {...register('project.currentCalltracking')} /></label>
             <label><span className="field-label-text">Интеграции через запятую <span className="optional-note">необязательно</span></span><input value={proposal.project.integrations.join(', ')} onChange={(event) => setValue('project.integrations', splitList(event.target.value))} /></label>
           </div><label><span className="field-label-text">Дополнительные вводные <span className="optional-note">необязательно</span></span><textarea {...register('project.additionalContext')} maxLength={180} rows={2} /></label></details>
+          <div className="project-raw-data">
+            <div>
+              <h2>Исходные данные проекта</h2>
+              <p className="subtitle">Параметры сайта, телефонии и связи — автоматически попадут на слайд контекста в презентации</p>
+            </div>
+
+            <div className="field-grid two">
+              <label><span className="field-label-text">Объём / посещаемость <span className="optional-note">например, 800 сессий в месяц</span></span><input {...register('project.sessions')} placeholder="800 сессий в месяц" /></label>
+              <label><span className="field-label-text">Количество статических номеров <span className="optional-note">например, 3 шт.</span></span><input {...register('project.staticPhones')} placeholder="3 шт." /></label>
+              <label><span className="field-label-text">Код города (статика и динамика) <span className="optional-note">например, Москва (495) или 812</span></span><input {...register('project.cityCode')} placeholder="Москва (495), Санкт-Петербург (812)" /></label>
+              <label><span className="field-label-text">Куда пойдет переадресация <span className="optional-note">например, SIP или мобильные</span></span><input {...register('project.forwardingTarget')} placeholder="SIP-транк / Мобильные номера менеджеров" /></label>
+              <label><span className="field-label-text">Трафик <span className="optional-note">необязательно</span></span><input {...register('project.traffic')} placeholder="Контекст, органика и социальные сети" /></label>
+              <label><span className="field-label-text">Каналы рекламы <span className="optional-note">через запятую</span></span><input value={(proposal.project?.channels ?? []).join(', ')} onChange={(event) => setValue('project.channels', splitList(event.target.value))} placeholder="Яндекс Директ, ВКонтакте, Авито" /></label>
+              <label><span className="field-label-text">CRM клиента <span className="optional-note">необязательно</span></span><input {...register('project.crm')} placeholder="Битрикс24, 1С, amoCRM" /></label>
+              <label><span className="field-label-text">Текущий коллтрекинг <span className="optional-note">необязательно</span></span><input {...register('project.currentCalltracking')} placeholder="Не используется / Манго / UIS" /></label>
+            </div>
+
+            <div className="modules-field">
+              <span className="field-label-text">Сервисы и модули клиента (ОЗ, email, чаты, предикт) <span className="optional-note">выбираются автоматически по продуктам или вручную</span></span>
+              <div className="modules-toggle-group">
+                {[
+                  { name: 'Обратный звонок (ОЗ)', productId: 'callback' },
+                  { name: 'Email-трекинг', productId: 'email-tracking' },
+                  { name: 'Чаты', productId: 'chats' },
+                  { name: 'Предикт', productId: 'predict' },
+                ].map((mod) => {
+                  const isSelectedByProduct = proposal.products.some((p) => p.productId === mod.productId);
+                  const isExplicitlySelected = (proposal.project?.requiredModules ?? []).includes(mod.name);
+                  const isChecked = isSelectedByProduct || isExplicitlySelected;
+                  return (
+                    <button
+                      key={mod.name}
+                      type="button"
+                      className={`module-chip ${isChecked ? 'selected' : ''}`}
+                      onClick={() => {
+                        if (isExplicitlySelected) {
+                          setValue('project.requiredModules', (proposal.project?.requiredModules ?? []).filter((item) => item !== mod.name), { shouldValidate: true });
+                        } else if (isSelectedByProduct) {
+                          setValue('products', proposal.products.filter((p) => p.productId !== mod.productId), { shouldValidate: true });
+                          setValue('project.requiredModules', (proposal.project?.requiredModules ?? []).filter((item) => item !== mod.name), { shouldValidate: true });
+                        } else {
+                          setValue('project.requiredModules', [...(proposal.project?.requiredModules ?? []), mod.name], { shouldValidate: true });
+                        }
+                      }}
+                    >
+                      <span className="chip-check">{isChecked ? '✓' : ''}</span>
+                      <span>{mod.name}</span>
+                      {isSelectedByProduct && <small style={{ fontSize: '10px', opacity: 0.75, marginLeft: '2px' }}>(в продуктах)</small>}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            <label><span className="field-label-text">Интеграции через запятую <span className="optional-note">необязательно</span></span><input value={(proposal.project?.integrations ?? []).join(', ')} onChange={(event) => setValue('project.integrations', splitList(event.target.value))} placeholder="Яндекс Директ, ВК Реклама, 1C" /></label>
+            <label><span className="field-label-text">Дополнительные вводные <span className="optional-note">необязательно</span></span><textarea {...register('project.additionalContext')} maxLength={180} rows={2} placeholder="Любые особые условия или пожелания клиента" /></label>
+          </div>
         </div>}
 
         {step === 2 && <PricingStep proposal={proposal} register={register} setValue={setValue} issueFor={issueFor} addPlan={addPlan} removePlan={removePlan} addLine={addLine} removeLine={removeLine} />}

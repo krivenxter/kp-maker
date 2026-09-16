@@ -8,6 +8,10 @@ const baseProject = {
   channels: ['Яндекс Директ', 'ВКонтакте', 'Авито'],
   crm: 'Битрикс24',
   currentCalltracking: 'Не используется',
+  staticPhones: '3 шт.',
+  cityCode: 'Москва (495)',
+  forwardingTarget: 'SIP-транк компании',
+  requiredModules: ['Обратный звонок', 'Чаты'],
   integrations: ['Яндекс Директ', 'ВК Реклама', 'Битрикс24'],
   additionalContext: 'Пилотный запуск на одном направлении',
 };
@@ -78,6 +82,7 @@ export const demoFixtures: Array<{ id: string; name: string; proposal: ProposalD
       ],
       pricing: {
         displayMode: 'final_only', includedMinutes: 300,
+        displayMode: 'final_only',
         plans: [
           { id: 'standard', name: 'Стандарт', recommended: false, lineItems: [
             { id: 'std-po', productId: 'calltracking', title: 'ПО', category: 'software', billingType: 'recurring', quantity: 1, unit: 'месяц', listPrice: 20000, discountPercent: 0, finalPrice: 20000, note: '' },
@@ -110,6 +115,7 @@ export const demoFixtures: Array<{ id: string; name: string; proposal: ProposalD
       ],
       pricing: {
         displayMode: 'final_only', includedMinutes: 500,
+        displayMode: 'final_only',
         plans: ['Базовый', 'Расширенный', 'Премиум'].map((name, index) => ({
           id: `plan-${index + 1}`, name, recommended: index === 1,
           lineItems: [
@@ -128,6 +134,7 @@ export const blankProposal: ProposalDocument = {
   ...structuredClone(demoFixtures[1].proposal),
   client: { name: '', brandId: 'neutral', site: '', industry: 'other' },
   project: { ...structuredClone(demoFixtures[1].proposal.project), goal: '', summary: '', traffic: '', sessions: '', channels: [], crm: '', currentCalltracking: '', integrations: [], additionalContext: '' },
+  project: { ...structuredClone(demoFixtures[1].proposal.project), goal: '', summary: '', traffic: '', sessions: '', channels: [], crm: '', currentCalltracking: '', staticPhones: '', cityCode: '', forwardingTarget: '', requiredModules: [], integrations: [], additionalContext: '' },
   products: [],
   pricing: { displayMode: 'full_vs_discount', plans: [] },
   caseIds: [],

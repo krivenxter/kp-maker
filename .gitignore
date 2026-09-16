@@ -7,3 +7,4 @@ tmp/pptx
 tmp/pdf-export
 *.log
 *.tsbuildinfo
+.playwright-mcp

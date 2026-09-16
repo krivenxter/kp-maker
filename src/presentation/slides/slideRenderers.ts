@@ -3,6 +3,7 @@ import productsData from '../../data/products.json';
 import legalTerms from '../../data/legalTerms.json';
 import type { ProposalDocument } from '../../schemas/proposal';
 import { calculatePlanTotals, formatMoney, normalizeLineItem } from '../../domain/pricingCalculator';
+import { calculatePlanTotals, formatMoney, getForwardingMinutesByCommunicationFee, normalizeLineItem } from '../../domain/pricingCalculator';
 import { selectFlow } from '../../domain/selectFlow';
 import { resolveManager } from '../../domain/resolveManager';
 import { columns, LAYOUT } from '../design/layout';
@@ -81,6 +82,15 @@ export function renderContextSlide(pptx: PptxGenJS, proposal: ProposalDocument, 
     addAdaptiveText(slide, proposal.project.summary, { x: 1.0, y: 1.9, w: 11.3, h: 0.42, ...textStyle(fonts, 'heading'), color: palette.text, margin: 0 }, { maxLines: 2, minFontSize: 9 });
   }
 
+  const selectedProductIds = new Set(proposal.products.map((p) => p.productId));
+  const autoModules: string[] = [];
+  if (selectedProductIds.has('callback')) autoModules.push('Обратный звонок (ОЗ)');
+  if (selectedProductIds.has('email-tracking')) autoModules.push('Email-трекинг');
+  if (selectedProductIds.has('chats')) autoModules.push('Чаты');
+  if (selectedProductIds.has('predict')) autoModules.push('Предикт');
+  const allModules = Array.from(new Set([...(proposal.project.requiredModules ?? []), ...autoModules]));
+  const modulesText = allModules.join(', ');
+
   const entries = [
     ['Главная задача', proposal.project.goal],
     ['Трафик', proposal.project.traffic],
@@ -88,16 +98,27 @@ export function renderContextSlide(pptx: PptxGenJS, proposal: ProposalDocument, 
     ['Каналы', proposal.project.channels.join(', ')],
     ['CRM', proposal.project.crm],
     ['Текущий коллтрекинг', proposal.project.currentCalltracking],
+    ['Статические номера', proposal.project.staticPhones],
+    ['Код города', proposal.project.cityCode],
+    ['Переадресация', proposal.project.forwardingTarget],
+    ['Сервисы / модули', modulesText],
     ['Интеграции', proposal.project.integrations.join(', ')],
     ['Дополнительные вводные', proposal.project.additionalContext],
   ].filter(([, value]) => value);
   const startY = proposal.project.summary ? 2.8 : 1.75;
   const rowHeight = Math.min(0.57, 4.05 / Math.max(entries.length, 1));
+  ].filter(([, value]) => Boolean(value));
+  const startY = proposal.project.summary ? 2.75 : 1.70;
+  const availableHeight = 6.95 - startY;
+  const rowHeight = Math.min(0.55, availableHeight / Math.max(entries.length, 1));
   entries.forEach(([label, value], index) => {
     const y = startY + index * rowHeight;
     slide.addText(label.toUpperCase(), { x: 0.82, y, w: 2.35, h: rowHeight - 0.08, ...textStyle(fonts, 'caption'), color: index === 0 ? accent : palette.muted, margin: 0, valign: 'middle' });
     addAdaptiveText(slide, value, { x: 3.22, y, w: 9.0, h: rowHeight - 0.08, ...textStyle(fonts, 'body'), color: palette.text, margin: 0, valign: 'middle' }, { maxLines: 2, minFontSize: 7.5 });
     slide.addShape(pptx.ShapeType.line, { x: 0.82, y: y + rowHeight - 0.06, w: 11.4, h: 0, line: { color: palette.line, width: 0.7 } });
+    slide.addText(label.toUpperCase(), { x: 0.82, y, w: 2.35, h: rowHeight - 0.05, ...textStyle(fonts, 'caption'), color: index === 0 ? accent : palette.muted, margin: 0, valign: 'middle' });
+    addAdaptiveText(slide, value, { x: 3.22, y, w: 9.0, h: rowHeight - 0.05, ...textStyle(fonts, 'body'), color: palette.text, margin: 0, valign: 'middle' }, { maxLines: 2, minFontSize: 6.5 });
+    slide.addShape(pptx.ShapeType.line, { x: 0.82, y: y + rowHeight - 0.03, w: 11.4, h: 0, line: { color: palette.line, width: 0.7 } });
   });
   addNotes(slide);
 }
@@ -218,6 +239,12 @@ export function renderPricingSlide(pptx: PptxGenJS, proposal: ProposalDocument, 
   const legal = proposal.pricing.includedMinutes !== undefined
     ? `${legalTerms.call_forwarding_v1.template.replace('{includedMinutes}', String(proposal.pricing.includedMinutes))} ${legalTerms.call_forwarding_v1.rates}`
     : Object.values(legalTerms.categories).map((item) => `${item.label} — ${item.tax}`).join(' · ');
+  const recommendedPlan = proposal.pricing.plans.find((p) => p.recommended) ?? proposal.pricing.plans[0];
+  const recommendedTotals = recommendedPlan ? calculatePlanTotals(recommendedPlan) : null;
+  const calculatedMinutes = recommendedTotals ? getForwardingMinutesByCommunicationFee(recommendedTotals.monthlyCommunication) : 3000;
+  const minutes = proposal.pricing.includedMinutes ?? calculatedMinutes;
+  const formattedMinutes = new Intl.NumberFormat('ru-RU').format(minutes);
+  const legal = `${legalTerms.call_forwarding_v1.template.replace('{includedMinutes}', formattedMinutes)} ${legalTerms.call_forwarding_v1.rates}`;
   addAdaptiveText(slide, legal, { x: 0.72, y: 6.62, w: 11.9, h: 0.34, ...textStyle(fonts, 'caption'), color: palette.muted, margin: 0 }, { maxLines: 2, minFontSize: 6 });
   addNotes(slide);
 }

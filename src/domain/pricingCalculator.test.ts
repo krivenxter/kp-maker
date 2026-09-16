@@ -26,4 +26,17 @@ describe('pricingCalculator', () => {
     expect(totals.firstMonthTotal).toBe(29000);
     expect(totals.nextMonthsTotal).toBe(20000);
   });
+  it('рассчитывает лесенку минут переадресации по абонентской плате за связь', async () => {
+    const { getForwardingMinutesByCommunicationFee } = await import('./pricingCalculator');
+    expect(getForwardingMinutesByCommunicationFee(0)).toBe(3000);
+    expect(getForwardingMinutesByCommunicationFee(4000)).toBe(3000);
+    expect(getForwardingMinutesByCommunicationFee(4001)).toBe(5000);
+    expect(getForwardingMinutesByCommunicationFee(7000)).toBe(5000);
+    expect(getForwardingMinutesByCommunicationFee(7001)).toBe(10000);
+    expect(getForwardingMinutesByCommunicationFee(12000)).toBe(10000);
+    expect(getForwardingMinutesByCommunicationFee(12001)).toBe(20000);
+    expect(getForwardingMinutesByCommunicationFee(23000)).toBe(20000);
+    expect(getForwardingMinutesByCommunicationFee(23001)).toBe(40000);
+    expect(getForwardingMinutesByCommunicationFee(50000)).toBe(40000);
+  });
 });
