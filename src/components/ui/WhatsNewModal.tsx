@@ -157,7 +157,11 @@ export function WhatsNewModal({ open, onClose }: Props) {
                 <ul className="whats-new-card-list">
                   {item.details.map((detail, idx) => (
                     <li key={idx}>
-                      <span className="whats-new-check">✓</span>
+                      <span className="whats-new-check">
+                        <svg viewBox="0 0 12 12" width="10" height="10" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                          <polyline points="2.5 6.2 4.8 8.5 9.5 3.5" />
+                        </svg>
+                      </span>
                       <span>{detail}</span>
                     </li>
                   ))}
@@ -179,3 +183,4 @@ export function WhatsNewModal({ open, onClose }: Props) {
     </div>
   );
 }
+
