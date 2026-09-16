@@ -13,6 +13,7 @@ import { CustomSelect } from './components/ui/CustomSelect';
 import { UiIcon } from './components/ui/UiIcon';
 import { PresentationThemeToggle } from './components/ui/PresentationThemeToggle';
 import { OnboardingModal } from './components/ui/OnboardingModal';
+import { WhatsNewModal } from './components/ui/WhatsNewModal';
 import { resolveManager } from './domain/resolveManager';
 import { getOnePagerWarnings } from './domain/onePager';
 import { DRAFT_STORAGE_KEY, LEGACY_DRAFT_STORAGE_KEY, restoreDraft, serializeDraft } from './drafts/draftStorage';
@@ -99,6 +100,7 @@ export default function App() {
   const [exportStartedAt, setExportStartedAt] = useState<number>();
   const [exportElapsedSeconds, setExportElapsedSeconds] = useState(0);
   const [mobilePreview, setMobilePreview] = useState(false);
+  const [whatsNewOpen, setWhatsNewOpen] = useState(false);
   const [productQuery, setProductQuery] = useState('');
   const [productCategory, setProductCategory] = useState(productCategories[0]);
   const [exportFormat, setExportFormat] = useState<ExportFormat>('full');
@@ -376,12 +378,26 @@ export default function App() {
   const issueFor = (path: string) => issues.find((issue) => issue.path.join('.') === path)?.message;
   return <div className="app-shell">
     <OnboardingModal />
+    <WhatsNewModal open={whatsNewOpen} onClose={() => setWhatsNewOpen(false)} />
     <header className="app-header">
       <img src="/logos/calltouch-light.svg" alt="Calltouch" />
       <div><b>Конструктор КП</b><span>Внутренний инструмент</span></div>
       <div className="app-release" aria-label="Версия приложения">
-        <b>v1.1</b>
-        <span>Обновлено 15 сентября</span>
+        <div className="app-release-meta">
+          <b>v1.1</b>
+          <span>Обновлено 15 сентября</span>
+        </div>
+        <button
+          type="button"
+          className="app-release-btn"
+          onClick={() => setWhatsNewOpen(true)}
+          title="Посмотреть список изменений v1.1"
+        >
+          <svg className="app-release-sparkle" viewBox="0 0 16 16" width="13" height="13" fill="currentColor">
+            <path d="M8 0L9.4 5.3 14.7 6.7 9.4 8.1 8 13.4 6.6 8.1 1.3 6.7 6.6 5.3 8 0z" />
+          </svg>
+          <span>Что нового?</span>
+        </button>
       </div>
       <div className="header-actions">
         <div className="demo-picker"><span>Пример заполнения</span><CustomSelect className="header-select" value={demoId} onChange={setDemoId} options={demoFixtures.map((item) => ({ value: item.id, label: item.name }))} /></div>
