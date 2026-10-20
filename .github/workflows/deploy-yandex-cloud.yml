@@ -1,0 +1,66 @@
+name: Deploy to Yandex Cloud
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-yandex-cloud
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.YC_OBJECT_STORAGE_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.YC_OBJECT_STORAGE_SECRET_KEY }}
+      AWS_DEFAULT_REGION: ru-central1
+      AWS_EC2_METADATA_DISABLED: "true"
+      YC_BUCKET: ${{ vars.YC_OBJECT_STORAGE_BUCKET || 'kp-maker' }}
+      VITE_PDF_API_URL: ${{ vars.VITE_PDF_API_URL || 'https://kp-maker.onrender.com' }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.21.0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies and build
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm build
+
+      - name: Install AWS CLI
+        run: |
+          python -m venv "$RUNNER_TEMP/aws-cli"
+          "$RUNNER_TEMP/aws-cli/bin/python" -m pip install awscli
+
+      - name: Deploy static site
+        run: |
+          if [[ -z "$AWS_ACCESS_KEY_ID" || -z "$AWS_SECRET_ACCESS_KEY" ]]; then
+            echo "Configure the Yandex Object Storage access-key secrets before deploying."
+            exit 1
+          fi
+
+          "$RUNNER_TEMP/aws-cli/bin/aws" s3 sync dist/ "s3://${YC_BUCKET}/" \
+            --delete \
+            --endpoint-url https://storage.yandexcloud.net \
+            --cache-control "public, max-age=3600"
+
+          "$RUNNER_TEMP/aws-cli/bin/aws" s3 cp dist/index.html "s3://${YC_BUCKET}/index.html" \
+            --endpoint-url https://storage.yandexcloud.net \
+            --content-type "text/html; charset=utf-8" \
+            --cache-control "no-cache, no-store, must-revalidate"

@@ -79,7 +79,7 @@ pnpm dev
 
 В PPTX шрифты встраиваются автоматически. Дополнительная кнопка «Aa Шрифты» в панели экспорта скачивает файлы Museo Sans Cyrl и Dela Gothic One для редактирования презентации на другом компьютере. Встраивание не гарантирует одинаковую замену шрифтов в уже установленной версии PowerPoint, поэтому для ручного редактирования рекомендуется установить скачанный комплект.
 
-Для Vercel нужно развернуть отдельный Docker-сервис из [`deploy/pdf-service/Dockerfile`](deploy/pdf-service/Dockerfile), а в настройках Vercel указать `VITE_PDF_API_URL` с его публичным URL. Полная инструкция находится в [`deploy/pdf-service/README.md`](deploy/pdf-service/README.md).
+Для Vercel нужно развернуть отдельный Docker-сервис из [`deploy/pdf-service/Dockerfile`](deploy/pdf-service/Dockerfile), а в настройках Vercel указать `VITE_PDF_API_URL` с его публичным URL. Полная инструкция находится в [`deploy/pdf-service/README.md`](deploy/pdf-service/README.md). Деплой фронтенда в Yandex Cloud описан в [`deploy/yandex-cloud/README.md`](deploy/yandex-cloud/README.md).
 
 Для отдельного запуска только интерфейса или только PDF-адаптера остаются команды `pnpm dev:web` и `pnpm server`.
 

@@ -8,7 +8,7 @@ import { pathToFileURL } from 'node:url';
 
 const defaultPort = Number(process.env.PORT || process.env.PDF_SERVER_PORT || 4174);
 const maxBytes = 50 * 1024 * 1024;
-const corsOrigin = process.env.PDF_CORS_ORIGIN || '*';
+const corsOrigins = (process.env.PDF_CORS_ORIGIN || '*').split(',').map((origin) => origin.trim()).filter(Boolean);
 
 function resolveLibreOfficeBinary() {
   if (process.env.LIBREOFFICE_BIN) return process.env.LIBREOFFICE_BIN;
@@ -52,8 +52,12 @@ async function convert(input: string, outputDir: string, profileDir: string) {
 export function createPdfServer(): Server {
   return createServer(async (request, response) => {
     const requestOrigin = request.headers.origin;
-    const originAllowed = corsOrigin === '*' || !requestOrigin || requestOrigin === corsOrigin;
-    if (originAllowed) response.setHeader('Access-Control-Allow-Origin', corsOrigin === '*' ? '*' : corsOrigin);
+    const allowAnyOrigin = corsOrigins.includes('*');
+    const originAllowed = allowAnyOrigin || !requestOrigin || corsOrigins.includes(requestOrigin);
+    if (originAllowed) {
+      response.setHeader('Access-Control-Allow-Origin', allowAnyOrigin ? '*' : requestOrigin || corsOrigins[0] || '*');
+      if (corsOrigins.length > 1) response.setHeader('Vary', 'Origin');
+    }
     response.setHeader('Access-Control-Allow-Headers', 'Content-Type');
     response.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
     if (request.method === 'OPTIONS') {

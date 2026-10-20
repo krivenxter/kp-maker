@@ -25,7 +25,7 @@ curl http://localhost:4174/api/export/pdf/health
 
 ## Production
 
-Разверните этот Dockerfile на сервисе, который поддерживает Docker и долгоживущий HTTP-процесс. В переменной `PDF_CORS_ORIGIN` укажите адрес Vercel-приложения, например `https://ct-kp-maker.vercel.app`.
+Разверните этот Dockerfile на сервисе, который поддерживает Docker и долгоживущий HTTP-процесс. В `PDF_CORS_ORIGIN` укажите origin приложения. Чтобы разрешить несколько адресов (например, Vercel и Yandex Cloud), перечислите их через запятую без пробелов.
 
 В настройках Vercel добавьте:
 
