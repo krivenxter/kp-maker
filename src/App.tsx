@@ -417,7 +417,10 @@ export default function App() {
           </div>
         </details>
         {siteMirror && <a className="site-mirror" href={siteMirror.href} title={`Открыть зеркало на ${siteMirror.label}`} aria-label={`Открыть зеркало на ${siteMirror.label}`}>
-          <span aria-hidden="true">↗</span> {siteMirror.label}
+          <svg aria-hidden="true" viewBox="0 0 16 16" focusable="false">
+            <path d="M4 12 12 4M5 4h7v7" />
+          </svg>
+          {siteMirror.label}
         </a>}
         <input ref={fileRef} hidden type="file" accept="application/json" onChange={(event) => importJson(event.target.files?.[0])} />
       </div>
