@@ -48,9 +48,15 @@
   .button-spinner, .export-readiness > i.working { animation: none; }
 }
 
-@media (max-width: 1080px) {
-  .export-dock { right: calc(45% + 14px); left: 28px; grid-template-columns: minmax(130px, 1fr) auto; }
+@media (max-width: 1300px) {
+  .export-dock { right: calc(45% + 14px); left: 28px; gap: 8px; padding: 10px; grid-template-columns: minmax(0, 1fr) auto auto; }
   .export-dock .export-readiness { grid-column: 1 / -1; }
+}
+
+@media (max-width: 1080px) {
+  .export-dock { grid-template-columns: minmax(0, 1fr); }
+  .export-format { justify-content: center; }
+  .export-actions { flex-wrap: wrap; justify-content: center; }
 }
 
 @media (max-width: 820px) {

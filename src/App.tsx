@@ -26,6 +26,11 @@ import { makeSavedContactId, readSavedContacts, SAVED_CONTACTS_STORAGE_KEY, seri
 const MAX_SELECTED_PRODUCTS = 5;
 const steps = ['Клиент и менеджер', 'Задача и продукты', 'Расчёт и условия', 'Проверка и экспорт'];
 const productCategories = ['Все категории', ...new Set(products.map((product) => product.category))];
+const siteMirror = window.location.hostname === 'ct-kp-maker.vercel.app'
+  ? { href: 'https://kp-maker.website.yandexcloud.net/', label: 'Яндекс Cloud' }
+  : window.location.hostname === 'kp-maker.website.yandexcloud.net'
+    ? { href: 'https://ct-kp-maker.vercel.app/', label: 'Vercel' }
+    : null;
 const coverBackgrounds = [
   { id: 'prez-bg-1', label: 'Вариант 1', darkImage: '/backgrounds/prez-bg-1.webp', lightImage: '/backgrounds-light/prez-bg-1.png' },
   { id: 'prez-bg-2', label: 'Вариант 2', darkImage: '/backgrounds/prez-bg-2.webp', lightImage: '/backgrounds-light/prez-bg-2.png' },
@@ -411,6 +416,9 @@ export default function App() {
             <button className="danger" type="button" onClick={() => { reset(structuredClone(blankProposal)); setStatus('Форма очищена.'); }}>Очистить форму</button>
           </div>
         </details>
+        {siteMirror && <a className="site-mirror" href={siteMirror.href} title={`Открыть зеркало на ${siteMirror.label}`} aria-label={`Открыть зеркало на ${siteMirror.label}`}>
+          <span aria-hidden="true">↗</span> {siteMirror.label}
+        </a>}
         <input ref={fileRef} hidden type="file" accept="application/json" onChange={(event) => importJson(event.target.files?.[0])} />
       </div>
     </header>

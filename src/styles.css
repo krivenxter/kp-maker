@@ -86,6 +86,8 @@ button:disabled { cursor: not-allowed; opacity: .48; }
 .app-release-btn:hover { background: rgba(27,208,239,.24); border-color: rgba(27,208,239,.55); color: #fff; transform: translateY(-1px); }
 .app-release-sparkle { flex-shrink: 0; }
 .header-actions { margin-left: auto; display: flex; align-items: flex-end; gap: 8px; }
+.site-mirror { display: inline-flex; min-height: 38px; align-items: center; justify-content: center; gap: 6px; padding: 0 12px; color: #8eeaf4; background: rgba(25,198,230,.08); border: 1px solid rgba(25,198,230,.3); border-radius: 9px; font-size: var(--type-label-size); font-weight: var(--type-label-weight); line-height: var(--type-label-line); text-decoration: none; white-space: nowrap; }
+.site-mirror:hover, .site-mirror:focus-visible { color: white; background: rgba(25,198,230,.18); border-color: var(--cyan); outline: 0; }
 .draft-menu { position: relative; margin: 0; padding: 0; background: transparent; border: 0; border-radius: 0; }
 .draft-menu > summary { list-style: none; padding: 9px 14px; cursor: pointer; font-size: var(--type-label-size); font-weight: var(--type-label-weight); line-height: var(--type-label-line); }
 .draft-menu > summary .ui-icon { width: 15px; height: 15px; }
@@ -403,6 +405,7 @@ label em, .form-error { color: var(--danger); font-size: var(--type-body-size); 
   .app-header > div:nth-child(2) { display: none; }
   .app-release { margin-left: auto; }
   .header-actions { width: 100%; margin: 0; }
+  .site-mirror { width: 100%; }
   .demo-picker { min-width: 0; flex: 1; }
   .header-actions .header-select { min-width: 0; flex: 1; }
   .stepper { padding: 0 10px; }
